@@ -1,0 +1,9 @@
+{
+  "initial_budget_eur": 100,
+  "reinvest_net_profit_pct": 30,
+  "requires_expense_approval": true,
+  "paid_ai_enabled": false,
+  "paid_ads_enabled": false,
+  "automated_outreach_enabled": false,
+  "notes": "Techo agregado de 100 EUR. No es un saldo transferido. Reinversion solo de beneficio neto efectivamente cobrado y verificado."
+}

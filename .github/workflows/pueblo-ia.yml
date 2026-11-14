@@ -1,6 +1,7 @@
 name: Pueblo IA - Radar y Panel
 
 on:
+  pull_request:
   workflow_dispatch:
   schedule:
     # Cuatro rondas diarias, cada 6 h; puede haber retrasos en GitHub Actions.
@@ -8,9 +9,7 @@ on:
   push:
     branches: [main]
     paths-ignore:
-      - 'site/data/runs.json'
-      - 'site/data/latest.json'
-      - 'site/index.html'
+      - 'site/**'
 
 permissions:
   contents: write
@@ -33,20 +32,21 @@ jobs:
       - name: Tests offline
         run: python -m unittest discover -s tests -v
       - name: Ejecutar agentes de investigación
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
         run: python -m app.run
+      - name: Validar sitio generado
+        run: python -m unittest discover -s tests -v
       - name: Guardar actividad pública sin datos privados
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/data/latest.json site/data/runs.json site/index.html
+          git add site/
           if ! git diff --cached --quiet; then
             git commit -m "chore: registrar ejecucion del Pueblo IA"
             git push
           fi
       - name: Preparar GitHub Pages
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v5
       - name: Empaquetar sitio web
         uses: actions/upload-pages-artifact@v4
@@ -54,7 +54,7 @@ jobs:
           path: site
   deploy:
     needs: scan
-    if: ${{ success() }}
+    if: ${{ success() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     permissions:
       pages: write

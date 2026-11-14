@@ -1,29 +1,37 @@
 {
-  "schema_version": 1,
-  "last_run_utc": "2026-11-14T04:31:15+00:00",
+  "schema_version": 3,
+  "last_run_utc": "2026-11-14T12:17:41+00:00",
   "run_type": "recoleccion_publica",
   "run_result": "completo",
   "sources": [
     {
       "name": "Jobicy Europa",
+      "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
+      "observed_at": "2026-11-14T12:17:41+00:00",
       "state": "ok",
-      "count": 6,
+      "count": 4,
       "error": null
     },
     {
       "name": "Jobicy worldwide",
+      "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
+      "observed_at": "2026-11-14T12:17:41+00:00",
       "state": "ok",
       "count": 0,
       "error": null
     },
     {
       "name": "HN freelance",
+      "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
+      "observed_at": "2026-11-14T12:17:41+00:00",
       "state": "ok",
       "count": 0,
       "error": null
     },
     {
       "name": "HN contract",
+      "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
+      "observed_at": "2026-11-14T12:17:41+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -31,48 +39,32 @@
   ],
   "opportunities": [
     {
-      "id": "jobicy-153063",
+      "id": "jobicy-162113",
       "agent": "research",
       "source": "Jobicy",
       "category": "empleo_remoto",
-      "title": "Senior Product Designer",
-      "company": "Kinsta",
-      "region": "Hungary",
-      "url": "https://jobicy.com/jobs/153063-senior-product-designer-11",
-      "published": "2026-11-13T03:10:30+00:00",
-      "excerpt": "Kinsta is one of the top providers of managed hosting for WordPress, with a growing club of 120,000+ businesses including startups, universities, and Fortune 500 firms. We're motivated by excellent quality and proud to have received a 97% satisfaction rating from our customers. That's because, to us, each day is a chance to grow. As a team, we cont",
-      "score": 6,
+      "title": "Italian Multimedia Content Reviewer",
+      "company": "Welo Global",
+      "region": "Greece, Romania, Spain",
+      "url": "https://jobicy.com/jobs/162113-italian-multimedia-content-reviewer",
+      "published": "2026-11-14T07:26:40+00:00",
+      "excerpt": "About Welocalize Welocalize, a Welo Global brand, serves localization teams through AI-enabled multilingual content solutions that enable enterprises to operate and scale globally. Welocalize combines AI, automation, and human expertise to support enterprises in more than 300 languages, enabling accurate, culturally aligned, and compliant multiling",
+      "score": 5,
       "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
       "revenue_eur": null,
       "expense_eur": null
     },
     {
-      "id": "jobicy-153062",
+      "id": "jobicy-144491",
       "agent": "research",
       "source": "Jobicy",
       "category": "empleo_remoto",
-      "title": "Staff Platform Engineer - UK",
-      "company": "Ashby",
-      "region": "UK",
-      "url": "https://jobicy.com/jobs/153062-staff-platform-engineer-uk",
-      "published": "2026-11-13T03:10:13+00:00",
-      "excerpt": "We’re looking for a curious, rigorous, problem-hungry platform software engineer (who codes!) to carry the ball as we bring Ashby to the big leagues. Ashby builds software that lets talent teams build an efficient, delightful, respectful hiring process. Similarly, you’re an engineer who wants to build a “paved road” that excellent engineering teams",
-      "score": 4,
-      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
-      "revenue_eur": null,
-      "expense_eur": null
-    },
-    {
-      "id": "jobicy-155165",
-      "agent": "research",
-      "source": "Jobicy",
-      "category": "empleo_remoto",
-      "title": "Account Executive",
-      "company": "StackAdapt",
-      "region": "UK",
-      "url": "https://jobicy.com/jobs/155165-account-executive-18",
-      "published": "2026-11-13T03:15:15+00:00",
-      "excerpt": "StackAdapt is the leading technology company that empowers marketers to reach, engage, and convert audiences with precision. With 465 billion automated optimizations per second, the AI-powered StackAdapt Marketing Platform seamlessly connects brand and performance marketing to drive measurable results across the entire customer journey. The most fo",
+      "title": "CRA II",
+      "company": "ICON plc",
+      "region": "Greece",
+      "url": "https://jobicy.com/jobs/144491-cra-ii",
+      "published": "2026-11-14T02:50:19+00:00",
+      "excerpt": "CRA II - Greece - Remote ICON plc is a world-leading healthcare intelligence and clinical research organization. We’re proud to foster an inclusive environment driving innovation and excellence, and we welcome you to join us on our mission to shape the future of clinical development We are currently seeking a Clinical Research Associate II to join ",
       "score": 4,
       "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
       "revenue_eur": null,
@@ -89,22 +81,6 @@
       "url": "https://jobicy.com/jobs/155173-sales-manager-6",
       "published": "2026-11-13T03:15:20+00:00",
       "excerpt": "StackAdapt is the leading technology company that empowers marketers to reach, engage, and convert audiences with precision. With 465 billion automated optimizations per second, the AI-powered StackAdapt Marketing Platform seamlessly connects brand and performance marketing to drive measurable results across the entire customer journey. The most fo",
-      "score": 4,
-      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
-      "revenue_eur": null,
-      "expense_eur": null
-    },
-    {
-      "id": "jobicy-161679",
-      "agent": "research",
-      "source": "Jobicy",
-      "category": "empleo_remoto",
-      "title": "Tech Lead - Python & AI",
-      "company": "Nearform",
-      "region": "UK",
-      "url": "https://jobicy.com/jobs/161679-tech-lead-python-ai",
-      "published": "2026-11-12T16:52:15+00:00",
-      "excerpt": "This is a full-time, permanent opportunity for candidates based in the UK and authorised to work without sponsorship. This position also requires travel to client sites with travel expenses covered by the company . About Nearform Nearform is an independent team of data & AI experts, engineers, and designers who build intelligent digital solutions a",
       "score": 4,
       "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
       "revenue_eur": null,
@@ -130,26 +106,18 @@
   "missions": [
     {
       "agent": "research",
-      "title": "Senior Product Designer",
-      "task": "Verificar requisitos y ubicación de «Senior Product Designer». Si encaja, preparar candidatura para revisión humana.",
-      "source_id": "jobicy-153063",
-      "url": "https://jobicy.com/jobs/153063-senior-product-designer-11",
+      "title": "Italian Multimedia Content Reviewer",
+      "task": "Verificar requisitos y ubicación de «Italian Multimedia Content Reviewer». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-162113",
+      "url": "https://jobicy.com/jobs/162113-italian-multimedia-content-reviewer",
       "state": "pendiente_de_revision"
     },
     {
       "agent": "research",
-      "title": "Staff Platform Engineer - UK",
-      "task": "Verificar requisitos y ubicación de «Staff Platform Engineer - UK». Si encaja, preparar candidatura para revisión humana.",
-      "source_id": "jobicy-153062",
-      "url": "https://jobicy.com/jobs/153062-staff-platform-engineer-uk",
-      "state": "pendiente_de_revision"
-    },
-    {
-      "agent": "research",
-      "title": "Account Executive",
-      "task": "Verificar requisitos y ubicación de «Account Executive». Si encaja, preparar candidatura para revisión humana.",
-      "source_id": "jobicy-155165",
-      "url": "https://jobicy.com/jobs/155165-account-executive-18",
+      "title": "CRA II",
+      "task": "Verificar requisitos y ubicación de «CRA II». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-144491",
+      "url": "https://jobicy.com/jobs/144491-cra-ii",
       "state": "pendiente_de_revision"
     },
     {
@@ -162,14 +130,6 @@
     },
     {
       "agent": "research",
-      "title": "Tech Lead - Python & AI",
-      "task": "Verificar requisitos y ubicación de «Tech Lead - Python & AI». Si encaja, preparar candidatura para revisión humana.",
-      "source_id": "jobicy-161679",
-      "url": "https://jobicy.com/jobs/161679-tech-lead-python-ai",
-      "state": "pendiente_de_revision"
-    },
-    {
-      "agent": "research",
       "title": "Sr Sales Manager, Mid-Market - UK & Ireland",
       "task": "Verificar requisitos y ubicación de «Sr Sales Manager, Mid-Market - UK & Ireland». Si encaja, preparar candidatura para revisión humana.",
       "source_id": "jobicy-161931",
@@ -178,13 +138,13 @@
     }
   ],
   "ai_brief": {
-    "state": "no_configurado",
-    "text": "Asesor de IA generativa no conectado: no se ha realizado ninguna llamada de pago."
+    "state": "desactivado",
+    "text": "La IA generativa no se ha ejecutado."
   },
   "facts": {
     "confirmed_revenue_eur": null,
     "confirmed_profit_eur": null,
-    "sales_completed": 0,
+    "sales_completed": null,
     "payments_verified": false,
     "notice": "No hay cuentas bancarias conectadas; sin verificación de cobros."
   },
