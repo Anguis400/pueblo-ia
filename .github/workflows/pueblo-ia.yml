@@ -1,0 +1,69 @@
+name: Pueblo IA - Radar y Panel
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Cuatro rondas diarias, cada 6 h; puede haber retrasos en GitHub Actions.
+    - cron: '17 1,7,13,19 * * *'
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'site/data/runs.json'
+      - 'site/data/latest.json'
+      - 'site/index.html'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pueblo-ia-production
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Tests offline
+        run: python -m unittest discover -s tests -v
+      - name: Ejecutar agentes de investigación
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: python -m app.run
+      - name: Guardar actividad pública sin datos privados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/latest.json site/data/runs.json site/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: registrar ejecucion del Pueblo IA"
+            git push
+          fi
+      - name: Preparar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Empaquetar sitio web
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+  deploy:
+    needs: scan
+    if: ${{ success() }}
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar panel
+        id: deployment
+        uses: actions/deploy-pages@v4
