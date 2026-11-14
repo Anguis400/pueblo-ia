@@ -1,6 +1,8 @@
 # Ficha preparada para Payhip — Escandallo Pro
 
-**Estado:** preparada; **NO publicada en Payhip**. Falta crear y configurar el artículo en una sesión autenticada de Payhip.
+**Estado (14/11/2026):** creado en Payhip como producto digital **no listado**. Precio, página y archivo adjunto comprobados. Checkout abierto con opciones PayPal/tarjeta; no se ha realizado ningún pago ni verificado la entrega posterior a una compra.
+
+**Origen y agente:** comprobación directa de la interfaz de Payhip por Codex, bajo autorización del titular. No constituye una venta ni un ingreso.
 
 - **Tipo:** producto digital
 - **Título:** Escandallo Pro — Calculadora de costes para pastelerías y obradores
@@ -8,8 +10,8 @@
 - **Visibilidad inicial:** Unlisted / No listado, hasta probar checkout y entrega
 - **Archivo a entregar:** `escandallo_pro_nuevo.zip` (ZIP preparado; contiene `Escandallo_Pro.html` y `LEEME.txt`)
 - **Tamaño aproximado:** 6.9 kB
-- **Tienda:** Payhip, cuenta personal conectada por el titular (conexión pendiente de comprobación desde Pueblo IA)
-- **Enlace de compra:** PENDIENTE, no inventar
+- **Tienda:** Payhip; nombre visible actual: PlantillaVivaShop. PayPal figura como Connected; moneda EUR. Revisar la coherencia de marca con Pueblo IA antes del lanzamiento.
+- **Enlace de compra:** https://payhip.com/b/4Wj7Q (página real comprobada; producto 4Wj7Q)
 - **Coste autorizado para anuncios:** 0 EUR hasta verificar checkout/entrega. Presupuesto experimental global 100 EUR.
 
 ## Resumen de producto
@@ -45,3 +47,23 @@ Escandallo Pro es una herramienta HTML local pensada para repostería, pequeños
 5. Solo entonces vincular la compra desde Pueblo IA y iniciar captación orgánica.
 
 **No introducir contraseñas, tokens ni información bancaria en GitHub.**
+
+## Integración preparada para Pueblo IA
+
+Destino confirmado: `https://payhip.com/b/4Wj7Q`. Mantener sin activar el botón público de compra hasta verificar entrega. Esta actualización documental no modifica la web ni su generador.
+
+Tras esa verificación, la ficha de Escandallo Pro puede usar este enlace HTML:
+
+```html
+<a href="https://payhip.com/b/4Wj7Q">Comprar Escandallo Pro — 19 €</a>
+```
+
+No requiere SDK, claves ni llamadas a una API. Confirmar el tratamiento de impuestos antes de anunciar un precio final al cliente.
+
+### Verificado y pendiente
+
+- Verificado: título, descripción comercial, precio de 19 EUR, visibilidad Unlisted y ZIP adjunto de 6.908 bytes.
+- ZIP local: CRC correcto; contiene `Escandallo_Pro.html` y `LEEME.txt`; SHA-256 `93b4205a2bd2f0e449985e915226fbe15d026a72bf18a39ad8edec7ec6720508`.
+- Verificado: PayPal conectado y formulario de checkout accesible. Esto no prueba un cobro ni una entrega.
+- Pendiente: prueba de descarga después del checkout, impuestos y condiciones, portada y coherencia del nombre de tienda. Mantener no listado.
+- Gasto efectuado en esta preparación: 0 EUR. No se contrataron servicios ni se activaron anuncios.
