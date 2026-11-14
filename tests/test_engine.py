@@ -2,7 +2,7 @@ import unittest
 import json
 import tempfile
 import pathlib
-from app.engine import collect, get_hn, get_jobicy, plain, score, unique_ranked, safe_url
+from app.engine import collect, get_hn, get_jobicy, plain, score, unique_ranked, safe_url, buyer_intent
 from app.render import render
 from unittest.mock import patch
 
@@ -14,6 +14,25 @@ class EngineTests(unittest.TestCase):
                      'jobGeo':'Europe','jobDescription':'Help us automate spreadsheets and dashboards.',
                      'url':'https://jobicy.com/jobs/test-placeholder', 'pubDate':'2026-11-14T12:00:00Z'}]}
         return {'hits':[]}
+
+    def test_buyer_intent_excludes_profiles(self):
+        self.assertFalse(buyer_intent('Location: Pakistan Remote: Yes Willing to relocate: No Technologies: Python, Excel. I am a freelancer.'))
+        self.assertFalse(buyer_intent('SEEKING WORK - I am looking for freelance work using Python and spreadsheets.'))
+        self.assertFalse(buyer_intent('Available for hire. Python Excel freelance contractor.'))
+        self.assertTrue(buyer_intent('We are looking to hire a Python freelancer to build an Excel dashboard. Budget: $300.'))
+        self.assertTrue(buyer_intent('I need help with Power BI dashboard automation. Can someone build it?'))
+
+    def test_hn_returns_buyer_not_seller(self):
+        import datetime as dt
+        ts=dt.datetime.now(dt.timezone.utc).isoformat()
+        samples=[
+            {'objectID': '32111', 'created_at': ts, 'comment_text': 'Location: Pakistan Remote: Yes Willing to relocate: No Technologies: Python Excel freelance contractor looking for work'},
+            {'objectID': '32112', 'created_at': ts, 'comment_text': 'We are looking to hire a Python contractor to automate Excel spreadsheets. Budget $300'},
+            {'objectID': '32113', 'created_at': ts, 'comment_text': 'I am looking for freelance projects using Excel and Python'},
+        ]
+        result=get_hn(fetch=lambda url: {'hits': samples})
+        self.assertEqual([row['id'] for row in result], ['hn-32112'])
+        self.assertEqual(result[0]['revenue_eur'], None)
 
     def test_clean_html(self):
         self.assertEqual(plain('<p>Oferta <b>concreta</b></p>'), 'Oferta concreta')

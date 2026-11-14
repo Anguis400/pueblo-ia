@@ -82,6 +82,27 @@ def get_jobicy(geo="europe", fetch=fetch_json):
         })
     return items
 
+# A keyword such as "freelance" does NOT prove that someone wants to buy work.
+# The radar intentionally favors precision over recall; missing a lead is safer
+# than presenting self-promotion as demand from a potential paying customer.
+SELLER_PROFILE = re.compile(
+    r"(?:\bseeking work\b|\bavailable for hire\b|\bopen to work\b|"
+    r"\blooking for (?:work|a job|jobs|projects|new opportunities|freelance work|freelance projects|contract work)\b|"
+    r"\bwilling to relocate\s*:|\bresume\s*/\s*cv\s*:|"
+    r"\blocation\s*:.*\btechnologies\s*:)", re.I)
+BUYER_SIGNALS = (
+    re.compile(r"\b(?:we|our (?:team|company|startup)|i)\s+(?:are\s+|am\s+|currently\s+|would\s+like\s+to\s+)?(?:looking\s+to\s+hire|hiring|looking\s+for|need|require|seeking)\b", re.I),
+    re.compile(r"\b(?:looking\s+for|seeking|need(?:ing)?|hiring|wanted|required)\s+(?:(?:an?|some)\s+)?(?:freelancer|contractor|developer|engineer|designer|consultant|data analyst|automation expert|python expert)\b", re.I),
+    re.compile(r"\b(?:need\s+help\s+with|looking\s+for\s+help\s+with|can\s+someone\s+(?:build|create|develop|help)|paying\s+someone\s+to)\b", re.I),
+)
+
+def buyer_intent(raw):
+    """Conservative triage only; not proof of client, budget or deal."""
+    body = plain(raw)[:6000]
+    if SELLER_PROFILE.search(body):
+        return False
+    return any(pattern.search(body) for pattern in BUYER_SIGNALS)
+
 def get_hn(query='freelance', fetch=fetch_json):
     base = "https://hn.algolia.com/api/v1/search_by_date?"
     data = fetch(base + urllib.parse.urlencode({"query": query, "tags":"comment", "hitsPerPage": 100}))
@@ -97,8 +118,8 @@ def get_hn(query='freelance', fetch=fetch_json):
             if published < earliest: continue
         except (ValueError, TypeError): continue
         body = plain(hit.get('comment_text') or '')
-        lc = body.lower()
-        if not any(word in lc for word in ('looking for','hiring','need a','need help','seeking','freelance','contractor','contract work')):
+        # Exclude profiles from people selling services. Demand must be explicit.
+        if not buyer_intent(body):
             continue
         suitability = score(body)
         if suitability < 5: continue
@@ -107,11 +128,11 @@ def get_hn(query='freelance', fetch=fetch_json):
         items.append({
             'id': 'hn-' + object_id, 'agent': 'sales', 'source': 'Hacker News / Algolia',
             'category': 'posible_encargo_no_verificado',
-            'title': 'Mención pública: ' + plain(body[:85]),
+            'title': 'Petición pública sin verificar: ' + plain(body[:85]),
             'company': '', 'region': 'No comprobada',
             'url': 'https://news.ycombinator.com/item?id=' + object_id,
             'published': raw_date, 'excerpt': body[:320], 'score': suitability,
-            'status': 'Posible encargo: requiere lectura y verificación manual',
+            'status': 'Posible comprador: verificar necesidad, presupuesto y vigencia antes de contactar',
             'revenue_eur': None, 'expense_eur': None,
         })
     return items

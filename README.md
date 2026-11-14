@@ -76,3 +76,12 @@ Publica únicamente datos que puedan aparecer en una web pública: ofertas vista
 `app/engine.py`: consultas y clasificación. `app/run.py`: orchestration. `app/render.py`: dashboard a partir de datos. `web/template.html`: villa visual. `site/data/latest.json`: foto de última ronda. `site/data/runs.json`: historial de rondas. `site/presupuestador.html`: primera demo comercial. `.github/workflows/pueblo-ia.yml`: trabajo programado + despliegue.
 
 **Política**: no gastar, comprar, contratar, realizar trading real, publicar productos ni enviar mensajes a terceros sin permiso explícito y un flujo de aprobación.
+
+## Mejora v1.1: evitar falsos clientes (14-11-2026)
+
+- El radar de Hacker News solo considera comentarios con expresiones explícitas de demanda (por ejemplo, «we are looking to hire» o «I need help with»).
+- Descarta perfiles típicos de profesionales que ofrecen servicios («Location: ... Technologies: ...», «seeking work», «available for hire»).
+- Mantiene una etiqueta prudente: **posible comprador sin verificar**, nunca «cliente conseguido».
+- Puede reducir drásticamente los hallazgos; **0 oportunidades mejores que 20 falsos clientes**.
+- No se han conectado modelos generativos ni automatizado mensajes, compras o cobros.
+- Tras copiar este parche al repositorio y hacer commit/push, GitHub Actions regenera automáticamente `site/index.html` y los datos públicos en su siguiente ejecución. No copies ni sobrescribas `site/data`.
