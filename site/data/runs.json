@@ -30,5 +30,37 @@
     ],
     "lead_count": 24,
     "ai_state": "no_configurado"
+  },
+  {
+    "time_utc": "2026-11-14T04:19:45+00:00",
+    "result": "completo",
+    "sources": [
+      {
+        "name": "Jobicy Europa",
+        "state": "ok",
+        "count": 6,
+        "error": null
+      },
+      {
+        "name": "Jobicy worldwide",
+        "state": "ok",
+        "count": 0,
+        "error": null
+      },
+      {
+        "name": "HN freelance",
+        "state": "ok",
+        "count": 44,
+        "error": null
+      },
+      {
+        "name": "HN contract",
+        "state": "ok",
+        "count": 2,
+        "error": null
+      }
+    ],
+    "lead_count": 24,
+    "ai_state": "no_configurado"
   }
 ]
