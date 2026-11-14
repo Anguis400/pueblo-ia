@@ -20,7 +20,8 @@ concurrency:
 
 jobs:
   scan:
-    runs-on: ubuntu-latest
+    # Playwright 1.58 supports this LTS; avoid ubuntu-latest drifting to an unsupported OS.
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - name: Checkout
