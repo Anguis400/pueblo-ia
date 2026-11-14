@@ -77,7 +77,7 @@ class EngineTests(unittest.TestCase):
             try:
                 r.ROOT=root
                 r.render({'untrusted':'</script><img src=x onerror=alert(1)>'})
-                body=(root/'site'/'index.html').read_text(encoding='utf-8')
+                body=(root/'site'/'radar'/'index.html').read_text(encoding='utf-8')
                 self.assertNotIn('</script><img',body)
                 self.assertIn('\\u003c',body)
             finally: r.ROOT=original
