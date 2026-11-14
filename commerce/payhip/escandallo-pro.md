@@ -1,6 +1,6 @@
 # Ficha preparada para Payhip — Escandallo Pro
 
-**Estado (14/11/2026):** creado en Payhip como producto digital **no listado**. Precio, página y archivo adjunto comprobados. Tienda independiente Escandallo Pro creada; PayPal todavía no conectado en esta cuenta. No se ha realizado ningún pago ni verificado checkout/entrega en esta nueva tienda.
+**Estado (14/11/2026):** creado en Payhip como producto digital **no listado**. Precio, página y archivo adjunto comprobados. Tienda independiente Escandallo Pro creada; PayPal figura como Connected en esta cuenta. Checkout abierto y opciones PayPal/tarjeta visibles. No se ha realizado ningún pago ni verificado la entrega posterior a una compra.
 
 **Origen y agente:** comprobación directa de la interfaz de Payhip por Codex, bajo autorización del titular. No constituye una venta ni un ingreso.
 
@@ -10,7 +10,7 @@
 - **Visibilidad inicial:** Unlisted / No listado, hasta probar checkout y entrega
 - **Archivo a entregar:** `escandallo_pro_nuevo.zip` (ZIP preparado; contiene `Escandallo_Pro.html` y `LEEME.txt`)
 - **Tamaño aproximado:** 6.9 kB
-- **Tienda:** Payhip; marca comercial independiente Escandallo Pro. Moneda EUR, idioma configurado Spanish y zona horaria Madrid. PayPal pendiente de conexión. Pueblo IA es el proyecto gestor, no la marca de la tienda.
+- **Tienda:** Payhip; marca comercial independiente Escandallo Pro. Moneda EUR, idioma configurado Spanish y zona horaria Madrid. PayPal conectado según la interfaz de Payhip. Pueblo IA es el proyecto gestor, no la marca de la tienda.
 - **Enlace de compra:** https://payhip.com/b/IiVct (página real comprobada; producto IiVct)
 - **Coste autorizado para anuncios:** 0 EUR hasta verificar checkout/entrega. Presupuesto experimental global 100 EUR.
 
@@ -64,10 +64,10 @@ No requiere SDK, claves ni llamadas a una API. Confirmar el tratamiento de impue
 
 - Verificado: título, descripción comercial, precio de 19 EUR, visibilidad Unlisted y ZIP adjunto de 6.908 bytes.
 - ZIP local: CRC correcto; contiene `Escandallo_Pro.html` y `LEEME.txt`; SHA-256 `93b4205a2bd2f0e449985e915226fbe15d026a72bf18a39ad8edec7ec6720508`.
-- Pendiente: conectar PayPal en la cuenta nueva. La página indica que el vendedor todavía no puede recibir pagos. La conexión comprobada anteriormente pertenecía únicamente a PlantillaVivaShop.
+- Verificado: PayPal figura como Connected en la cuenta independiente, botón de compra habilitado y checkout en español con opciones PayPal/tarjeta. Payhip recuerda que el correo de PayPal debe estar confirmado; no se ha comprobado ese estado en PayPal. No se ha efectuado ningún cobro.
 - Pendiente: prueba de descarga después del checkout, impuestos y condiciones, portada. Mantener no listado.
 - Gasto efectuado en esta preparación: 0 EUR. No se contrataron servicios ni se activaron anuncios.
 
 ### Separación de marcas
 
-La ficha anterior `4Wj7Q` permanece no listada en PlantillaVivaShop; no usarla para la integración de Escandallo Pro. No se ha eliminado ni archivado. El enlace definitivo de esta preparación es `https://payhip.com/b/IiVct`, en la cuenta independiente creada por el titular. El titular debe completar la conexión de su medio de cobro.
+La ficha anterior `4Wj7Q` permanece no listada en PlantillaVivaShop; no usarla para la integración de Escandallo Pro. No se ha eliminado ni archivado. El enlace definitivo de esta preparación es `https://payhip.com/b/IiVct`, en la cuenta independiente creada por el titular. El medio de cobro figura conectado; la entrega posterior al checkout sigue pendiente.
