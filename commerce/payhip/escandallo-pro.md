@@ -1,6 +1,6 @@
 # Ficha preparada para Payhip — Escandallo Pro
 
-**Estado (14/11/2026):** creado en Payhip como producto digital **no listado**. Precio, página y archivo adjunto comprobados. Checkout abierto con opciones PayPal/tarjeta; no se ha realizado ningún pago ni verificado la entrega posterior a una compra.
+**Estado (14/11/2026):** creado en Payhip como producto digital **no listado**. Precio, página y archivo adjunto comprobados. Tienda independiente Escandallo Pro creada; PayPal todavía no conectado en esta cuenta. No se ha realizado ningún pago ni verificado checkout/entrega en esta nueva tienda.
 
 **Origen y agente:** comprobación directa de la interfaz de Payhip por Codex, bajo autorización del titular. No constituye una venta ni un ingreso.
 
@@ -10,8 +10,8 @@
 - **Visibilidad inicial:** Unlisted / No listado, hasta probar checkout y entrega
 - **Archivo a entregar:** `escandallo_pro_nuevo.zip` (ZIP preparado; contiene `Escandallo_Pro.html` y `LEEME.txt`)
 - **Tamaño aproximado:** 6.9 kB
-- **Tienda:** Payhip; nombre visible actual: PlantillaVivaShop. PayPal figura como Connected; moneda EUR. Revisar la coherencia de marca con Pueblo IA antes del lanzamiento.
-- **Enlace de compra:** https://payhip.com/b/4Wj7Q (página real comprobada; producto 4Wj7Q)
+- **Tienda:** Payhip; marca comercial independiente Escandallo Pro. Moneda EUR, idioma configurado Spanish y zona horaria Madrid. PayPal pendiente de conexión. Pueblo IA es el proyecto gestor, no la marca de la tienda.
+- **Enlace de compra:** https://payhip.com/b/IiVct (página real comprobada; producto IiVct)
 - **Coste autorizado para anuncios:** 0 EUR hasta verificar checkout/entrega. Presupuesto experimental global 100 EUR.
 
 ## Resumen de producto
@@ -44,18 +44,18 @@ Escandallo Pro es una herramienta HTML local pensada para repostería, pequeños
 2. Subir el ZIP y verificar que se puede descargar correctamente después del checkout.
 3. Revisar IVA/impuestos y datos legales de vendedor, política de devoluciones y condiciones de descarga.
 4. Comprobar el enlace público exacto y el flujo de compra de prueba; no crear ventas ficticias.
-5. Solo entonces vincular la compra desde Pueblo IA y iniciar captación orgánica.
+5. Solo entonces activar enlaces comerciales e iniciar captación orgánica. Pueblo IA gestiona proyectos; cada negocio conserva su identidad.
 
 **No introducir contraseñas, tokens ni información bancaria en GitHub.**
 
 ## Integración preparada para Pueblo IA
 
-Destino confirmado: `https://payhip.com/b/4Wj7Q`. Mantener sin activar el botón público de compra hasta verificar entrega. Esta actualización documental no modifica la web ni su generador.
+Destino confirmado: `https://payhip.com/b/IiVct`. Mantener sin activar el botón público de compra hasta verificar entrega. Esta actualización documental no modifica la web ni su generador.
 
 Tras esa verificación, la ficha de Escandallo Pro puede usar este enlace HTML:
 
 ```html
-<a href="https://payhip.com/b/4Wj7Q">Comprar Escandallo Pro — 19 €</a>
+<a href="https://payhip.com/b/IiVct">Comprar Escandallo Pro — 19 €</a>
 ```
 
 No requiere SDK, claves ni llamadas a una API. Confirmar el tratamiento de impuestos antes de anunciar un precio final al cliente.
@@ -64,6 +64,10 @@ No requiere SDK, claves ni llamadas a una API. Confirmar el tratamiento de impue
 
 - Verificado: título, descripción comercial, precio de 19 EUR, visibilidad Unlisted y ZIP adjunto de 6.908 bytes.
 - ZIP local: CRC correcto; contiene `Escandallo_Pro.html` y `LEEME.txt`; SHA-256 `93b4205a2bd2f0e449985e915226fbe15d026a72bf18a39ad8edec7ec6720508`.
-- Verificado: PayPal conectado y formulario de checkout accesible. Esto no prueba un cobro ni una entrega.
-- Pendiente: prueba de descarga después del checkout, impuestos y condiciones, portada y coherencia del nombre de tienda. Mantener no listado.
+- Pendiente: conectar PayPal en la cuenta nueva. La página indica que el vendedor todavía no puede recibir pagos. La conexión comprobada anteriormente pertenecía únicamente a PlantillaVivaShop.
+- Pendiente: prueba de descarga después del checkout, impuestos y condiciones, portada. Mantener no listado.
 - Gasto efectuado en esta preparación: 0 EUR. No se contrataron servicios ni se activaron anuncios.
+
+### Separación de marcas
+
+La ficha anterior `4Wj7Q` permanece no listada en PlantillaVivaShop; no usarla para la integración de Escandallo Pro. No se ha eliminado ni archivado. El enlace definitivo de esta preparación es `https://payhip.com/b/IiVct`, en la cuenta independiente creada por el titular. El titular debe completar la conexión de su medio de cobro.
