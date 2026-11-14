@@ -1,0 +1,11 @@
+{
+  "name": "pueblo-ia-browser-checks",
+  "private": true,
+  "description": "Browser checks only; the published website has no npm runtime dependencies.",
+  "scripts": {
+    "test:browser": "node tests/browser_v4.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  }
+}

@@ -1,11 +1,11 @@
 """21 deterministic roles, traceable artifacts, no external side effects."""
 import collections
 import hashlib
-import html
 import json
 import pathlib
 import re
-from .products import STYLE, build_products
+from .products import build_products
+from .presentation import render_company
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DEPARTMENTS = {
@@ -29,11 +29,6 @@ def policy():
 def dump(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-
-def page(site, path, title, body):
-    target = site / path / 'index.html'
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(f'<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Pueblo IA: actividad, herramientas y evidencias públicas"><title>{title} · Pueblo IA v3</title><style>{STYLE}</style><nav><a href="../">Radar</a> · <a href="../empresa/">Pueblo y agentes</a> · <a href="../marketing/">Marketing</a> · <a href="../tienda/">Demos</a></nav><h1>{title}</h1>{body}</html>', encoding='utf-8')
 
 def build_company(snapshot, site=None):
     site = site or ROOT / 'site'
@@ -93,11 +88,5 @@ def build_company(snapshot, site=None):
     report = {'schema_version': 3, 'run_id': run_id, 'time_utc': now, 'execution': '21 roles deterministas secuenciales, sin LLM ni trabajo paralelo simulado', 'agents': agents, 'finances': finances, 'catalog': catalog}
     dump(site / base / 'report.json', report)
     dump(site / 'data/company.json', report)
-    e = lambda x: html.escape(str(x), quote=True)
-    def cards(items):
-        return ''.join(f'<details id="{e(a["agent"])}"><summary>🧑‍💼 {e(a["name"])} · {e(a["state"])}</summary><p>{e(a["mission"])}</p><small>{e(now)} · {e(a["origin"])}</small><pre>{e(json.dumps(a["result"], ensure_ascii=False, indent=2))}</pre><a href="../{e(a["evidence"])}">Evidencia JSON de esta ronda</a></details>' for a in items)
-    town = ''.join(f'<article><h2>{e(department)}</h2>{cards([a for a in agents if a["department"] == department])}</article>' for department in DEPARTMENTS)
-    page(site, 'empresa', '🏘️ Pueblo IA v3 · Empresa', f'<p>{e(report["execution"])}. Fecha: {e(now)}. Abre cada agente para consultar su resultado.</p><p>Ingresos, gastos y beneficios verificados: desconocidos. Techo agregado: 100 EUR; reinversión propuesta: 30% del beneficio neto verificado. Automatización de esta ronda: 0 EUR gastados.</p><p><a href="../{base}/report.json">Informe inmutable de la ronda</a> · <a href="../data/runs.json">Historial del radar</a></p><div class="grid">{town}</div>')
-    page(site, 'marketing', 'Marketing y adquisición · Borradores', '<p>Preparación para revisión. Ningún contenido comercial se ha enviado ni se ha activado publicidad.</p>' + cards([a for a in agents if a['department'] in ('Marketing y publicidad', 'Ventas')]))
-    page(site, 'tienda', 'Herramientas digitales · Demos', '<p>Cuatro herramientas funcionales offline. Sin compra, checkout ni ingresos demostrados. No implica validación del producto Escandallo Pro de Shopify.</p><div class="grid">' + ''.join(f'<article><h2>{e(p["name"])}</h2><p>{e(p["mission"])}</p><a href="./{e(p["id"])}.html">Abrir demo</a> · <a download href="./{e(p["id"])}.zip">Descargar ZIP</a></article>' for p in catalog) + '</div>')
+    render_company(report, site)
     return report

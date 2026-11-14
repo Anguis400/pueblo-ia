@@ -10,7 +10,9 @@ def render(snapshot):
         raise ValueError('Template snapshot marker missing')
     page = template.replace('<!-- VILLAGE_SNAPSHOT -->',
                             '<script type="application/json" id="village-snapshot">' + json_text + '</script>')
-    (ROOT / 'site' / 'index.html').write_text(page, encoding='utf-8')
+    target = ROOT / "site/radar/index.html"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(page, encoding="utf-8")
 
 if __name__ == '__main__':
     root=ROOT/'site'/'data'/'latest.json'
