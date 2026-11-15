@@ -1,6 +1,6 @@
 # Ficha preparada para Payhip — Escandallo Pro
 
-**Estado (15/11/2026):** creado en Payhip como producto digital **no listado**. Precio, página y archivo adjunto comprobados. Tienda independiente Escandallo Pro creada; PayPal figura como Connected en esta cuenta. Checkout abierto y opciones PayPal/tarjeta visibles. No se ha realizado ningún pago ni verificado la entrega posterior a una compra.
+**Estado (15/11/2026):** creado en Payhip como producto digital **no listado**. Precio, página y archivo adjunto comprobados. Tienda independiente Escandallo Pro creada; PayPal figura como Connected en esta cuenta. Checkout abierto y opciones PayPal/tarjeta visibles. Prueba gratuita completada el 15/11/2026: pedido de 0 EUR confirmado y ZIP descargado y verificado. No se ha probado un cobro real.
 
 **Origen y agente:** comprobación directa de la interfaz de Payhip por Codex, bajo autorización del titular. No constituye una venta ni un ingreso.
 
@@ -50,9 +50,9 @@ Escandallo Pro es una herramienta HTML local pensada para repostería, pequeños
 
 ## Integración preparada para Pueblo IA
 
-Destino confirmado: `https://payhip.com/b/IiVct`. Mantener sin activar el botón público de compra hasta verificar entrega. Esta actualización documental no modifica la web ni su generador.
+Destino confirmado: `https://payhip.com/b/IiVct`. Entrega verificada. Mantener sin activar el botón público de compra hasta completar los datos legales y condiciones de venta. Esta actualización documental no modifica la web ni su generador.
 
-Tras esa verificación, la ficha de Escandallo Pro puede usar este enlace HTML:
+Tras completar esos requisitos, la ficha de Escandallo Pro puede usar este enlace HTML:
 
 ```html
 <a href="https://payhip.com/b/IiVct">Comprar Escandallo Pro — 19 €</a>
@@ -65,12 +65,12 @@ No requiere SDK, claves ni llamadas a una API. Confirmar el tratamiento de impue
 - Verificado: título, descripción comercial, precio de 19 EUR, visibilidad Unlisted y ZIP adjunto de 6.900 bytes.
 - ZIP local: CRC correcto; contiene `Escandallo_Pro.html` y `LEEME.txt`; SHA-256 `65f110b2d968667b054d907392f1650dbb91243d618c6d6f121aab89b58f2458`.
 - Verificado: PayPal figura como Connected en la cuenta independiente, botón de compra habilitado y checkout en español con opciones PayPal/tarjeta. Payhip recuerda que el correo de PayPal debe estar confirmado; no se ha comprobado ese estado en PayPal. No se ha efectuado ningún cobro.
-- Pendiente: finalizar la prueba gratuita de entrega, completar datos del vendedor y condiciones de venta, capturas reales y archivar la ficha anterior. Mantener no listado.
+- Pendiente: completar datos del vendedor y condiciones de venta, capturas reales y archivar la ficha anterior. Mantener no listado.
 - Gasto efectuado en esta preparación: 0 EUR. No se contrataron servicios ni se activaron anuncios.
 
 ### Separación de marcas
 
-La ficha anterior `4Wj7Q` permanece no listada en PlantillaVivaShop; no usarla para la integración de Escandallo Pro. No se ha eliminado ni archivado. El enlace definitivo de esta preparación es `https://payhip.com/b/IiVct`, en la cuenta independiente creada por el titular. El medio de cobro figura conectado; la entrega posterior al checkout sigue pendiente.
+La ficha anterior `4Wj7Q` permanece no listada en PlantillaVivaShop; no usarla para la integración de Escandallo Pro. No se ha eliminado ni archivado. El enlace definitivo de esta preparación es `https://payhip.com/b/IiVct`, en la cuenta independiente creada por el titular. El medio de cobro figura conectado; la entrega posterior al checkout ha sido verificada mediante un pedido gratuito.
 
 ## Preparación de lanzamiento — 15/11/2026
 
@@ -79,6 +79,6 @@ La ficha anterior `4Wj7Q` permanece no listada en PlantillaVivaShop; no usarla p
 - Comprobaciones de código ejecutadas: cálculo de referencia (coste lote 15 EUR, coste unidad 3 EUR, precio neto 6 EUR y bruto 7,26 EUR), límites de unidades/margen y lista de ingredientes vacía. No equivale a prueba visual de navegador.
 - Impuestos: gestión automática de IVA digital UE y Reino Unido activada, impuestos incluidos en precio; configuración guardada. No acredita situación fiscal del vendedor.
 - Recibo configurado en español con instrucciones para descomprimir, abrir HTML y guardar JSON.
-- Prueba gratuita: cupón del 100 % limitado a un uso y a este producto. El 14/11 el checkout mostró total 0 EUR, pero apareció un hCaptcha antes de confirmar la entrega. El 15/11 la lista de productos aún mostraba 0 pedidos; no registrar esta prueba como venta ni ingreso. Checkout recuperado con total 0 EUR y descarga aún pendiente.
+- Prueba gratuita completada el 15/11/2026: checkout de 0 EUR con cupón del 100 % limitado a un uso; página de descarga confirmada y archivo descargado. Payhip registra 1 pedido y 0,00 EUR de ventas. El ZIP recibido tiene 6.900 bytes, CRC correcto, los dos archivos esperados y SHA-256 idéntico al ZIP subido. Es un pedido de prueba, no una venta ni un ingreso. La página indica que envió el enlace por correo; no se ha comprobado la recepción en el buzón.
 - Capturas reales de la aplicación pendientes: la apertura local no estaba disponible en el navegador compartido; no se sustituyen por pantallas inventadas.
 - Antes de lanzamiento faltan los datos legales y de contacto que confirme el titular; no publicar datos personales inferidos ni condiciones con campos inventados.
