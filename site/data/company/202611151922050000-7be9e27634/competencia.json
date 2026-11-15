@@ -1,0 +1,16 @@
+{
+  "agent": "competencia",
+  "department": "Inteligencia de mercado",
+  "mission": "Preparar comparación verificable",
+  "time_utc": "2026-11-15T19:22:05+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "pendiente",
+  "result": {
+    "state": "pendiente",
+    "reason": "No se han consultado fuentes de competencia de productos; no inventar comparativas",
+    "plan": [
+      "Comparar precio y licencia en página original",
+      "Registrar URL, fecha y límites de cada alternativa"
+    ]
+  }
+}

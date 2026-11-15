@@ -1,0 +1,264 @@
+{
+  "schema_version": 3,
+  "last_run_utc": "2026-11-15T19:22:05+00:00",
+  "run_type": "recoleccion_publica",
+  "run_result": "completo",
+  "sources": [
+    {
+      "name": "Jobicy Europa",
+      "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
+      "observed_at": "2026-11-15T19:22:05+00:00",
+      "state": "ok",
+      "count": 10,
+      "error": null
+    },
+    {
+      "name": "Jobicy worldwide",
+      "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
+      "observed_at": "2026-11-15T19:22:05+00:00",
+      "state": "ok",
+      "count": 0,
+      "error": null
+    },
+    {
+      "name": "HN freelance",
+      "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
+      "observed_at": "2026-11-15T19:22:05+00:00",
+      "state": "ok",
+      "count": 0,
+      "error": null
+    },
+    {
+      "name": "HN contract",
+      "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
+      "observed_at": "2026-11-15T19:22:05+00:00",
+      "state": "ok",
+      "count": 0,
+      "error": null
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "jobicy-162113",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Italian Multimedia Content Reviewer",
+      "company": "Welo Global",
+      "region": "Greece, Romania, Spain",
+      "url": "https://jobicy.com/jobs/162113-italian-multimedia-content-reviewer",
+      "published": "2026-11-14T07:26:40+00:00",
+      "excerpt": "About Welocalize Welocalize, a Welo Global brand, serves localization teams through AI-enabled multilingual content solutions that enable enterprises to operate and scale globally. Welocalize combines AI, automation, and human expertise to support enterprises in more than 300 languages, enabling accurate, culturally aligned, and compliant multiling",
+      "score": 5,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-162218",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Accountant (Part-time)",
+      "company": "Aghanim",
+      "region": "Serbia",
+      "url": "https://jobicy.com/jobs/162218-accountant-part-time-2",
+      "published": "2026-11-14T14:32:44+00:00",
+      "excerpt": "Aghanim is an integrated commerce, liveops automation, community engagement, and payments platform for video games. Mobile games have traditionally depended on app stores for distribution, payments, and player relationships. We believe there is a better way. Aghanim helps game studios build direct relationships with players, sell directly, and buil",
+      "score": 5,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-162318",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Senior Client Platform Engineer, Endpoint Platform & Automation",
+      "company": "Dropbox",
+      "region": "Ireland",
+      "url": "https://jobicy.com/jobs/162318-senior-client-platform-engineer-endpoint-platform-automation",
+      "published": "2026-11-15T10:20:21+00:00",
+      "excerpt": "Role Description As a Senior Client Platform Engineer on CorpFleet Engineering, you will lead the migration to FleetDM and build the shared platform capabilities that support dependable endpoint operations. You will combine hands-on engineering with technical planning, partnering with Windows, macOS, and Linux engineers to introduce changes safely ",
+      "score": 5,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-155375",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Solutions Architect f/m/d",
+      "company": "Apaleo",
+      "region": "France",
+      "url": "https://jobicy.com/jobs/155375-solutions-architect-f-m-d",
+      "published": "2026-11-15T03:45:08+00:00",
+      "excerpt": "Apaleo is the world’s most open, API-first property management platform powering the next generation of hospitality operations. Its modular, AI-powered infrastructure enables hoteliers to customise their tech stack, automate routine work, and deliver seamless, personalised guest experiences, powered by best-in-class apps and autonomous AI agents th",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-162198",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "KYB Operations Lead, UK",
+      "company": "Ramp",
+      "region": "UK",
+      "url": "https://jobicy.com/jobs/162198-kyb-operations-lead-uk",
+      "published": "2026-11-14T12:55:18+00:00",
+      "excerpt": "About Ramp Ramp is building the smart infrastructure for finance teams, embedded in the transaction flow of every dollar a business spends. We automate how over $275B in annualized spend flows in and out of 85,000+ companies: authorizing payments, flagging risk, categorizing spend, and closing books. The problems are high-stakes, data-dense, and un",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-162286",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Manager, Monitoring & Site Management (CRA Team)",
+      "company": "Alimentiv",
+      "region": "Germany, Hungary, Ireland, Poland, Romania, UK",
+      "url": "https://jobicy.com/jobs/162286-manager-monitoring-site-management-cra-team",
+      "published": "2026-11-15T10:15:34+00:00",
+      "excerpt": "Alimentiv is a global CRO with a singular focus: advancing therapies for patients with gastrointestinal diseases. GI is our WHY and for more than 30 years that purpose has driven our scientific rigour, operational excellence, and deep therapeutic expertise, including supporting more than 70% of IBD compounds in development. We operate as a private,",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-162290",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Engineering Manager",
+      "company": "Vonage",
+      "region": "Poland",
+      "url": "https://jobicy.com/jobs/162290-engineering-manager-16",
+      "published": "2026-11-15T10:16:15+00:00",
+      "excerpt": "Join Vonage and help us innovate cloud communications for businesses worldwide! Vonage Engineering Mission: We embody the notion of what's next now! We envision, develop and manage technology to connect the world. Our team brings excellence, passion, creativity and curiosity to the job. We look at the business environment and technologies in new an",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-162304",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Sr. Clinical Research Associate (Hungary)",
+      "company": "Alimentiv",
+      "region": "Hungary",
+      "url": "https://jobicy.com/jobs/162304-sr-clinical-research-associate-hungary",
+      "published": "2026-11-15T10:17:28+00:00",
+      "excerpt": "Alimentiv is a global CRO with a singular focus: advancing therapies for patients with gastrointestinal diseases. GI is our WHY and for more than 30 years that purpose has driven our scientific rigour, operational excellence, and deep therapeutic expertise, including supporting more than 70% of IBD compounds in development. We operate as a private,",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-162316",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Account Director, Enterprise",
+      "company": "StackAdapt",
+      "region": "UK",
+      "url": "https://jobicy.com/jobs/162316-account-director-enterprise-3",
+      "published": "2026-11-15T10:20:18+00:00",
+      "excerpt": "StackAdapt is the leading technology company that empowers marketers to reach, engage, and convert audiences with precision. With 465 billion automated optimizations per second, the AI-powered StackAdapt Marketing Platform seamlessly connects brand and performance marketing to drive measurable results across the entire customer journey. The most fo",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-162412",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Senior Data Analyst, Marketing Measurement",
+      "company": "Airalo",
+      "region": "Germany, Spain, UK",
+      "url": "https://jobicy.com/jobs/162412-senior-data-analyst-marketing-measurement",
+      "published": "2026-11-15T12:06:28+00:00",
+      "excerpt": "Help Us Build The Future of Travel At Airalo , we're making it easier for people to stay connected wherever they travel. As the world's first eSIM store, we help millions of travelers access affordable mobile data in 200+ countries and regions around the world. Today, we're a team of 400+ people across 60+ countries, building a product used by trav",
+      "score": 3,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    }
+  ],
+  "missions": [
+    {
+      "agent": "research",
+      "title": "Italian Multimedia Content Reviewer",
+      "task": "Verificar requisitos y ubicación de «Italian Multimedia Content Reviewer». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-162113",
+      "url": "https://jobicy.com/jobs/162113-italian-multimedia-content-reviewer",
+      "state": "pendiente_de_revision"
+    },
+    {
+      "agent": "research",
+      "title": "Accountant (Part-time)",
+      "task": "Verificar requisitos y ubicación de «Accountant (Part-time)». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-162218",
+      "url": "https://jobicy.com/jobs/162218-accountant-part-time-2",
+      "state": "pendiente_de_revision"
+    },
+    {
+      "agent": "research",
+      "title": "Senior Client Platform Engineer, Endpoint Platform & Automation",
+      "task": "Verificar requisitos y ubicación de «Senior Client Platform Engineer, Endpoint Platform & Automation». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-162318",
+      "url": "https://jobicy.com/jobs/162318-senior-client-platform-engineer-endpoint-platform-automation",
+      "state": "pendiente_de_revision"
+    },
+    {
+      "agent": "research",
+      "title": "Solutions Architect f/m/d",
+      "task": "Verificar requisitos y ubicación de «Solutions Architect f/m/d». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-155375",
+      "url": "https://jobicy.com/jobs/155375-solutions-architect-f-m-d",
+      "state": "pendiente_de_revision"
+    },
+    {
+      "agent": "research",
+      "title": "KYB Operations Lead, UK",
+      "task": "Verificar requisitos y ubicación de «KYB Operations Lead, UK». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-162198",
+      "url": "https://jobicy.com/jobs/162198-kyb-operations-lead-uk",
+      "state": "pendiente_de_revision"
+    },
+    {
+      "agent": "research",
+      "title": "Manager, Monitoring & Site Management (CRA Team)",
+      "task": "Verificar requisitos y ubicación de «Manager, Monitoring & Site Management (CRA Team)». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-162286",
+      "url": "https://jobicy.com/jobs/162286-manager-monitoring-site-management-cra-team",
+      "state": "pendiente_de_revision"
+    }
+  ],
+  "ai_brief": {
+    "state": "desactivado",
+    "text": "La IA generativa no se ha ejecutado."
+  },
+  "facts": {
+    "confirmed_revenue_eur": null,
+    "confirmed_profit_eur": null,
+    "sales_completed": null,
+    "payments_verified": false,
+    "notice": "No hay cuentas bancarias conectadas; sin verificación de cobros."
+  },
+  "policy": "No compras, contactos, publicaciones ni inversión sin aprobación expresa."
+}

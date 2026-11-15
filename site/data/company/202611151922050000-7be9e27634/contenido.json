@@ -1,0 +1,41 @@
+{
+  "agent": "contenido",
+  "department": "Marketing y publicidad",
+  "mission": "Preparar calendario editorial",
+  "time_utc": "2026-11-15T19:22:05+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "completado",
+  "result": {
+    "calendar": [
+      {
+        "slot": 1,
+        "title": "Cómo usar escandallo de servicios con datos propios",
+        "demo": "tienda/escandallo.html",
+        "state": "borrador_no_publicado",
+        "copy": "Calcula y revisa tus supuestos con Escandallo de servicios. Demo offline, sin registro. No promete resultados económicos."
+      },
+      {
+        "slot": 2,
+        "title": "Cómo usar presupuesto de proyecto con datos propios",
+        "demo": "tienda/presupuesto.html",
+        "state": "borrador_no_publicado",
+        "copy": "Calcula y revisa tus supuestos con Presupuesto de proyecto. Demo offline, sin registro. No promete resultados económicos."
+      },
+      {
+        "slot": 3,
+        "title": "Cómo usar punto de equilibrio con datos propios",
+        "demo": "tienda/rentabilidad.html",
+        "state": "borrador_no_publicado",
+        "copy": "Calcula y revisa tus supuestos con Punto de equilibrio. Demo offline, sin registro. No promete resultados económicos."
+      },
+      {
+        "slot": 4,
+        "title": "Cómo usar embudo comercial con datos propios",
+        "demo": "tienda/conversion.html",
+        "state": "borrador_no_publicado",
+        "copy": "Calcula y revisa tus supuestos con Embudo comercial. Demo offline, sin registro. No promete resultados económicos."
+      }
+    ],
+    "cadence": "Una pieza semanal tras revisión; no publicación automática"
+  }
+}
