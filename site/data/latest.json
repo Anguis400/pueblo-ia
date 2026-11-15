@@ -1,21 +1,21 @@
 {
   "schema_version": 3,
-  "last_run_utc": "2026-11-14T13:09:57+00:00",
+  "last_run_utc": "2026-11-15T07:49:55+00:00",
   "run_type": "recoleccion_publica",
   "run_result": "completo",
   "sources": [
     {
       "name": "Jobicy Europa",
       "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
-      "observed_at": "2026-11-14T13:09:57+00:00",
+      "observed_at": "2026-11-15T07:49:55+00:00",
       "state": "ok",
-      "count": 4,
+      "count": 6,
       "error": null
     },
     {
       "name": "Jobicy worldwide",
       "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
-      "observed_at": "2026-11-14T13:09:57+00:00",
+      "observed_at": "2026-11-15T07:49:55+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -23,7 +23,7 @@
     {
       "name": "HN freelance",
       "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
-      "observed_at": "2026-11-14T13:09:57+00:00",
+      "observed_at": "2026-11-15T07:49:55+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -31,7 +31,7 @@
     {
       "name": "HN contract",
       "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
-      "observed_at": "2026-11-14T13:09:57+00:00",
+      "observed_at": "2026-11-15T07:49:55+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -55,6 +55,22 @@
       "expense_eur": null
     },
     {
+      "id": "jobicy-162218",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Accountant (Part-time)",
+      "company": "Aghanim",
+      "region": "Serbia",
+      "url": "https://jobicy.com/jobs/162218-accountant-part-time-2",
+      "published": "2026-11-14T14:32:44+00:00",
+      "excerpt": "Aghanim is an integrated commerce, liveops automation, community engagement, and payments platform for video games. Mobile games have traditionally depended on app stores for distribution, payments, and player relationships. We believe there is a better way. Aghanim helps game studios build direct relationships with players, sell directly, and buil",
+      "score": 5,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
       "id": "jobicy-144491",
       "agent": "research",
       "source": "Jobicy",
@@ -71,16 +87,16 @@
       "expense_eur": null
     },
     {
-      "id": "jobicy-155173",
+      "id": "jobicy-155375",
       "agent": "research",
       "source": "Jobicy",
       "category": "empleo_remoto",
-      "title": "Sales Manager",
-      "company": "StackAdapt",
-      "region": "UK",
-      "url": "https://jobicy.com/jobs/155173-sales-manager-6",
-      "published": "2026-11-13T03:15:20+00:00",
-      "excerpt": "StackAdapt is the leading technology company that empowers marketers to reach, engage, and convert audiences with precision. With 465 billion automated optimizations per second, the AI-powered StackAdapt Marketing Platform seamlessly connects brand and performance marketing to drive measurable results across the entire customer journey. The most fo",
+      "title": "Solutions Architect f/m/d",
+      "company": "Apaleo",
+      "region": "France",
+      "url": "https://jobicy.com/jobs/155375-solutions-architect-f-m-d",
+      "published": "2026-11-15T03:45:08+00:00",
+      "excerpt": "Apaleo is the world’s most open, API-first property management platform powering the next generation of hospitality operations. Its modular, AI-powered infrastructure enables hoteliers to customise their tech stack, automate routine work, and deliver seamless, personalised guest experiences, powered by best-in-class apps and autonomous AI agents th",
       "score": 4,
       "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
       "revenue_eur": null,
@@ -101,6 +117,22 @@
       "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
       "revenue_eur": null,
       "expense_eur": null
+    },
+    {
+      "id": "jobicy-162198",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "KYB Operations Lead, UK",
+      "company": "Ramp",
+      "region": "UK",
+      "url": "https://jobicy.com/jobs/162198-kyb-operations-lead-uk",
+      "published": "2026-11-14T12:55:18+00:00",
+      "excerpt": "About Ramp Ramp is building the smart infrastructure for finance teams, embedded in the transaction flow of every dollar a business spends. We automate how over $275B in annualized spend flows in and out of 85,000+ companies: authorizing payments, flagging risk, categorizing spend, and closing books. The problems are high-stakes, data-dense, and un",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
     }
   ],
   "missions": [
@@ -114,6 +146,14 @@
     },
     {
       "agent": "research",
+      "title": "Accountant (Part-time)",
+      "task": "Verificar requisitos y ubicación de «Accountant (Part-time)». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-162218",
+      "url": "https://jobicy.com/jobs/162218-accountant-part-time-2",
+      "state": "pendiente_de_revision"
+    },
+    {
+      "agent": "research",
       "title": "CRA II",
       "task": "Verificar requisitos y ubicación de «CRA II». Si encaja, preparar candidatura para revisión humana.",
       "source_id": "jobicy-144491",
@@ -122,10 +162,10 @@
     },
     {
       "agent": "research",
-      "title": "Sales Manager",
-      "task": "Verificar requisitos y ubicación de «Sales Manager». Si encaja, preparar candidatura para revisión humana.",
-      "source_id": "jobicy-155173",
-      "url": "https://jobicy.com/jobs/155173-sales-manager-6",
+      "title": "Solutions Architect f/m/d",
+      "task": "Verificar requisitos y ubicación de «Solutions Architect f/m/d». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-155375",
+      "url": "https://jobicy.com/jobs/155375-solutions-architect-f-m-d",
       "state": "pendiente_de_revision"
     },
     {
@@ -134,6 +174,14 @@
       "task": "Verificar requisitos y ubicación de «Sr Sales Manager, Mid-Market - UK & Ireland». Si encaja, preparar candidatura para revisión humana.",
       "source_id": "jobicy-161931",
       "url": "https://jobicy.com/jobs/161931-sr-sales-manager-mid-market-uk-ireland",
+      "state": "pendiente_de_revision"
+    },
+    {
+      "agent": "research",
+      "title": "KYB Operations Lead, UK",
+      "task": "Verificar requisitos y ubicación de «KYB Operations Lead, UK». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-162198",
+      "url": "https://jobicy.com/jobs/162198-kyb-operations-lead-uk",
       "state": "pendiente_de_revision"
     }
   ],
