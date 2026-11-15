@@ -1,14 +1,14 @@
 # Ficha preparada para Payhip — Escandallo Pro
 
-**Estado (14/11/2026):** creado en Payhip como producto digital **no listado**. Precio, página y archivo adjunto comprobados. Tienda independiente Escandallo Pro creada; PayPal figura como Connected en esta cuenta. Checkout abierto y opciones PayPal/tarjeta visibles. No se ha realizado ningún pago ni verificado la entrega posterior a una compra.
+**Estado (15/11/2026):** creado en Payhip como producto digital **no listado**. Precio, página y archivo adjunto comprobados. Tienda independiente Escandallo Pro creada; PayPal figura como Connected en esta cuenta. Checkout abierto y opciones PayPal/tarjeta visibles. No se ha realizado ningún pago ni verificado la entrega posterior a una compra.
 
 **Origen y agente:** comprobación directa de la interfaz de Payhip por Codex, bajo autorización del titular. No constituye una venta ni un ingreso.
 
 - **Tipo:** producto digital
 - **Título:** Escandallo Pro — Calculadora de costes para pastelerías y obradores
-- **Precio inicial:** 19,00 EUR (revisar impuestos y comisiones aplicables)
+- **Precio inicial:** 19,00 EUR con impuestos incluidos según la configuración guardada de Payhip; comisiones descontadas de los ingresos
 - **Visibilidad inicial:** Unlisted / No listado, hasta probar checkout y entrega
-- **Archivo a entregar:** `escandallo_pro_nuevo.zip` (ZIP preparado; contiene `Escandallo_Pro.html` y `LEEME.txt`)
+- **Archivo a entregar:** `Escandallo_Pro_v1.0.1.zip` (ZIP preparado; contiene `Escandallo_Pro.html` y `LEEME.txt`)
 - **Tamaño aproximado:** 6.9 kB
 - **Tienda:** Payhip; marca comercial independiente Escandallo Pro. Moneda EUR, idioma configurado Spanish y zona horaria Madrid. PayPal conectado según la interfaz de Payhip. Pueblo IA es el proyecto gestor, no la marca de la tienda.
 - **Enlace de compra:** https://payhip.com/b/IiVct (página real comprobada; producto IiVct)
@@ -62,12 +62,23 @@ No requiere SDK, claves ni llamadas a una API. Confirmar el tratamiento de impue
 
 ### Verificado y pendiente
 
-- Verificado: título, descripción comercial, precio de 19 EUR, visibilidad Unlisted y ZIP adjunto de 6.908 bytes.
-- ZIP local: CRC correcto; contiene `Escandallo_Pro.html` y `LEEME.txt`; SHA-256 `93b4205a2bd2f0e449985e915226fbe15d026a72bf18a39ad8edec7ec6720508`.
+- Verificado: título, descripción comercial, precio de 19 EUR, visibilidad Unlisted y ZIP adjunto de 6.900 bytes.
+- ZIP local: CRC correcto; contiene `Escandallo_Pro.html` y `LEEME.txt`; SHA-256 `65f110b2d968667b054d907392f1650dbb91243d618c6d6f121aab89b58f2458`.
 - Verificado: PayPal figura como Connected en la cuenta independiente, botón de compra habilitado y checkout en español con opciones PayPal/tarjeta. Payhip recuerda que el correo de PayPal debe estar confirmado; no se ha comprobado ese estado en PayPal. No se ha efectuado ningún cobro.
-- Pendiente: prueba de descarga después del checkout, impuestos y condiciones, portada. Mantener no listado.
+- Pendiente: finalizar la prueba gratuita de entrega, completar datos del vendedor y condiciones de venta, capturas reales y archivar la ficha anterior. Mantener no listado.
 - Gasto efectuado en esta preparación: 0 EUR. No se contrataron servicios ni se activaron anuncios.
 
 ### Separación de marcas
 
 La ficha anterior `4Wj7Q` permanece no listada en PlantillaVivaShop; no usarla para la integración de Escandallo Pro. No se ha eliminado ni archivado. El enlace definitivo de esta preparación es `https://payhip.com/b/IiVct`, en la cuenta independiente creada por el titular. El medio de cobro figura conectado; la entrega posterior al checkout sigue pendiente.
+
+## Preparación de lanzamiento — 15/11/2026
+
+- Portada comercial generada y subida a Payhip el 14/11; usa únicamente la marca Escandallo Pro.
+- ZIP v1.0.1 subido y adjunto anterior sustituido. Cambio de marca visible en título, cabecera y pie; se conserva la clave de almacenamiento y las fórmulas.
+- Comprobaciones de código ejecutadas: cálculo de referencia (coste lote 15 EUR, coste unidad 3 EUR, precio neto 6 EUR y bruto 7,26 EUR), límites de unidades/margen y lista de ingredientes vacía. No equivale a prueba visual de navegador.
+- Impuestos: gestión automática de IVA digital UE y Reino Unido activada, impuestos incluidos en precio; configuración guardada. No acredita situación fiscal del vendedor.
+- Recibo configurado en español con instrucciones para descomprimir, abrir HTML y guardar JSON.
+- Prueba gratuita: cupón del 100 % limitado a un uso y a este producto. El 14/11 el checkout mostró total 0 EUR, pero apareció un hCaptcha antes de confirmar la entrega. El 15/11 la lista de productos aún mostraba 0 pedidos; no registrar esta prueba como venta ni ingreso. Checkout recuperado con total 0 EUR y descarga aún pendiente.
+- Capturas reales de la aplicación pendientes: la apertura local no estaba disponible en el navegador compartido; no se sustituyen por pantallas inventadas.
+- Antes de lanzamiento faltan los datos legales y de contacto que confirme el titular; no publicar datos personales inferidos ni condiciones con campos inventados.
