@@ -1,13 +1,13 @@
 {
   "schema_version": 3,
-  "last_run_utc": "2026-11-16T22:20:44+00:00",
+  "last_run_utc": "2026-11-16T22:53:05+00:00",
   "run_type": "recoleccion_publica",
   "run_result": "completo",
   "sources": [
     {
       "name": "Jobicy Europa",
       "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
-      "observed_at": "2026-11-16T22:20:44+00:00",
+      "observed_at": "2026-11-16T22:53:05+00:00",
       "state": "ok",
       "count": 5,
       "error": null
@@ -15,7 +15,7 @@
     {
       "name": "Jobicy worldwide",
       "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
-      "observed_at": "2026-11-16T22:20:44+00:00",
+      "observed_at": "2026-11-16T22:53:05+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -23,7 +23,7 @@
     {
       "name": "HN freelance",
       "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
-      "observed_at": "2026-11-16T22:20:44+00:00",
+      "observed_at": "2026-11-16T22:53:05+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -31,7 +31,7 @@
     {
       "name": "HN contract",
       "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
-      "observed_at": "2026-11-16T22:20:44+00:00",
+      "observed_at": "2026-11-16T22:53:05+00:00",
       "state": "ok",
       "count": 0,
       "error": null

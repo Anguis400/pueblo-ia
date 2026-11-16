@@ -1,0 +1,613 @@
+{
+  "schema_version": 3,
+  "run_id": "202611162253050000-7b54495ebf",
+  "time_utc": "2026-11-16T22:53:05+00:00",
+  "execution": "21 roles deterministas secuenciales, sin LLM ni trabajo paralelo simulado",
+  "agents": [
+    {
+      "agent": "ceo",
+      "department": "Dirección",
+      "mission": "Priorizar validación comercial",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "CEO",
+      "evidence": "data/company/202611162253050000-7b54495ebf/ceo.json",
+      "result": {
+        "priority": "Validar una necesidad con comprador y demo antes de invertir",
+        "buyer_candidates": 0,
+        "blocked": "Contacto requiere autorización específica"
+      }
+    },
+    {
+      "agent": "estrategia",
+      "department": "Dirección",
+      "mission": "Diseñar experimentos rentables",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Estrategia",
+      "evidence": "data/company/202611162253050000-7b54495ebf/estrategia.json",
+      "result": {
+        "experiment": "Revisar hasta 5 señales de compra, adaptar demo y propuesta; solicitar autorización individual",
+        "success": "Conversación consentida, después contrato y cobro verificado",
+        "stop": "Sin demanda validada: no gastar"
+      }
+    },
+    {
+      "agent": "operaciones",
+      "department": "Dirección",
+      "mission": "Auditar ejecución y dependencias",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Operaciones",
+      "evidence": "data/company/202611162253050000-7b54495ebf/operaciones.json",
+      "result": {
+        "sources": [
+          {
+            "name": "Jobicy Europa",
+            "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
+            "observed_at": "2026-11-16T22:53:05+00:00",
+            "state": "ok",
+            "count": 5,
+            "error": null
+          },
+          {
+            "name": "Jobicy worldwide",
+            "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
+            "observed_at": "2026-11-16T22:53:05+00:00",
+            "state": "ok",
+            "count": 0,
+            "error": null
+          },
+          {
+            "name": "HN freelance",
+            "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
+            "observed_at": "2026-11-16T22:53:05+00:00",
+            "state": "ok",
+            "count": 0,
+            "error": null
+          },
+          {
+            "name": "HN contract",
+            "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
+            "observed_at": "2026-11-16T22:53:05+00:00",
+            "state": "ok",
+            "count": 0,
+            "error": null
+          }
+        ],
+        "round_state": "completo",
+        "schedule": "4 rondas diarias; no garantiza puntualidad"
+      }
+    },
+    {
+      "agent": "investigacion",
+      "department": "Inteligencia de mercado",
+      "mission": "Consultar fuentes públicas",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Investigación",
+      "evidence": "data/company/202611162253050000-7b54495ebf/investigacion.json",
+      "result": {
+        "sources": [
+          {
+            "name": "Jobicy Europa",
+            "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
+            "observed_at": "2026-11-16T22:53:05+00:00",
+            "state": "ok",
+            "count": 5,
+            "error": null
+          },
+          {
+            "name": "Jobicy worldwide",
+            "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
+            "observed_at": "2026-11-16T22:53:05+00:00",
+            "state": "ok",
+            "count": 0,
+            "error": null
+          },
+          {
+            "name": "HN freelance",
+            "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
+            "observed_at": "2026-11-16T22:53:05+00:00",
+            "state": "ok",
+            "count": 0,
+            "error": null
+          },
+          {
+            "name": "HN contract",
+            "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
+            "observed_at": "2026-11-16T22:53:05+00:00",
+            "state": "ok",
+            "count": 0,
+            "error": null
+          }
+        ],
+        "observed_at": "2026-11-16T22:53:05+00:00",
+        "evidence": [
+          "https://jobicy.com/jobs/146167-senior-marketing-automation-manager",
+          "https://jobicy.com/jobs/155430-backend-engineer-pythonai-engineering-agent-foundations",
+          "https://jobicy.com/jobs/155445-sales-solutions-manager-f-m-d",
+          "https://jobicy.com/jobs/162680-account-manager-uk-ireland",
+          "https://jobicy.com/jobs/162715-vp-sales-emea"
+        ]
+      }
+    },
+    {
+      "agent": "demanda",
+      "department": "Inteligencia de mercado",
+      "mission": "Separar compradores de empleo",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Demanda",
+      "evidence": "data/company/202611162253050000-7b54495ebf/demanda.json",
+      "result": {
+        "buyer_signals": 0,
+        "remote_jobs_not_clients": 5,
+        "keyword_counts": {},
+        "method": "Filtro conservador de intención de compra; no prueba presupuesto ni vigencia"
+      }
+    },
+    {
+      "agent": "competencia",
+      "department": "Inteligencia de mercado",
+      "mission": "Preparar comparación verificable",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "pendiente",
+      "name": "Competencia",
+      "evidence": "data/company/202611162253050000-7b54495ebf/competencia.json",
+      "result": {
+        "state": "pendiente",
+        "reason": "No se han consultado fuentes de competencia de productos; no inventar comparativas",
+        "plan": [
+          "Comparar precio y licencia en página original",
+          "Registrar URL, fecha y límites de cada alternativa"
+        ]
+      }
+    },
+    {
+      "agent": "producto",
+      "department": "Desarrollo de productos",
+      "mission": "Definir herramientas útiles",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Producto",
+      "evidence": "data/company/202611162253050000-7b54495ebf/producto.json",
+      "result": {
+        "specifications": [
+          {
+            "name": "Escandallo de servicios",
+            "mission": "Calcular coste y precio objetivo",
+            "acceptance": "Funciona offline con entradas válidas y errores visibles"
+          },
+          {
+            "name": "Presupuesto de proyecto",
+            "mission": "Estimar una propuesta sin enviarla",
+            "acceptance": "Funciona offline con entradas válidas y errores visibles"
+          },
+          {
+            "name": "Punto de equilibrio",
+            "mission": "Analizar viabilidad antes de gastar",
+            "acceptance": "Funciona offline con entradas válidas y errores visibles"
+          },
+          {
+            "name": "Embudo comercial",
+            "mission": "Calcular conversión de datos propios",
+            "acceptance": "Funciona offline con entradas válidas y errores visibles"
+          }
+        ]
+      }
+    },
+    {
+      "agent": "desarrollo",
+      "department": "Desarrollo de productos",
+      "mission": "Construir demos descargables",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Desarrollo",
+      "evidence": "data/company/202611162253050000-7b54495ebf/desarrollo.json",
+      "result": {
+        "catalog": [
+          {
+            "id": "escandallo",
+            "name": "Escandallo de servicios",
+            "mission": "Calcular coste y precio objetivo",
+            "state": "demo_funcional",
+            "url": "tienda/escandallo.html",
+            "download": "tienda/escandallo.zip",
+            "sha256": "022e42317258202e7f8ca0345d8546b3f77db11e91a521adcd22313904b75526",
+            "sales_verified": null
+          },
+          {
+            "id": "presupuesto",
+            "name": "Presupuesto de proyecto",
+            "mission": "Estimar una propuesta sin enviarla",
+            "state": "demo_funcional",
+            "url": "tienda/presupuesto.html",
+            "download": "tienda/presupuesto.zip",
+            "sha256": "dbfadc379dacd7fc6c91fa2138d926679bde5eebe32ae16d848780b2f2097a5d",
+            "sales_verified": null
+          },
+          {
+            "id": "rentabilidad",
+            "name": "Punto de equilibrio",
+            "mission": "Analizar viabilidad antes de gastar",
+            "state": "demo_funcional",
+            "url": "tienda/rentabilidad.html",
+            "download": "tienda/rentabilidad.zip",
+            "sha256": "a354c33f35428a6b76b9264d7c4ffa962caae3192380aa50f5b135de542cdd70",
+            "sales_verified": null
+          },
+          {
+            "id": "conversion",
+            "name": "Embudo comercial",
+            "mission": "Calcular conversión de datos propios",
+            "state": "demo_funcional",
+            "url": "tienda/conversion.html",
+            "download": "tienda/conversion.zip",
+            "sha256": "2a367fea80c88e5be2f59a8087c0aafce6d25699cd7f818929d742ae4002ee36",
+            "sales_verified": null
+          }
+        ],
+        "implementation": "Plantillas HTML y JavaScript locales; cero API de pago"
+      }
+    },
+    {
+      "agent": "qa",
+      "department": "Desarrollo de productos",
+      "mission": "Verificar integridad de artefactos",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "QA",
+      "evidence": "data/company/202611162253050000-7b54495ebf/qa.json",
+      "result": {
+        "checks": [
+          {
+            "product": "escandallo",
+            "sha256_matches": true,
+            "zip_exists": true
+          },
+          {
+            "product": "presupuesto",
+            "sha256_matches": true,
+            "zip_exists": true
+          },
+          {
+            "product": "rentabilidad",
+            "sha256_matches": true,
+            "zip_exists": true
+          },
+          {
+            "product": "conversion",
+            "sha256_matches": true,
+            "zip_exists": true
+          }
+        ],
+        "limits": "Integridad de compilación; pruebas de cálculo en CI, no certificación fiscal"
+      }
+    },
+    {
+      "agent": "seo",
+      "department": "Marketing y publicidad",
+      "mission": "Preparar contenidos indexables",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado; posicionamiento no medido",
+      "name": "SEO",
+      "evidence": "data/company/202611162253050000-7b54495ebf/seo.json",
+      "result": {
+        "titles": [
+          "Cómo usar escandallo de servicios con datos propios",
+          "Cómo usar presupuesto de proyecto con datos propios",
+          "Cómo usar punto de equilibrio con datos propios",
+          "Cómo usar embudo comercial con datos propios"
+        ],
+        "keywords": [
+          "escandallo servicios",
+          "presupuesto proyecto",
+          "punto de equilibrio"
+        ],
+        "state": "preparado; posicionamiento no medido"
+      }
+    },
+    {
+      "agent": "contenido",
+      "department": "Marketing y publicidad",
+      "mission": "Preparar calendario editorial",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Contenido",
+      "evidence": "data/company/202611162253050000-7b54495ebf/contenido.json",
+      "result": {
+        "calendar": [
+          {
+            "slot": 1,
+            "title": "Cómo usar escandallo de servicios con datos propios",
+            "demo": "tienda/escandallo.html",
+            "state": "borrador_no_publicado",
+            "copy": "Calcula y revisa tus supuestos con Escandallo de servicios. Demo offline, sin registro. No promete resultados económicos."
+          },
+          {
+            "slot": 2,
+            "title": "Cómo usar presupuesto de proyecto con datos propios",
+            "demo": "tienda/presupuesto.html",
+            "state": "borrador_no_publicado",
+            "copy": "Calcula y revisa tus supuestos con Presupuesto de proyecto. Demo offline, sin registro. No promete resultados económicos."
+          },
+          {
+            "slot": 3,
+            "title": "Cómo usar punto de equilibrio con datos propios",
+            "demo": "tienda/rentabilidad.html",
+            "state": "borrador_no_publicado",
+            "copy": "Calcula y revisa tus supuestos con Punto de equilibrio. Demo offline, sin registro. No promete resultados económicos."
+          },
+          {
+            "slot": 4,
+            "title": "Cómo usar embudo comercial con datos propios",
+            "demo": "tienda/conversion.html",
+            "state": "borrador_no_publicado",
+            "copy": "Calcula y revisa tus supuestos con Embudo comercial. Demo offline, sin registro. No promete resultados económicos."
+          }
+        ],
+        "cadence": "Una pieza semanal tras revisión; no publicación automática"
+      }
+    },
+    {
+      "agent": "publicidad",
+      "department": "Marketing y publicidad",
+      "mission": "Preparar campaña condicionada",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "bloqueado",
+      "name": "Publicidad",
+      "evidence": "data/company/202611162253050000-7b54495ebf/publicidad.json",
+      "result": {
+        "state": "bloqueado",
+        "campaign_draft": "Demostración de cálculo de costes para pequeños negocios",
+        "audience_hypothesis": "Profesionales que presupuestan servicios",
+        "copy": "Revisa costes y supuestos con una demo offline.",
+        "spend_eur": 0,
+        "gates": [
+          "Validar checkout público y entrega digital de Shopify",
+          "Confirmar precio, impuestos y condiciones",
+          "Aprobar destinatario y propuesta individual",
+          "Registrar consentimiento y resultado fuera del repositorio",
+          "Verificar cobro, comisiones y devoluciones antes de atribuir ingresos"
+        ],
+        "budget": "Sin asignación; requiere autorización específica dentro del techo agregado"
+      }
+    },
+    {
+      "agent": "prospeccion",
+      "department": "Ventas",
+      "mission": "Priorizar señales de compra",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Prospección",
+      "evidence": "data/company/202611162253050000-7b54495ebf/prospeccion.json",
+      "result": {
+        "candidates": [],
+        "excluded_job_count": 5,
+        "next": "Verificar necesidad, presupuesto, vigencia y adecuación antes de contactar"
+      }
+    },
+    {
+      "agent": "propuestas",
+      "department": "Ventas",
+      "mission": "Preparar borradores individuales",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "pendiente",
+      "name": "Propuestas",
+      "evidence": "data/company/202611162253050000-7b54495ebf/propuestas.json",
+      "result": {
+        "drafts": [],
+        "state": "pendiente",
+        "reason": "Sin señal de compra no se genera propuesta ficticia"
+      }
+    },
+    {
+      "agent": "conversion",
+      "department": "Ventas",
+      "mission": "Definir medición comercial",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Conversión",
+      "evidence": "data/company/202611162253050000-7b54495ebf/conversion.json",
+      "result": {
+        "visits": null,
+        "consented_conversations": null,
+        "proposals_sent": null,
+        "verified_sales": null,
+        "checklist": [
+          "Validar checkout público y entrega digital de Shopify",
+          "Confirmar precio, impuestos y condiciones",
+          "Aprobar destinatario y propuesta individual",
+          "Registrar consentimiento y resultado fuera del repositorio",
+          "Verificar cobro, comisiones y devoluciones antes de atribuir ingresos"
+        ]
+      }
+    },
+    {
+      "agent": "soporte",
+      "department": "Atención al cliente",
+      "mission": "Preparar ayuda de producto",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Soporte",
+      "evidence": "data/company/202611162253050000-7b54495ebf/soporte.json",
+      "result": {
+        "faq": [
+          "Descarga el ZIP y abre index.html sin conexión.",
+          "Los datos permanecen en la página; no se envían.",
+          "Los cálculos son orientativos: revisa fiscalidad y supuestos."
+        ],
+        "tickets_received": null
+      }
+    },
+    {
+      "agent": "voz",
+      "department": "Atención al cliente",
+      "mission": "Preparar entrevistas consentidas",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "pendiente",
+      "name": "Voz del cliente",
+      "evidence": "data/company/202611162253050000-7b54495ebf/voz.json",
+      "result": {
+        "interview_draft": [
+          "¿Cómo calculas tus costes hoy?",
+          "¿Qué error te cuesta más tiempo?",
+          "¿Qué prueba necesitarías para comprar?"
+        ],
+        "state": "pendiente",
+        "reason": "No hay entrevistas ni respuestas reales; requiere consentimiento y permiso para contactar"
+      }
+    },
+    {
+      "agent": "retencion",
+      "department": "Atención al cliente",
+      "mission": "Diseñar seguimiento consentido",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "pendiente",
+      "name": "Retención",
+      "evidence": "data/company/202611162253050000-7b54495ebf/retencion.json",
+      "result": {
+        "followup_draft": "Tras compra verificada y consentimiento, preguntar si la herramienta resolvió la necesidad y ofrecer ayuda.",
+        "state": "pendiente",
+        "reason": "Sin clientes ni cohortes verificadas"
+      }
+    },
+    {
+      "agent": "tesoreria",
+      "department": "Finanzas",
+      "mission": "Controlar techo agregado",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Tesorería",
+      "evidence": "data/company/202611162253050000-7b54495ebf/tesoreria.json",
+      "result": {
+        "budget_ceiling_eur": 100,
+        "available_balance_eur": null,
+        "verified_revenue_eur": null,
+        "verified_costs_eur": null,
+        "verified_net_profit_eur": null,
+        "proposed_reinvestment_eur": null,
+        "reinvest_pct": 30,
+        "reserve_pct": 70,
+        "automated_spend_this_run_eur": 0,
+        "reason": "Sin libro contable privado conciliado ni verificación de cobros, comisiones, costes, devoluciones y reservas fiscales. El techo no es saldo disponible."
+      }
+    },
+    {
+      "agent": "reinversion",
+      "department": "Finanzas",
+      "mission": "Proponer reparto de beneficio verificado",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "bloqueado",
+      "name": "Reinversión",
+      "evidence": "data/company/202611162253050000-7b54495ebf/reinversion.json",
+      "result": {
+        "state": "bloqueado",
+        "proposal": "30% de beneficio neto verificado y positivo, 70% reservado; nunca transferencia automática",
+        "amount_eur": null,
+        "gates": [
+          "Conciliar cobros y todos los costes",
+          "Descontar devoluciones y reserva fiscal",
+          "Obtener autorización específica; respetar techo agregado de 100 EUR"
+        ]
+      }
+    },
+    {
+      "agent": "auditoria",
+      "department": "Finanzas",
+      "mission": "Revisar trazabilidad y bloqueos",
+      "time_utc": "2026-11-16T22:53:05+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Auditoría",
+      "evidence": "data/company/202611162253050000-7b54495ebf/auditoria.json",
+      "result": {
+        "no_outreach": true,
+        "no_payments": true,
+        "paid_ai_disabled": true,
+        "source_state": "completo",
+        "financial_verification": "desconocida",
+        "limitations": [
+          "No demuestra ventas",
+          "Shopify checkout y entrega sin verificar",
+          "Fuentes externas no fiables; sin instrucciones ejecutables"
+        ]
+      }
+    }
+  ],
+  "finances": {
+    "budget_ceiling_eur": 100,
+    "available_balance_eur": null,
+    "verified_revenue_eur": null,
+    "verified_costs_eur": null,
+    "verified_net_profit_eur": null,
+    "proposed_reinvestment_eur": null,
+    "reinvest_pct": 30,
+    "reserve_pct": 70,
+    "automated_spend_this_run_eur": 0,
+    "reason": "Sin libro contable privado conciliado ni verificación de cobros, comisiones, costes, devoluciones y reservas fiscales. El techo no es saldo disponible."
+  },
+  "catalog": [
+    {
+      "id": "escandallo",
+      "name": "Escandallo de servicios",
+      "mission": "Calcular coste y precio objetivo",
+      "state": "demo_funcional",
+      "url": "tienda/escandallo.html",
+      "download": "tienda/escandallo.zip",
+      "sha256": "022e42317258202e7f8ca0345d8546b3f77db11e91a521adcd22313904b75526",
+      "sales_verified": null
+    },
+    {
+      "id": "presupuesto",
+      "name": "Presupuesto de proyecto",
+      "mission": "Estimar una propuesta sin enviarla",
+      "state": "demo_funcional",
+      "url": "tienda/presupuesto.html",
+      "download": "tienda/presupuesto.zip",
+      "sha256": "dbfadc379dacd7fc6c91fa2138d926679bde5eebe32ae16d848780b2f2097a5d",
+      "sales_verified": null
+    },
+    {
+      "id": "rentabilidad",
+      "name": "Punto de equilibrio",
+      "mission": "Analizar viabilidad antes de gastar",
+      "state": "demo_funcional",
+      "url": "tienda/rentabilidad.html",
+      "download": "tienda/rentabilidad.zip",
+      "sha256": "a354c33f35428a6b76b9264d7c4ffa962caae3192380aa50f5b135de542cdd70",
+      "sales_verified": null
+    },
+    {
+      "id": "conversion",
+      "name": "Embudo comercial",
+      "mission": "Calcular conversión de datos propios",
+      "state": "demo_funcional",
+      "url": "tienda/conversion.html",
+      "download": "tienda/conversion.zip",
+      "sha256": "2a367fea80c88e5be2f59a8087c0aafce6d25699cd7f818929d742ae4002ee36",
+      "sales_verified": null
+    }
+  ]
+}
