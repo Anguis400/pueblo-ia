@@ -233,6 +233,29 @@ const TYPES = {
       await page.locator("button").click();
       assert.ok((await page.locator("output").innerText()).includes(expected));
     }
+    // Public pastry demo: real DOM calculation, invalid inputs, reset and purchase destination.
+    for (const width of [1536, 390, 320]) {
+      await page.setViewportSize({ width, height: 1050 });
+      const res = await page.goto(base + "tienda/escandallo-pro/");
+      assert.equal(res.status(), 200);
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false, "Pastry demo overflow");
+      assert.ok((await page.locator("#batch").innerText()).includes("24,00"));
+      assert.ok((await page.locator("#unit").innerText()).includes("2,00"));
+      assert.ok((await page.locator("#gross").innerText()).includes("5,50"));
+      for (const href of await page.locator("a[href]").evaluateAll(nodes => nodes.map(n => n.href)))
+        assert.equal(href, "https://payhip.com/b/IiVct");
+      await page.locator("#units").fill("6");
+      assert.ok((await page.locator("#unit").innerText()).includes("4,00"));
+      await page.locator("#units").fill("0");
+      assert.equal(await page.locator("#unit").innerText(), "—");
+      assert.notEqual(await page.locator("#error").innerText(), "");
+      await page.locator('button[type="reset"]').click();
+      await page.waitForFunction(() => document.querySelector("#unit").textContent.includes("2,00"));
+      await page.locator("#margin").fill("100");
+      assert.equal(await page.locator("#gross").innerText(), "—");
+      await page.locator("#margin").fill("");
+      assert.equal(await page.locator("#gross").innerText(), "—");
+    }
     await page.goto(base + "radar/");
     assert.equal(
       await page.locator("#leads").innerText(),
