@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prueba un escandallo · Escandallo Pro</title><meta name="description" content="Calcula el coste de un lote de brownies con un ejemplo editable. Descubre Escandallo Pro, sin cuotas.">
+<style>
+:root{color-scheme:light;--ink:#17302c;--paper:#f6f3eb;--accent:#c9ef9b}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 system-ui,sans-serif}header,main,footer{max-width:1100px;margin:auto;padding:24px}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ccd4c8}.brand{font-weight:800}a{color:inherit}h1{font:clamp(38px,6vw,72px)/1.05 Georgia,serif;letter-spacing:-2px;max-width:800px;margin:28px 0}h2{font:32px/1.2 Georgia,serif}p{max-width:700px}.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px}.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;margin:36px 0}.card{background:white;padding:28px;border:1px solid #d5dccf;border-radius:20px}.results{background:var(--ink);color:white}.results small{color:#c9d7ce}.metric{font-size:52px;font-weight:700;line-height:1.2;margin:8px 0 26px}label{display:block;font-size:14px;margin:14px 0 5px}input{width:100%;font:inherit;padding:10px;border:1px solid #a6b4a5;border-radius:8px;background:#fff;color:var(--ink)}input:focus,button:focus,a:focus{outline:3px solid #8cae53;outline-offset:3px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}.button,button{display:inline-block;background:var(--accent);color:var(--ink);padding:14px 20px;border:0;border-radius:9px;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer}.secondary{background:#e6e8df}dl{display:grid;grid-template-columns:1fr auto;gap:8px}dd{margin:0;font-weight:bold}summary{cursor:pointer;font-weight:700;padding:14px 0}details{border-bottom:1px solid #ccd4c8}footer{font-size:13px;color:#51635b}#error{color:#a71d29}.note{font-size:14px}.cta{padding:32px 0}.pill{font-size:12px;border:1px solid #62796f;border-radius:30px;padding:5px 12px}@media(max-width:720px){.grid{grid-template-columns:1fr}header,main,footer{padding:20px}.card{padding:22px}h1{letter-spacing:-1px}.metric{font-size:44px}}@media(prefers-reduced-motion:no-preference){button,.button{transition:transform .15s}button:hover,.button:hover{transform:translateY(-2px)}}
+</style></head><body>
+<header><span class="brand">Escandallo Pro</span><span class="pill">Demo gratuita · sin registro</span></header>
+<main><section><p class="tag">Para pastelerías y pequeños obradores</p><h1>Una receta deliciosa.<br>¿Y el coste por porción?</h1><p>Prueba con un lote de brownies. Añade los gastos que también cuentan y comprueba cómo cambia el coste de cada unidad.</p><p class="note">Ejemplo hipotético editable. Los precios no son cotizaciones de mercado. Esta demo es una calculadora simplificada, no la aplicación completa.</p></section>
+<section class="grid" aria-label="Calculadora de demostración"><div class="card"><h2>Tu lote de brownies</h2><form id="form"><div class="fields">
+<label>Ingredientes del lote (€)<input id="ingredients" type="number" min="0" max="1000000" step="0.01" value="12" required></label>
+<label>Merma sobre ingredientes (%)<input id="loss" type="number" min="0" max="100" step="0.1" value="5" required></label>
+<label>Mano de obra del lote (€)<input id="labor" type="number" min="0" max="1000000" step="0.01" value="8" required></label>
+<label>Envases del lote (€)<input id="pack" type="number" min="0" max="1000000" step="0.01" value="2.4" required></label>
+<label>Energía y otros gastos (€)<input id="other" type="number" min="0" max="1000000" step="0.01" value="1" required></label>
+<label>Unidades vendibles<input id="units" type="number" min="1" max="1000000" step="1" value="12" required></label>
+<label>Margen sobre precio neto (%)<input id="margin" type="number" min="0" max="95" step="0.1" value="60" required></label>
+<label>IVA para simular (%)<input id="vat" type="number" min="0" max="100" step="0.1" value="10" required></label>
+</div><p class="note">Merma: recargo sobre el coste de ingredientes. Margen: porcentaje del precio neto, no recargo sobre coste. El IVA es un supuesto; comprueba el tipo aplicable.</p><button type="reset" class="secondary">Restablecer ejemplo</button><p id="error" role="alert"></p></form></div>
+<div class="card results" aria-live="polite" aria-atomic="true"><p class="tag">El resultado del ejemplo</p><small>Coste por unidad</small><div class="metric" id="unit">—</div><dl><dt>Ingredientes y merma</dt><dd id="ingredientTotal">—</dd><dt>Coste del lote</dt><dd id="batch">—</dd><dt>Precio orientativo sin IVA</dt><dd id="net">—</dd><dt>Precio orientativo con IVA</dt><dd id="gross">—</dd></dl><p class="note">Este margen se calcula sobre los costes que has introducido. No equivale al beneficio final de tu negocio.</p><hr><p>En Escandallo Pro puedes desglosar ingredientes, guardar varias recetas y exportar tus cálculos.</p><a class="button" href="https://payhip.com/b/IiVct">Ver Escandallo Pro · 19 €</a><p class="note">Pago único. Archivo ZIP con HTML y guía. Sin suscripción.</p></div></section>
+<section><h2>De una prueba a tus recetas de cada día</h2><p>La versión completa permite gestionar y duplicar recetas, introducir ingredientes por cantidad y precio por kilo, exportar CSV, guardar copias JSON e imprimir o guardar PDF desde el navegador.</p>
+<details><summary>¿Necesito Excel o instalar un programa?</summary><p>No necesitas Excel. Descomprime el ZIP y abre el HTML en un navegador moderno. Una vez descargado, funciona sin conexión.</p></details>
+<details><summary>¿Dónde se guardan mis recetas?</summary><p>En el navegador de tu dispositivo. Exporta copias JSON periódicamente, especialmente antes de borrar datos o cambiar de dispositivo. Esta demo no guarda datos.</p></details>
+<details><summary>¿Incluye asesoramiento o actualizaciones ilimitadas?</summary><p>No incluye asesoramiento personalizado, integraciones ni actualizaciones garantizadas, sin perjuicio de los derechos legales aplicables.</p></details>
+<details><summary>¿Qué compruebo antes de comprar?</summary><p>Que puedes descomprimir ZIP y abrir HTML con JavaScript y almacenamiento local en tu dispositivo. Recomendamos ordenador. Revisa también la descripción y las condiciones disponibles en Payhip.</p></details></section>
+<section class="cta"><h2>Empieza por una receta que ya conoces.</h2><p>Compara el resultado con tu cálculo habitual. Si el problema es llevar varias recetas y actualizar costes, consulta la versión completa.</p><a class="button" href="https://payhip.com/b/IiVct">Consultar producto · 19 €</a></section>
+</main><footer>Escandallo Pro · Demostración simplificada. No recoge datos personales, no utiliza analítica ni guarda tus entradas. El enlace de compra abre Payhip, un servicio externo. Cálculos orientativos.</footer>
+<script>
+'use strict';
+function calculate(v){
+  const keys=['ingredients','loss','labor','pack','other','units','margin','vat'];
+  if(keys.some(k=>!Number.isFinite(v[k])||v[k]<0)||!Number.isInteger(v.units)||v.units<1||v.margin>95||v.loss>100||v.vat>100) return null;
+  const ingredientTotal=v.ingredients*(1+v.loss/100);
+  const batch=ingredientTotal+v.labor+v.pack+v.other;
+  const unit=batch/v.units;
+  const net=unit/(1-v.margin/100);
+  return {ingredientTotal,batch,unit,net,gross:net*(1+v.vat/100)};
+}
+const form=document.getElementById('form'),money=new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR'});
+function update(){
+ const v={};for(const input of form.querySelectorAll('input'))v[input.id]=input.value.trim()===''?NaN:Number(input.value);
+ const r=form.checkValidity()?calculate(v):null;
+ document.getElementById('error').textContent=r?'':'Revisa los campos: unidades enteras mayores que cero y margen entre 0 y 95 %.';
+ for(const key of ['ingredientTotal','batch','unit','net','gross'])document.getElementById(key).textContent=r?money.format(r[key]):'—';
+}
+form.addEventListener('input',update);form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('reset',()=>setTimeout(update,0));update();
+</script></body></html>
