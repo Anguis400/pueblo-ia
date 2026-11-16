@@ -1,5 +1,8 @@
 # Ficha preparada para Payhip — Escandallo Pro
 
+> **Actualización 16/11/2026:** el titular ordenó publicar el producto, y se guardó como Visible a 19 EUR. La ficha fue comprobada sin nombre, domicilio ni correo personales. El borrador legal permanece sin publicar y sin datos personales. No volver a exponer datos personales. La publicación técnica no acredita cumplimiento legal. La información del 15/11 que sigue es histórica. Material nuevo: [demo simplificada](escandallo-demo.html) y [kit comercial](escandallo-lanzamiento.md). Demo guardada en rama, no desplegada ni verificada visualmente. Ninguna venta de pago acreditada.
+
+
 **Estado (15/11/2026):** creado en Payhip como producto digital **no listado**. Precio, página y archivo adjunto comprobados. Tienda independiente Escandallo Pro creada; PayPal figura como Connected en esta cuenta. Checkout abierto y opciones PayPal/tarjeta visibles. Prueba gratuita completada el 15/11/2026: pedido de 0 EUR confirmado y ZIP descargado y verificado. No se ha probado un cobro real.
 
 **Origen y agente:** comprobación directa de la interfaz de Payhip por Codex, bajo autorización del titular. No constituye una venta ni un ingreso.
