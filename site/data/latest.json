@@ -1,13 +1,13 @@
 {
   "schema_version": 3,
-  "last_run_utc": "2026-11-16T22:53:05+00:00",
+  "last_run_utc": "2026-11-17T09:11:21+00:00",
   "run_type": "recoleccion_publica",
   "run_result": "completo",
   "sources": [
     {
       "name": "Jobicy Europa",
       "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
-      "observed_at": "2026-11-16T22:53:05+00:00",
+      "observed_at": "2026-11-17T09:11:21+00:00",
       "state": "ok",
       "count": 5,
       "error": null
@@ -15,7 +15,7 @@
     {
       "name": "Jobicy worldwide",
       "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
-      "observed_at": "2026-11-16T22:53:05+00:00",
+      "observed_at": "2026-11-17T09:11:21+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -23,7 +23,7 @@
     {
       "name": "HN freelance",
       "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
-      "observed_at": "2026-11-16T22:53:05+00:00",
+      "observed_at": "2026-11-17T09:11:21+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -31,7 +31,7 @@
     {
       "name": "HN contract",
       "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
-      "observed_at": "2026-11-16T22:53:05+00:00",
+      "observed_at": "2026-11-17T09:11:21+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -39,17 +39,17 @@
   ],
   "opportunities": [
     {
-      "id": "jobicy-146167",
+      "id": "jobicy-150688",
       "agent": "research",
       "source": "Jobicy",
       "category": "empleo_remoto",
-      "title": "Senior Marketing Automation Manager",
-      "company": "Canonical",
-      "region": "EMEA",
-      "url": "https://jobicy.com/jobs/146167-senior-marketing-automation-manager",
-      "published": "2026-11-16T03:05:26+00:00",
-      "excerpt": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation and IoT. Our customers include the world's leading public cloud and silicon pro",
-      "score": 5,
+      "title": "Mid Market Account Executive - EMEA (French Speaking)",
+      "company": "Ashby",
+      "region": "Europe",
+      "url": "https://jobicy.com/jobs/150688-mid-market-account-executive-emea-french-speaking",
+      "published": "2026-11-17T02:45:22+00:00",
+      "excerpt": "About Ashby We’re building the next generation of enterprise software, starting with products that help talent leaders, recruiters, and managers unlock hiring excellence Series D raised in 2025, and growing ARR >100% YoY Have thousands of amazing customers including OpenAI, Deliveroo, Lemonade & Alan Multiple products to win both land-and-expand an",
+      "score": 4,
       "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
       "revenue_eur": null,
       "expense_eur": null
@@ -122,10 +122,10 @@
   "missions": [
     {
       "agent": "research",
-      "title": "Senior Marketing Automation Manager",
-      "task": "Verificar requisitos y ubicación de «Senior Marketing Automation Manager». Si encaja, preparar candidatura para revisión humana.",
-      "source_id": "jobicy-146167",
-      "url": "https://jobicy.com/jobs/146167-senior-marketing-automation-manager",
+      "title": "Mid Market Account Executive - EMEA (French Speaking)",
+      "task": "Verificar requisitos y ubicación de «Mid Market Account Executive - EMEA (French Speaking)». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-150688",
+      "url": "https://jobicy.com/jobs/150688-mid-market-account-executive-emea-french-speaking",
       "state": "pendiente_de_revision"
     },
     {

@@ -1,0 +1,13 @@
+{
+  "agent": "ceo",
+  "department": "Dirección",
+  "mission": "Priorizar validación comercial",
+  "time_utc": "2026-11-17T09:11:21+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "completado",
+  "result": {
+    "priority": "Validar una necesidad con comprador y demo antes de invertir",
+    "buyer_candidates": 0,
+    "blocked": "Contacto requiere autorización específica"
+  }
+}
