@@ -1,0 +1,13 @@
+{
+  "agent": "estrategia",
+  "department": "Dirección",
+  "mission": "Diseñar experimentos rentables",
+  "time_utc": "2026-11-18T21:24:32+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "preparado",
+  "result": {
+    "experiment": "Validar cobro de Escandallo Pro, distribuir demo en un canal autorizado y medir visitas, objeciones y compras",
+    "success": "Primera compra pagada de un cliente real; excluir pedido gratuito y compras propias",
+    "stop": "Sin demanda validada: no gastar"
+  }
+}

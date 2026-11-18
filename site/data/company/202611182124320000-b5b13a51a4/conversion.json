@@ -1,0 +1,21 @@
+{
+  "agent": "conversion",
+  "department": "Ventas",
+  "mission": "Definir medición comercial",
+  "time_utc": "2026-11-18T21:24:32+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "bloqueado",
+  "result": {
+    "visits": null,
+    "consented_conversations": null,
+    "proposals_sent": null,
+    "verified_sales": null,
+    "checklist": [
+      "Resolver aviso de PayPal observado el 17/11/2026 y verificar cobro; descarga gratuita ya probada el 15/11",
+      "Confirmar precio, impuestos y condiciones",
+      "Aprobar destinatario y propuesta individual",
+      "Registrar consentimiento y resultado fuera del repositorio",
+      "Verificar cobro, comisiones y devoluciones antes de atribuir ingresos"
+    ]
+  }
+}

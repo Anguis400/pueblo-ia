@@ -1,0 +1,104 @@
+{
+  "schema_version": 3,
+  "last_run_utc": "2026-11-18T21:24:32+00:00",
+  "run_type": "recoleccion_publica",
+  "run_result": "completo",
+  "sources": [
+    {
+      "name": "Jobicy Europa",
+      "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
+      "observed_at": "2026-11-18T21:24:32+00:00",
+      "state": "ok",
+      "count": 2,
+      "error": null
+    },
+    {
+      "name": "Jobicy worldwide",
+      "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
+      "observed_at": "2026-11-18T21:24:32+00:00",
+      "state": "ok",
+      "count": 0,
+      "error": null
+    },
+    {
+      "name": "HN freelance",
+      "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
+      "observed_at": "2026-11-18T21:24:32+00:00",
+      "state": "ok",
+      "count": 0,
+      "error": null
+    },
+    {
+      "name": "HN contract",
+      "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
+      "observed_at": "2026-11-18T21:24:32+00:00",
+      "state": "ok",
+      "count": 0,
+      "error": null
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "jobicy-153361",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Customer Success Manager II",
+      "company": "Demandbase, Inc.",
+      "region": "UK",
+      "url": "https://jobicy.com/jobs/153361-customer-success-manager-ii-4",
+      "published": "2026-11-18T02:55:12+00:00",
+      "excerpt": "Introduction to Demandbase: Demandbase is the only pipeline AI platform that empowers GTM teams to automate growth at scale. With a unified view of data, insights, actions, and outcomes, B2B enterprises can seamlessly align and execute their account-based GTM strategies with confidence. Thousands of businesses trust Demandbase to maximize revenue, ",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-155731",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Staff Software Engineer - Python, Java / Spring or Go",
+      "company": "Bloomreach",
+      "region": "Europe",
+      "url": "https://jobicy.com/jobs/155731-staff-software-engineer-python-java-spring-or-go",
+      "published": "2026-11-18T04:10:35+00:00",
+      "excerpt": "Bloomreach is building the world’s premier agentic platform for personalization .We’re revolutionizing how businesses connect with their customers, building and deploying AI agents to personalize the entire customer journey. We're taking autonomous search mainstream, making product discovery more intuitive and conversational for customers, and more",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    }
+  ],
+  "missions": [
+    {
+      "agent": "research",
+      "title": "Customer Success Manager II",
+      "task": "Verificar requisitos y ubicación de «Customer Success Manager II». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-153361",
+      "url": "https://jobicy.com/jobs/153361-customer-success-manager-ii-4",
+      "state": "pendiente_de_revision"
+    },
+    {
+      "agent": "research",
+      "title": "Staff Software Engineer - Python, Java / Spring or Go",
+      "task": "Verificar requisitos y ubicación de «Staff Software Engineer - Python, Java / Spring or Go». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-155731",
+      "url": "https://jobicy.com/jobs/155731-staff-software-engineer-python-java-spring-or-go",
+      "state": "pendiente_de_revision"
+    }
+  ],
+  "ai_brief": {
+    "state": "desactivado",
+    "text": "La IA generativa no se ha ejecutado."
+  },
+  "facts": {
+    "confirmed_revenue_eur": null,
+    "confirmed_profit_eur": null,
+    "sales_completed": null,
+    "payments_verified": false,
+    "notice": "No hay cuentas bancarias conectadas; sin verificación de cobros."
+  },
+  "policy": "No compras, contactos, publicaciones ni inversión sin aprobación expresa."
+}
