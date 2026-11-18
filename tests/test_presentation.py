@@ -59,7 +59,15 @@ class PresentationTests(unittest.TestCase):
         self.assertIsNone(view_model(report)['sales'])
 
     def test_department_status_does_not_hide_a_blocked_role(self):
-        model = view_model(self.report)
+        report = copy.deepcopy(self.report)
+        for agent in report['agents']:
+            if agent['department'] == 'Desarrollo de productos':
+                agent['state'] = 'completado'
+            if agent['department'] == 'Marketing y publicidad':
+                agent['state'] = 'preparado'
+            if agent['agent'] == 'publicidad':
+                agent['state'] = 'bloqueado'
+        model = view_model(report)
         self.assertEqual(len(model['departments']), 7)
         departments = {d['id']: d for d in model['departments']}
         self.assertEqual(departments['marketing']['state'], 'bloqueado')
