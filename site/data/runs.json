@@ -609,5 +609,46 @@
     "lead_count": 3,
     "ai_state": "desactivado",
     "company_report": "data/company/202611180830200000-591f15c164/report.json"
+  },
+  {
+    "time_utc": "2026-11-18T10:18:18+00:00",
+    "result": "completo",
+    "sources": [
+      {
+        "name": "Jobicy Europa",
+        "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
+        "observed_at": "2026-11-18T10:18:18+00:00",
+        "state": "ok",
+        "count": 3,
+        "error": null
+      },
+      {
+        "name": "Jobicy worldwide",
+        "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
+        "observed_at": "2026-11-18T10:18:18+00:00",
+        "state": "ok",
+        "count": 0,
+        "error": null
+      },
+      {
+        "name": "HN freelance",
+        "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
+        "observed_at": "2026-11-18T10:18:18+00:00",
+        "state": "ok",
+        "count": 0,
+        "error": null
+      },
+      {
+        "name": "HN contract",
+        "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
+        "observed_at": "2026-11-18T10:18:18+00:00",
+        "state": "ok",
+        "count": 0,
+        "error": null
+      }
+    ],
+    "lead_count": 3,
+    "ai_state": "desactivado",
+    "company_report": "data/company/202611181018180000-6bd0f021f8/report.json"
   }
 ]

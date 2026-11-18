@@ -1,0 +1,13 @@
+{
+  "agent": "ceo",
+  "department": "Dirección",
+  "mission": "Priorizar validación comercial",
+  "time_utc": "2026-11-18T10:18:18+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "preparado",
+  "result": {
+    "priority": "Primera venta real de Escandallo Pro a 19 EUR; no iniciar otros productos",
+    "buyer_candidates": 0,
+    "blocked": "Contacto requiere autorización específica"
+  }
+}

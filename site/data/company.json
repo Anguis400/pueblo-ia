@@ -1,20 +1,20 @@
 {
   "schema_version": 3,
-  "run_id": "202611180830200000-591f15c164",
-  "time_utc": "2026-11-18T08:30:20+00:00",
+  "run_id": "202611181018180000-6bd0f021f8",
+  "time_utc": "2026-11-18T10:18:18+00:00",
   "execution": "21 roles deterministas secuenciales, sin LLM ni trabajo paralelo simulado",
   "agents": [
     {
       "agent": "ceo",
       "department": "Dirección",
       "mission": "Priorizar validación comercial",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
-      "state": "completado",
+      "state": "preparado",
       "name": "CEO",
-      "evidence": "data/company/202611180830200000-591f15c164/ceo.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/ceo.json",
       "result": {
-        "priority": "Validar una necesidad con comprador y demo antes de invertir",
+        "priority": "Primera venta real de Escandallo Pro a 19 EUR; no iniciar otros productos",
         "buyer_candidates": 0,
         "blocked": "Contacto requiere autorización específica"
       }
@@ -23,14 +23,14 @@
       "agent": "estrategia",
       "department": "Dirección",
       "mission": "Diseñar experimentos rentables",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
-      "state": "completado",
+      "state": "preparado",
       "name": "Estrategia",
-      "evidence": "data/company/202611180830200000-591f15c164/estrategia.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/estrategia.json",
       "result": {
-        "experiment": "Revisar hasta 5 señales de compra, adaptar demo y propuesta; solicitar autorización individual",
-        "success": "Conversación consentida, después contrato y cobro verificado",
+        "experiment": "Validar cobro de Escandallo Pro, distribuir demo en un canal autorizado y medir visitas, objeciones y compras",
+        "success": "Primera compra pagada de un cliente real; excluir pedido gratuito y compras propias",
         "stop": "Sin demanda validada: no gastar"
       }
     },
@@ -38,17 +38,17 @@
       "agent": "operaciones",
       "department": "Dirección",
       "mission": "Auditar ejecución y dependencias",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
-      "state": "completado",
+      "state": "preparado",
       "name": "Operaciones",
-      "evidence": "data/company/202611180830200000-591f15c164/operaciones.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/operaciones.json",
       "result": {
         "sources": [
           {
             "name": "Jobicy Europa",
             "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
-            "observed_at": "2026-11-18T08:30:20+00:00",
+            "observed_at": "2026-11-18T10:18:18+00:00",
             "state": "ok",
             "count": 3,
             "error": null
@@ -56,7 +56,7 @@
           {
             "name": "Jobicy worldwide",
             "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
-            "observed_at": "2026-11-18T08:30:20+00:00",
+            "observed_at": "2026-11-18T10:18:18+00:00",
             "state": "ok",
             "count": 0,
             "error": null
@@ -64,7 +64,7 @@
           {
             "name": "HN freelance",
             "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
-            "observed_at": "2026-11-18T08:30:20+00:00",
+            "observed_at": "2026-11-18T10:18:18+00:00",
             "state": "ok",
             "count": 0,
             "error": null
@@ -72,7 +72,7 @@
           {
             "name": "HN contract",
             "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
-            "observed_at": "2026-11-18T08:30:20+00:00",
+            "observed_at": "2026-11-18T10:18:18+00:00",
             "state": "ok",
             "count": 0,
             "error": null
@@ -86,17 +86,17 @@
       "agent": "investigacion",
       "department": "Inteligencia de mercado",
       "mission": "Consultar fuentes públicas",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "completado",
       "name": "Investigación",
-      "evidence": "data/company/202611180830200000-591f15c164/investigacion.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/investigacion.json",
       "result": {
         "sources": [
           {
             "name": "Jobicy Europa",
             "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
-            "observed_at": "2026-11-18T08:30:20+00:00",
+            "observed_at": "2026-11-18T10:18:18+00:00",
             "state": "ok",
             "count": 3,
             "error": null
@@ -104,7 +104,7 @@
           {
             "name": "Jobicy worldwide",
             "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
-            "observed_at": "2026-11-18T08:30:20+00:00",
+            "observed_at": "2026-11-18T10:18:18+00:00",
             "state": "ok",
             "count": 0,
             "error": null
@@ -112,7 +112,7 @@
           {
             "name": "HN freelance",
             "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
-            "observed_at": "2026-11-18T08:30:20+00:00",
+            "observed_at": "2026-11-18T10:18:18+00:00",
             "state": "ok",
             "count": 0,
             "error": null
@@ -120,13 +120,13 @@
           {
             "name": "HN contract",
             "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
-            "observed_at": "2026-11-18T08:30:20+00:00",
+            "observed_at": "2026-11-18T10:18:18+00:00",
             "state": "ok",
             "count": 0,
             "error": null
           }
         ],
-        "observed_at": "2026-11-18T08:30:20+00:00",
+        "observed_at": "2026-11-18T10:18:18+00:00",
         "evidence": [
           "https://jobicy.com/jobs/153361-customer-success-manager-ii-4",
           "https://jobicy.com/jobs/155731-staff-software-engineer-python-java-spring-or-go",
@@ -138,11 +138,11 @@
       "agent": "demanda",
       "department": "Inteligencia de mercado",
       "mission": "Separar compradores de empleo",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
-      "state": "completado",
+      "state": "preparado",
       "name": "Demanda",
-      "evidence": "data/company/202611180830200000-591f15c164/demanda.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/demanda.json",
       "result": {
         "buyer_signals": 0,
         "remote_jobs_not_clients": 3,
@@ -154,11 +154,11 @@
       "agent": "competencia",
       "department": "Inteligencia de mercado",
       "mission": "Preparar comparación verificable",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "pendiente",
       "name": "Competencia",
-      "evidence": "data/company/202611180830200000-591f15c164/competencia.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/competencia.json",
       "result": {
         "state": "pendiente",
         "reason": "No se han consultado fuentes de competencia de productos; no inventar comparativas",
@@ -172,11 +172,11 @@
       "agent": "producto",
       "department": "Desarrollo de productos",
       "mission": "Definir herramientas útiles",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
-      "state": "completado",
+      "state": "preparado",
       "name": "Producto",
-      "evidence": "data/company/202611180830200000-591f15c164/producto.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/producto.json",
       "result": {
         "specifications": [
           {
@@ -206,11 +206,11 @@
       "agent": "desarrollo",
       "department": "Desarrollo de productos",
       "mission": "Construir demos descargables",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "completado",
       "name": "Desarrollo",
-      "evidence": "data/company/202611180830200000-591f15c164/desarrollo.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/desarrollo.json",
       "result": {
         "catalog": [
           {
@@ -261,11 +261,11 @@
       "agent": "qa",
       "department": "Desarrollo de productos",
       "mission": "Verificar integridad de artefactos",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "completado",
       "name": "QA",
-      "evidence": "data/company/202611180830200000-591f15c164/qa.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/qa.json",
       "result": {
         "checks": [
           {
@@ -296,22 +296,19 @@
       "agent": "seo",
       "department": "Marketing y publicidad",
       "mission": "Preparar contenidos indexables",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "preparado; posicionamiento no medido",
       "name": "SEO",
-      "evidence": "data/company/202611180830200000-591f15c164/seo.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/seo.json",
       "result": {
         "titles": [
-          "Cómo usar escandallo de servicios con datos propios",
-          "Cómo usar presupuesto de proyecto con datos propios",
-          "Cómo usar punto de equilibrio con datos propios",
-          "Cómo usar embudo comercial con datos propios"
+          "Cuánto cuesta cada unidad: prueba Escandallo Pro"
         ],
         "keywords": [
-          "escandallo servicios",
-          "presupuesto proyecto",
-          "punto de equilibrio"
+          "escandallo pastelería",
+          "coste por receta",
+          "calculadora costes obrador"
         ],
         "state": "preparado; posicionamiento no medido"
       }
@@ -320,40 +317,19 @@
       "agent": "contenido",
       "department": "Marketing y publicidad",
       "mission": "Preparar calendario editorial",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
-      "state": "completado",
+      "state": "preparado",
       "name": "Contenido",
-      "evidence": "data/company/202611180830200000-591f15c164/contenido.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/contenido.json",
       "result": {
         "calendar": [
           {
             "slot": 1,
-            "title": "Cómo usar escandallo de servicios con datos propios",
-            "demo": "tienda/escandallo.html",
+            "title": "Cuánto cuesta cada unidad: prueba Escandallo Pro",
+            "demo": "tienda/escandallo-pro/",
             "state": "borrador_no_publicado",
-            "copy": "Calcula y revisa tus supuestos con Escandallo de servicios. Demo offline, sin registro. No promete resultados económicos."
-          },
-          {
-            "slot": 2,
-            "title": "Cómo usar presupuesto de proyecto con datos propios",
-            "demo": "tienda/presupuesto.html",
-            "state": "borrador_no_publicado",
-            "copy": "Calcula y revisa tus supuestos con Presupuesto de proyecto. Demo offline, sin registro. No promete resultados económicos."
-          },
-          {
-            "slot": 3,
-            "title": "Cómo usar punto de equilibrio con datos propios",
-            "demo": "tienda/rentabilidad.html",
-            "state": "borrador_no_publicado",
-            "copy": "Calcula y revisa tus supuestos con Punto de equilibrio. Demo offline, sin registro. No promete resultados económicos."
-          },
-          {
-            "slot": 4,
-            "title": "Cómo usar embudo comercial con datos propios",
-            "demo": "tienda/conversion.html",
-            "state": "borrador_no_publicado",
-            "copy": "Calcula y revisa tus supuestos con Embudo comercial. Demo offline, sin registro. No promete resultados económicos."
+            "copy": "Ingredientes, mermas, mano de obra y envases: prueba la demo gratuita para pastelerías y obradores. La versión descargable cuesta 19 EUR, pago único. https://payhip.com/b/IiVct"
           }
         ],
         "cadence": "Una pieza semanal tras revisión; no publicación automática"
@@ -363,19 +339,19 @@
       "agent": "publicidad",
       "department": "Marketing y publicidad",
       "mission": "Preparar campaña condicionada",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "bloqueado",
       "name": "Publicidad",
-      "evidence": "data/company/202611180830200000-591f15c164/publicidad.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/publicidad.json",
       "result": {
         "state": "bloqueado",
-        "campaign_draft": "Demostración de cálculo de costes para pequeños negocios",
-        "audience_hypothesis": "Profesionales que presupuestan servicios",
+        "campaign_draft": "Demostración de Escandallo Pro para pastelerías",
+        "audience_hypothesis": "Pastelerías y pequeños obradores que calculan costes de recetas",
         "copy": "Revisa costes y supuestos con una demo offline.",
         "spend_eur": 0,
         "gates": [
-          "Validar checkout público y entrega digital de Shopify",
+          "Resolver aviso de PayPal observado el 17/11/2026 y verificar cobro; descarga gratuita ya probada el 15/11",
           "Confirmar precio, impuestos y condiciones",
           "Aprobar destinatario y propuesta individual",
           "Registrar consentimiento y resultado fuera del repositorio",
@@ -388,11 +364,11 @@
       "agent": "prospeccion",
       "department": "Ventas",
       "mission": "Priorizar señales de compra",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
-      "state": "completado",
+      "state": "preparado",
       "name": "Prospección",
-      "evidence": "data/company/202611180830200000-591f15c164/prospeccion.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/prospeccion.json",
       "result": {
         "candidates": [],
         "excluded_job_count": 3,
@@ -403,11 +379,11 @@
       "agent": "propuestas",
       "department": "Ventas",
       "mission": "Preparar borradores individuales",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "pendiente",
       "name": "Propuestas",
-      "evidence": "data/company/202611180830200000-591f15c164/propuestas.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/propuestas.json",
       "result": {
         "drafts": [],
         "state": "pendiente",
@@ -418,18 +394,18 @@
       "agent": "conversion",
       "department": "Ventas",
       "mission": "Definir medición comercial",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
-      "state": "completado",
+      "state": "bloqueado",
       "name": "Conversión",
-      "evidence": "data/company/202611180830200000-591f15c164/conversion.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/conversion.json",
       "result": {
         "visits": null,
         "consented_conversations": null,
         "proposals_sent": null,
         "verified_sales": null,
         "checklist": [
-          "Validar checkout público y entrega digital de Shopify",
+          "Resolver aviso de PayPal observado el 17/11/2026 y verificar cobro; descarga gratuita ya probada el 15/11",
           "Confirmar precio, impuestos y condiciones",
           "Aprobar destinatario y propuesta individual",
           "Registrar consentimiento y resultado fuera del repositorio",
@@ -441,15 +417,15 @@
       "agent": "soporte",
       "department": "Atención al cliente",
       "mission": "Preparar ayuda de producto",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
-      "state": "completado",
+      "state": "preparado",
       "name": "Soporte",
-      "evidence": "data/company/202611180830200000-591f15c164/soporte.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/soporte.json",
       "result": {
         "faq": [
-          "Descarga el ZIP y abre index.html sin conexión.",
-          "Los datos permanecen en la página; no se envían.",
+          "Descomprime el ZIP de Escandallo Pro y abre Escandallo_Pro.html.",
+          "Las recetas se guardan en el navegador; exporta copias JSON antes de cambiar de dispositivo o borrar datos.",
           "Los cálculos son orientativos: revisa fiscalidad y supuestos."
         ],
         "tickets_received": null
@@ -459,11 +435,11 @@
       "agent": "voz",
       "department": "Atención al cliente",
       "mission": "Preparar entrevistas consentidas",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "pendiente",
       "name": "Voz del cliente",
-      "evidence": "data/company/202611180830200000-591f15c164/voz.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/voz.json",
       "result": {
         "interview_draft": [
           "¿Cómo calculas tus costes hoy?",
@@ -478,11 +454,11 @@
       "agent": "retencion",
       "department": "Atención al cliente",
       "mission": "Diseñar seguimiento consentido",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "pendiente",
       "name": "Retención",
-      "evidence": "data/company/202611180830200000-591f15c164/retencion.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/retencion.json",
       "result": {
         "followup_draft": "Tras compra verificada y consentimiento, preguntar si la herramienta resolvió la necesidad y ofrecer ayuda.",
         "state": "pendiente",
@@ -493,11 +469,11 @@
       "agent": "tesoreria",
       "department": "Finanzas",
       "mission": "Controlar techo agregado",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
-      "state": "completado",
+      "state": "bloqueado",
       "name": "Tesorería",
-      "evidence": "data/company/202611180830200000-591f15c164/tesoreria.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/tesoreria.json",
       "result": {
         "budget_ceiling_eur": 100,
         "available_balance_eur": null,
@@ -515,11 +491,11 @@
       "agent": "reinversion",
       "department": "Finanzas",
       "mission": "Proponer reparto de beneficio verificado",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "bloqueado",
       "name": "Reinversión",
-      "evidence": "data/company/202611180830200000-591f15c164/reinversion.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/reinversion.json",
       "result": {
         "state": "bloqueado",
         "proposal": "30% de beneficio neto verificado y positivo, 70% reservado; nunca transferencia automática",
@@ -535,11 +511,11 @@
       "agent": "auditoria",
       "department": "Finanzas",
       "mission": "Revisar trazabilidad y bloqueos",
-      "time_utc": "2026-11-18T08:30:20+00:00",
+      "time_utc": "2026-11-18T10:18:18+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "completado",
       "name": "Auditoría",
-      "evidence": "data/company/202611180830200000-591f15c164/auditoria.json",
+      "evidence": "data/company/202611181018180000-6bd0f021f8/auditoria.json",
       "result": {
         "no_outreach": true,
         "no_payments": true,
@@ -548,7 +524,7 @@
         "financial_verification": "desconocida",
         "limitations": [
           "No demuestra ventas",
-          "Shopify checkout y entrega sin verificar",
+          "PayPal: aviso de correo sin confirmar observado el 17/11/2026; estado actual pendiente de nueva verificación. Entrega gratuita verificada, cobro real no verificado",
           "Fuentes externas no fiables; sin instrucciones ejecutables"
         ]
       }
