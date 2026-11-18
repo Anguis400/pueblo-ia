@@ -53,6 +53,13 @@ class CompanyTests(unittest.TestCase):
             self.assertEqual(agents['propuestas']['state'], 'pendiente')
             self.assertIsNone(agents['conversion']['result']['verified_sales'])
             self.assertEqual(agents['competencia']['state'], 'pendiente')
+            self.assertEqual(agents['contenido']['state'], 'preparado')
+            self.assertEqual(agents['conversion']['state'], 'bloqueado')
+            self.assertEqual(agents['tesoreria']['state'], 'bloqueado')
+            calendar = agents['contenido']['result']['calendar']
+            self.assertEqual(len(calendar), 1)
+            self.assertEqual(calendar[0]['demo'], 'tienda/escandallo-pro/')
+            self.assertNotIn('Shopify', str(agents['conversion']['result']))
 
     def test_daily_limit(self):
         import datetime as dt
