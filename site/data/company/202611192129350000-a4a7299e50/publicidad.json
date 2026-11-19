@@ -1,0 +1,23 @@
+{
+  "agent": "publicidad",
+  "department": "Marketing y publicidad",
+  "mission": "Preparar campaña condicionada",
+  "time_utc": "2026-11-19T21:29:35+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "bloqueado",
+  "result": {
+    "state": "bloqueado",
+    "campaign_draft": "Demostración de Escandallo Pro para pastelerías",
+    "audience_hypothesis": "Pastelerías y pequeños obradores que calculan costes de recetas",
+    "copy": "Revisa costes y supuestos con una demo offline.",
+    "spend_eur": 0,
+    "gates": [
+      "Resolver aviso de PayPal observado el 17/11/2026 y verificar cobro; descarga gratuita ya probada el 15/11",
+      "Confirmar precio, impuestos y condiciones",
+      "Aprobar destinatario y propuesta individual",
+      "Registrar consentimiento y resultado fuera del repositorio",
+      "Verificar cobro, comisiones y devoluciones antes de atribuir ingresos"
+    ],
+    "budget": "Sin asignación; requiere autorización específica dentro del techo agregado"
+  }
+}
