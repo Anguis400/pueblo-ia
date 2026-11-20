@@ -1,0 +1,14 @@
+{
+  "agent": "demanda",
+  "department": "Inteligencia de mercado",
+  "mission": "Separar compradores de empleo",
+  "time_utc": "2026-11-20T21:03:34+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "preparado",
+  "result": {
+    "buyer_signals": 0,
+    "remote_jobs_not_clients": 1,
+    "keyword_counts": {},
+    "method": "Filtro conservador de intención de compra; no prueba presupuesto ni vigencia"
+  }
+}
