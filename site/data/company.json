@@ -1,18 +1,18 @@
 {
   "schema_version": 3,
-  "run_id": "202611210816150000-868878f434",
-  "time_utc": "2026-11-21T08:16:15+00:00",
+  "run_id": "202611212004340000-4555babaa6",
+  "time_utc": "2026-11-21T20:04:34+00:00",
   "execution": "21 roles deterministas secuenciales, sin LLM ni trabajo paralelo simulado",
   "agents": [
     {
       "agent": "ceo",
       "department": "Dirección",
       "mission": "Priorizar validación comercial",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "preparado",
       "name": "CEO",
-      "evidence": "data/company/202611210816150000-868878f434/ceo.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/ceo.json",
       "result": {
         "priority": "Primera venta real de Escandallo Pro a 19 EUR; no iniciar otros productos",
         "buyer_candidates": 0,
@@ -23,11 +23,11 @@
       "agent": "estrategia",
       "department": "Dirección",
       "mission": "Diseñar experimentos rentables",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "preparado",
       "name": "Estrategia",
-      "evidence": "data/company/202611210816150000-868878f434/estrategia.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/estrategia.json",
       "result": {
         "experiment": "Validar cobro de Escandallo Pro, distribuir demo en un canal autorizado y medir visitas, objeciones y compras",
         "success": "Primera compra pagada de un cliente real; excluir pedido gratuito y compras propias",
@@ -38,25 +38,25 @@
       "agent": "operaciones",
       "department": "Dirección",
       "mission": "Auditar ejecución y dependencias",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "preparado",
       "name": "Operaciones",
-      "evidence": "data/company/202611210816150000-868878f434/operaciones.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/operaciones.json",
       "result": {
         "sources": [
           {
             "name": "Jobicy Europa",
             "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
-            "observed_at": "2026-11-21T08:16:15+00:00",
+            "observed_at": "2026-11-21T20:04:34+00:00",
             "state": "ok",
-            "count": 3,
+            "count": 5,
             "error": null
           },
           {
             "name": "Jobicy worldwide",
             "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
-            "observed_at": "2026-11-21T08:16:15+00:00",
+            "observed_at": "2026-11-21T20:04:34+00:00",
             "state": "ok",
             "count": 1,
             "error": null
@@ -64,7 +64,7 @@
           {
             "name": "HN freelance",
             "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
-            "observed_at": "2026-11-21T08:16:15+00:00",
+            "observed_at": "2026-11-21T20:04:34+00:00",
             "state": "ok",
             "count": 0,
             "error": null
@@ -72,7 +72,7 @@
           {
             "name": "HN contract",
             "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
-            "observed_at": "2026-11-21T08:16:15+00:00",
+            "observed_at": "2026-11-21T20:04:34+00:00",
             "state": "ok",
             "count": 0,
             "error": null
@@ -86,25 +86,25 @@
       "agent": "investigacion",
       "department": "Inteligencia de mercado",
       "mission": "Consultar fuentes públicas",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "completado",
       "name": "Investigación",
-      "evidence": "data/company/202611210816150000-868878f434/investigacion.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/investigacion.json",
       "result": {
         "sources": [
           {
             "name": "Jobicy Europa",
             "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
-            "observed_at": "2026-11-21T08:16:15+00:00",
+            "observed_at": "2026-11-21T20:04:34+00:00",
             "state": "ok",
-            "count": 3,
+            "count": 5,
             "error": null
           },
           {
             "name": "Jobicy worldwide",
             "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
-            "observed_at": "2026-11-21T08:16:15+00:00",
+            "observed_at": "2026-11-21T20:04:34+00:00",
             "state": "ok",
             "count": 1,
             "error": null
@@ -112,7 +112,7 @@
           {
             "name": "HN freelance",
             "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
-            "observed_at": "2026-11-21T08:16:15+00:00",
+            "observed_at": "2026-11-21T20:04:34+00:00",
             "state": "ok",
             "count": 0,
             "error": null
@@ -120,17 +120,19 @@
           {
             "name": "HN contract",
             "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
-            "observed_at": "2026-11-21T08:16:15+00:00",
+            "observed_at": "2026-11-21T20:04:34+00:00",
             "state": "ok",
             "count": 0,
             "error": null
           }
         ],
-        "observed_at": "2026-11-21T08:16:15+00:00",
+        "observed_at": "2026-11-21T20:04:34+00:00",
         "evidence": [
+          "https://jobicy.com/jobs/163711-account-executive-40",
           "https://jobicy.com/jobs/151013-distributed-systems-testing-software-engineer-python-go",
           "https://jobicy.com/jobs/156227-clinical-operations-lead-2",
-          "https://jobicy.com/jobs/163587-director-of-agency-development"
+          "https://jobicy.com/jobs/163587-director-of-agency-development",
+          "https://jobicy.com/jobs/163714-onboarding-manager-france"
         ]
       }
     },
@@ -138,14 +140,14 @@
       "agent": "demanda",
       "department": "Inteligencia de mercado",
       "mission": "Separar compradores de empleo",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "preparado",
       "name": "Demanda",
-      "evidence": "data/company/202611210816150000-868878f434/demanda.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/demanda.json",
       "result": {
         "buyer_signals": 0,
-        "remote_jobs_not_clients": 3,
+        "remote_jobs_not_clients": 5,
         "keyword_counts": {},
         "method": "Filtro conservador de intención de compra; no prueba presupuesto ni vigencia"
       }
@@ -154,11 +156,11 @@
       "agent": "competencia",
       "department": "Inteligencia de mercado",
       "mission": "Preparar comparación verificable",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "pendiente",
       "name": "Competencia",
-      "evidence": "data/company/202611210816150000-868878f434/competencia.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/competencia.json",
       "result": {
         "state": "pendiente",
         "reason": "No se han consultado fuentes de competencia de productos; no inventar comparativas",
@@ -172,11 +174,11 @@
       "agent": "producto",
       "department": "Desarrollo de productos",
       "mission": "Definir herramientas útiles",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "preparado",
       "name": "Producto",
-      "evidence": "data/company/202611210816150000-868878f434/producto.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/producto.json",
       "result": {
         "specifications": [
           {
@@ -206,11 +208,11 @@
       "agent": "desarrollo",
       "department": "Desarrollo de productos",
       "mission": "Construir demos descargables",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "completado",
       "name": "Desarrollo",
-      "evidence": "data/company/202611210816150000-868878f434/desarrollo.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/desarrollo.json",
       "result": {
         "catalog": [
           {
@@ -261,11 +263,11 @@
       "agent": "qa",
       "department": "Desarrollo de productos",
       "mission": "Verificar integridad de artefactos",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "completado",
       "name": "QA",
-      "evidence": "data/company/202611210816150000-868878f434/qa.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/qa.json",
       "result": {
         "checks": [
           {
@@ -296,11 +298,11 @@
       "agent": "seo",
       "department": "Marketing y publicidad",
       "mission": "Preparar contenidos indexables",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "preparado; posicionamiento no medido",
       "name": "SEO",
-      "evidence": "data/company/202611210816150000-868878f434/seo.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/seo.json",
       "result": {
         "titles": [
           "Cuánto cuesta cada unidad: prueba Escandallo Pro"
@@ -317,11 +319,11 @@
       "agent": "contenido",
       "department": "Marketing y publicidad",
       "mission": "Preparar calendario editorial",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "preparado",
       "name": "Contenido",
-      "evidence": "data/company/202611210816150000-868878f434/contenido.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/contenido.json",
       "result": {
         "calendar": [
           {
@@ -339,11 +341,11 @@
       "agent": "publicidad",
       "department": "Marketing y publicidad",
       "mission": "Preparar campaña condicionada",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "bloqueado",
       "name": "Publicidad",
-      "evidence": "data/company/202611210816150000-868878f434/publicidad.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/publicidad.json",
       "result": {
         "state": "bloqueado",
         "campaign_draft": "Demostración de Escandallo Pro para pastelerías",
@@ -364,14 +366,14 @@
       "agent": "prospeccion",
       "department": "Ventas",
       "mission": "Priorizar señales de compra",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "preparado",
       "name": "Prospección",
-      "evidence": "data/company/202611210816150000-868878f434/prospeccion.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/prospeccion.json",
       "result": {
         "candidates": [],
-        "excluded_job_count": 3,
+        "excluded_job_count": 5,
         "next": "Verificar necesidad, presupuesto, vigencia y adecuación antes de contactar"
       }
     },
@@ -379,11 +381,11 @@
       "agent": "propuestas",
       "department": "Ventas",
       "mission": "Preparar borradores individuales",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "pendiente",
       "name": "Propuestas",
-      "evidence": "data/company/202611210816150000-868878f434/propuestas.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/propuestas.json",
       "result": {
         "drafts": [],
         "state": "pendiente",
@@ -394,11 +396,11 @@
       "agent": "conversion",
       "department": "Ventas",
       "mission": "Definir medición comercial",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "bloqueado",
       "name": "Conversión",
-      "evidence": "data/company/202611210816150000-868878f434/conversion.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/conversion.json",
       "result": {
         "visits": null,
         "consented_conversations": null,
@@ -417,11 +419,11 @@
       "agent": "soporte",
       "department": "Atención al cliente",
       "mission": "Preparar ayuda de producto",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "preparado",
       "name": "Soporte",
-      "evidence": "data/company/202611210816150000-868878f434/soporte.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/soporte.json",
       "result": {
         "faq": [
           "Descomprime el ZIP de Escandallo Pro y abre Escandallo_Pro.html.",
@@ -435,11 +437,11 @@
       "agent": "voz",
       "department": "Atención al cliente",
       "mission": "Preparar entrevistas consentidas",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "pendiente",
       "name": "Voz del cliente",
-      "evidence": "data/company/202611210816150000-868878f434/voz.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/voz.json",
       "result": {
         "interview_draft": [
           "¿Cómo calculas tus costes hoy?",
@@ -454,11 +456,11 @@
       "agent": "retencion",
       "department": "Atención al cliente",
       "mission": "Diseñar seguimiento consentido",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "pendiente",
       "name": "Retención",
-      "evidence": "data/company/202611210816150000-868878f434/retencion.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/retencion.json",
       "result": {
         "followup_draft": "Tras compra verificada y consentimiento, preguntar si la herramienta resolvió la necesidad y ofrecer ayuda.",
         "state": "pendiente",
@@ -469,11 +471,11 @@
       "agent": "tesoreria",
       "department": "Finanzas",
       "mission": "Controlar techo agregado",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "bloqueado",
       "name": "Tesorería",
-      "evidence": "data/company/202611210816150000-868878f434/tesoreria.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/tesoreria.json",
       "result": {
         "budget_ceiling_eur": 100,
         "available_balance_eur": null,
@@ -491,11 +493,11 @@
       "agent": "reinversion",
       "department": "Finanzas",
       "mission": "Proponer reparto de beneficio verificado",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "bloqueado",
       "name": "Reinversión",
-      "evidence": "data/company/202611210816150000-868878f434/reinversion.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/reinversion.json",
       "result": {
         "state": "bloqueado",
         "proposal": "30% de beneficio neto verificado y positivo, 70% reservado; nunca transferencia automática",
@@ -511,11 +513,11 @@
       "agent": "auditoria",
       "department": "Finanzas",
       "mission": "Revisar trazabilidad y bloqueos",
-      "time_utc": "2026-11-21T08:16:15+00:00",
+      "time_utc": "2026-11-21T20:04:34+00:00",
       "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
       "state": "completado",
       "name": "Auditoría",
-      "evidence": "data/company/202611210816150000-868878f434/auditoria.json",
+      "evidence": "data/company/202611212004340000-4555babaa6/auditoria.json",
       "result": {
         "no_outreach": true,
         "no_payments": true,
