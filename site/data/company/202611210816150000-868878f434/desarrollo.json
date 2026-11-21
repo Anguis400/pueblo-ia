@@ -1,0 +1,53 @@
+{
+  "agent": "desarrollo",
+  "department": "Desarrollo de productos",
+  "mission": "Construir demos descargables",
+  "time_utc": "2026-11-21T08:16:15+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "completado",
+  "result": {
+    "catalog": [
+      {
+        "id": "escandallo",
+        "name": "Escandallo de servicios",
+        "mission": "Calcular coste y precio objetivo",
+        "state": "demo_funcional",
+        "url": "tienda/escandallo.html",
+        "download": "tienda/escandallo.zip",
+        "sha256": "022e42317258202e7f8ca0345d8546b3f77db11e91a521adcd22313904b75526",
+        "sales_verified": null
+      },
+      {
+        "id": "presupuesto",
+        "name": "Presupuesto de proyecto",
+        "mission": "Estimar una propuesta sin enviarla",
+        "state": "demo_funcional",
+        "url": "tienda/presupuesto.html",
+        "download": "tienda/presupuesto.zip",
+        "sha256": "dbfadc379dacd7fc6c91fa2138d926679bde5eebe32ae16d848780b2f2097a5d",
+        "sales_verified": null
+      },
+      {
+        "id": "rentabilidad",
+        "name": "Punto de equilibrio",
+        "mission": "Analizar viabilidad antes de gastar",
+        "state": "demo_funcional",
+        "url": "tienda/rentabilidad.html",
+        "download": "tienda/rentabilidad.zip",
+        "sha256": "a354c33f35428a6b76b9264d7c4ffa962caae3192380aa50f5b135de542cdd70",
+        "sales_verified": null
+      },
+      {
+        "id": "conversion",
+        "name": "Embudo comercial",
+        "mission": "Calcular conversión de datos propios",
+        "state": "demo_funcional",
+        "url": "tienda/conversion.html",
+        "download": "tienda/conversion.zip",
+        "sha256": "2a367fea80c88e5be2f59a8087c0aafce6d25699cd7f818929d742ae4002ee36",
+        "sales_verified": null
+      }
+    ],
+    "implementation": "Plantillas HTML y JavaScript locales; cero API de pago"
+  }
+}
