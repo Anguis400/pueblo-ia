@@ -13,7 +13,8 @@ from app.products import PRODUCTS
 
 class CompanyTests(unittest.TestCase):
     def snapshot(self):
-        return collect(fetch=lambda url: {'jobs': []} if 'jobicy' in url else {'hits': []}, include_ai=False)
+        from test_demand import empty_fetch
+        return collect(fetch=empty_fetch, include_ai=False)
 
     def test_roles_evidence_and_safe_pages(self):
         snapshot = self.snapshot()
@@ -52,7 +53,8 @@ class CompanyTests(unittest.TestCase):
             self.assertEqual(agents['propuestas']['result']['drafts'], [])
             self.assertEqual(agents['propuestas']['state'], 'pendiente')
             self.assertIsNone(agents['conversion']['result']['verified_sales'])
-            self.assertEqual(agents['competencia']['state'], 'pendiente')
+            self.assertEqual(agents['competencia']['state'], 'preparado')
+            self.assertIn('bakecost.app', agents['competencia']['result']['source'])
             self.assertEqual(agents['contenido']['state'], 'preparado')
             self.assertEqual(agents['conversion']['state'], 'bloqueado')
             self.assertEqual(agents['tesoreria']['state'], 'bloqueado')

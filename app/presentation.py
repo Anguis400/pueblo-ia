@@ -266,7 +266,7 @@ def operations(vm, prefix):
 
 def next_steps(vm, prefix):
     tasks = [
-        ('ventas', 'Desbloquear el cobro de Escandallo Pro', 'Payhip mostró un aviso de PayPal el 17/11/2026. Resolverlo y verificar el estado actual; conectado no equivale a cobrar.', 'Bloqueado'),
+        ('ventas', 'Conseguir una prueba con un comprador', 'Payhip confirmó el 23/11/2026 aptitud para recibir pagos con PayPal. Falta un cobro real; no contar la entrega gratuita como venta.', 'Pendiente'),
         ('inteligencia', 'Validar con pastelerías y obradores', 'Cinco pruebas consentidas como objetivo, no como resultado. Registrar objeciones anónimas; no iniciar otro producto.', 'Pendiente'),
         ('marketing', 'Revisar campaña y permisos', 'Contenido y propuestas requieren revisión. No hay anuncios de pago activados.', 'Bloqueado'),
         ('finanzas', 'Conciliar cobros y costes', 'Solo entonces se puede calcular el 30% de reinversión propuesto.', 'Bloqueado'),

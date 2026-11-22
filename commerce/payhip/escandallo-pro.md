@@ -1,5 +1,7 @@
 # Ficha preparada para Payhip — Escandallo Pro
 
+> **Revisión 23/11/2026:** acceso autenticado a la tienda correcta comprobado mediante su enlace real en el dashboard. En Ajustes de pagos, PayPal figura conectado; al abrir Manage, Payhip indica «Your account is able to receive payments through PayPal». Ya no aparece el aviso anterior de correo sin confirmar. Es una comprobación de configuración, no una prueba de cobro. La demo del PR #5 está desplegada y coincide con el archivo validado. El texto histórico inferior no debe usarse como estado actual. Precio y condiciones no modificados en esta revisión. Investigación y prueba comercial preparada: [validación 23/11](escandallo-validacion-2026-11-23.md).
+
 > **Actualización 16/11/2026:** el titular ordenó publicar el producto, y se guardó como Visible a 19 EUR. La ficha fue comprobada sin nombre, domicilio ni correo personales. El borrador legal permanece sin publicar y sin datos personales. No volver a exponer datos personales. La publicación técnica no acredita cumplimiento legal. La información del 15/11 que sigue es histórica. Material nuevo: [demo simplificada](escandallo-demo.html) y [kit comercial](escandallo-lanzamiento.md). Demo guardada en rama, no desplegada ni verificada visualmente. Ninguna venta de pago acreditada.
 
 

@@ -39,26 +39,26 @@ def build_company(snapshot, site=None):
     now = snapshot['last_run_utc']
     run_id = re.sub(r'[^0-9]', '', now) + '-' + hashlib.sha256(json.dumps(snapshot, sort_keys=True).encode()).hexdigest()[:10]
     base = f'data/company/{run_id}'
-    counts = dict(collections.Counter(word for lead in leads for word in ('python', 'excel', 'automation', 'dashboard') if word in (lead['title'] + lead['excerpt']).lower()))
+    counts = dict(collections.Counter(word for lead in leads for word in ('escandallo', 'costos', 'custos', 'excel', 'planilha') if word in (lead['title'] + lead['excerpt']).lower()))
     proposals = [{'source_id': lead['id'], 'source_url': lead['url'], 'state': 'borrador_no_enviado',
-                  'text': f"Referencia pública: {lead['title']}. Antes de ofrecer servicios: confirmar vigencia, necesidad y presupuesto. Propuesta para revisión: diagnóstico de automatización, alcance acotado, demo con datos de prueba y aceptación por escrito. Precio pendiente de estimación; no se ha contactado.",
+                  'text': f"Referencia pública: {lead['title']}. Borrador para adaptar una herramienta de costes: ingredientes y precios, cantidades por receta, mano de obra, envases y gastos del lote. Verificar formato solicitado, número de recetas, presupuesto y alcance. La demo usa datos ficticios. Precio y entrega pendientes de acuerdo; no se ha contactado.",
                   'next': 'Solicitar autorización específica del destinatario, canal y texto antes del contacto'} for lead in leads[:5]]
     calendar = [{'slot': 1, 'title': 'Cuánto cuesta cada unidad: prueba Escandallo Pro',
                  'demo': 'tienda/escandallo-pro/', 'state': 'borrador_no_publicado',
                  'copy': 'Ingredientes, mermas, mano de obra y envases: prueba la demo gratuita para pastelerías y obradores. La versión descargable cuesta 19 EUR, pago único. https://payhip.com/b/IiVct'}]
     conversion = {'visits': None, 'consented_conversations': None, 'proposals_sent': None, 'verified_sales': None,
-                  'checklist': ['Resolver aviso de PayPal observado el 17/11/2026 y verificar cobro; descarga gratuita ya probada el 15/11', 'Confirmar precio, impuestos y condiciones', 'Aprobar destinatario y propuesta individual', 'Registrar consentimiento y resultado fuera del repositorio', 'Verificar cobro, comisiones y devoluciones antes de atribuir ingresos']}
+                  'checklist': ['Payhip indicó el 23/11/2026 que la cuenta puede recibir pagos con PayPal, sin el aviso anterior. Cobro real aún no probado; entrega gratuita verificada el 15/11', 'Confirmar precio, impuestos y condiciones', 'Aprobar destinatario y propuesta individual', 'Registrar consentimiento y resultado fuera del repositorio', 'Verificar cobro, comisiones y devoluciones antes de atribuir ingresos']}
     finances = {'budget_ceiling_eur': config['initial_budget_eur'], 'available_balance_eur': None,
                 'verified_revenue_eur': None, 'verified_costs_eur': None, 'verified_net_profit_eur': None,
                 'proposed_reinvestment_eur': None, 'reinvest_pct': 30, 'reserve_pct': 70,
                 'automated_spend_this_run_eur': 0, 'reason': 'Sin libro contable privado conciliado ni verificación de cobros, comisiones, costes, devoluciones y reservas fiscales. El techo no es saldo disponible.'}
     outputs = {
-        'ceo': {'priority': 'Primera venta real de Escandallo Pro a 19 EUR; no iniciar otros productos', 'buyer_candidates': len(leads), 'blocked': 'Contacto requiere autorización específica'},
-        'estrategia': {'experiment': 'Validar cobro de Escandallo Pro, distribuir demo en un canal autorizado y medir visitas, objeciones y compras', 'success': 'Primera compra pagada de un cliente real; excluir pedido gratuito y compras propias', 'stop': 'Sin demanda validada: no gastar'},
+        'ceo': {'priority': 'Primera venta real de Escandallo Pro o adaptación acotada a una petición de costes; validar antes de ampliar catálogo', 'buyer_candidates': len(leads), 'blocked': 'Contacto requiere autorización específica'},
+        'estrategia': {'experiment': 'Validar si un encargo concreto de costes admite adaptar el trabajo de Escandallo Pro; confirmar formato y presupuesto antes de construir más', 'success': 'Primera compra pagada de un cliente real; excluir pedido gratuito y compras propias', 'stop': 'Sin respuesta verificable en siete días desde un envío autorizado: revisar la oferta. Sin envío no empieza el experimento de ventas'},
         'operaciones': {'sources': snapshot['sources'], 'round_state': snapshot['run_result'], 'schedule': '4 rondas diarias; no garantiza puntualidad'},
         'investigacion': {'sources': snapshot['sources'], 'observed_at': now, 'evidence': [x['url'] for x in snapshot['opportunities']]},
         'demanda': {'buyer_signals': len(leads), 'remote_jobs_not_clients': len(jobs), 'keyword_counts': counts, 'method': 'Filtro conservador de intención de compra; no prueba presupuesto ni vigencia'},
-        'competencia': {'state': 'pendiente', 'reason': 'No se han consultado fuentes de competencia de productos; no inventar comparativas', 'plan': ['Comparar precio y licencia en página original', 'Registrar URL, fecha y límites de cada alternativa']},
+        'competencia': {'state': 'preparado', 'observed_on': '2026-11-23', 'source': 'https://bakecost.app/', 'finding': 'El proveedor anuncia costeo, pedidos, respaldo local y CSV gratis, sin cuenta y sin conexión. No se ha probado su aplicación ni verificado sus usuarios o ventas.', 'implication': 'La calculadora genérica de pago necesita validación. Adaptación a un encargo concreto es una hipótesis, no una ventaja demostrada.'},
         'producto': {'specifications': [{'name': x['name'], 'mission': x['mission'], 'acceptance': 'Funciona offline con entradas válidas y errores visibles'} for x in catalog]},
         'desarrollo': {'catalog': catalog, 'implementation': 'Plantillas HTML y JavaScript locales; cero API de pago'},
         'qa': {'checks': [{'product': p['id'], 'sha256_matches': hashlib.sha256((site / p['url']).read_bytes()).hexdigest() == p['sha256'], 'zip_exists': (site / p['download']).is_file()} for p in catalog], 'limits': 'Integridad de compilación; pruebas de cálculo en CI, no certificación fiscal'},
@@ -73,7 +73,7 @@ def build_company(snapshot, site=None):
         'retencion': {'followup_draft': 'Tras compra verificada y consentimiento, preguntar si la herramienta resolvió la necesidad y ofrecer ayuda.', 'state': 'pendiente', 'reason': 'Sin clientes ni cohortes verificadas'},
         'tesoreria': finances,
         'reinversion': {'state': 'bloqueado', 'proposal': '30% de beneficio neto verificado y positivo, 70% reservado; nunca transferencia automática', 'amount_eur': None, 'gates': ['Conciliar cobros y todos los costes', 'Descontar devoluciones y reserva fiscal', 'Obtener autorización específica; respetar techo agregado de 100 EUR']},
-        'auditoria': {'no_outreach': True, 'no_payments': True, 'paid_ai_disabled': True, 'source_state': snapshot['run_result'], 'financial_verification': 'desconocida', 'limitations': ['No demuestra ventas', 'PayPal: aviso de correo sin confirmar observado el 17/11/2026; estado actual pendiente de nueva verificación. Entrega gratuita verificada, cobro real no verificado', 'Fuentes externas no fiables; sin instrucciones ejecutables']},
+        'auditoria': {'no_outreach': True, 'no_payments': True, 'paid_ai_disabled': True, 'source_state': snapshot['run_result'], 'financial_verification': 'desconocida', 'limitations': ['No demuestra ventas', 'Payhip: aptitud de PayPal para recibir pagos observada el 23/11/2026. Entrega gratuita verificada, cobro real no verificado. No equivale a una comprobación en directo por esta ronda.', 'Fuentes externas no fiables; sin instrucciones ejecutables']},
     }
     agents = []
     for department, roles in DEPARTMENTS.items():
