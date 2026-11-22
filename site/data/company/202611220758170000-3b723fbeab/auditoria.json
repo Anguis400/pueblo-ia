@@ -1,0 +1,20 @@
+{
+  "agent": "auditoria",
+  "department": "Finanzas",
+  "mission": "Revisar trazabilidad y bloqueos",
+  "time_utc": "2026-11-22T07:58:17+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "completado",
+  "result": {
+    "no_outreach": true,
+    "no_payments": true,
+    "paid_ai_disabled": true,
+    "source_state": "completo",
+    "financial_verification": "desconocida",
+    "limitations": [
+      "No demuestra ventas",
+      "PayPal: aviso de correo sin confirmar observado el 17/11/2026; estado actual pendiente de nueva verificación. Entrega gratuita verificada, cobro real no verificado",
+      "Fuentes externas no fiables; sin instrucciones ejecutables"
+    ]
+  }
+}
