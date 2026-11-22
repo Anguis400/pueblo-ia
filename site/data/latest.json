@@ -1,21 +1,21 @@
 {
   "schema_version": 3,
-  "last_run_utc": "2026-11-22T07:58:17+00:00",
+  "last_run_utc": "2026-11-22T20:19:47+00:00",
   "run_type": "recoleccion_publica",
   "run_result": "completo",
   "sources": [
     {
       "name": "Jobicy Europa",
       "url": "https://jobicy.com/api/jobs?count=100&geo=europe",
-      "observed_at": "2026-11-22T07:58:17+00:00",
+      "observed_at": "2026-11-22T20:19:47+00:00",
       "state": "ok",
-      "count": 6,
+      "count": 8,
       "error": null
     },
     {
       "name": "Jobicy worldwide",
       "url": "https://jobicy.com/api/jobs?count=100&geo=anywhere",
-      "observed_at": "2026-11-22T07:58:17+00:00",
+      "observed_at": "2026-11-22T20:19:47+00:00",
       "state": "ok",
       "count": 1,
       "error": null
@@ -23,7 +23,7 @@
     {
       "name": "HN freelance",
       "url": "https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100",
-      "observed_at": "2026-11-22T07:58:17+00:00",
+      "observed_at": "2026-11-22T20:19:47+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -31,7 +31,7 @@
     {
       "name": "HN contract",
       "url": "https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100",
-      "observed_at": "2026-11-22T07:58:17+00:00",
+      "observed_at": "2026-11-22T20:19:47+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -65,22 +65,6 @@
       "url": "https://jobicy.com/jobs/151013-distributed-systems-testing-software-engineer-python-go",
       "published": "2026-11-21T03:00:25+00:00",
       "excerpt": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT. Our customers include the world's leading public cloud and silicon pr",
-      "score": 4,
-      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
-      "revenue_eur": null,
-      "expense_eur": null
-    },
-    {
-      "id": "jobicy-156227",
-      "agent": "research",
-      "source": "Jobicy",
-      "category": "empleo_remoto",
-      "title": "Clinical Operations Lead",
-      "company": "Alimentiv",
-      "region": "Hungary",
-      "url": "https://jobicy.com/jobs/156227-clinical-operations-lead-2",
-      "published": "2026-11-21T03:20:34+00:00",
-      "excerpt": "Alimentiv is a global CRO with a singular focus: advancing therapies for patients with gastrointestinal diseases. GI is our WHY and for more than 30 years that purpose has driven our scientific rigour, operational excellence, and deep therapeutic expertise, including supporting more than 70% of IBD compounds in development. We operate as a private,",
       "score": 4,
       "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
       "revenue_eur": null,
@@ -149,6 +133,54 @@
       "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
       "revenue_eur": null,
       "expense_eur": null
+    },
+    {
+      "id": "jobicy-163822",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Clinical Compliance Specialist",
+      "company": "Alimentiv",
+      "region": "Canada, Poland, Portugal, Romania",
+      "url": "https://jobicy.com/jobs/163822-clinical-compliance-specialist",
+      "published": "2026-11-22T05:58:43+00:00",
+      "excerpt": "Alimentiv is a global CRO with a singular focus: advancing therapies for patients with gastrointestinal diseases. GI is our WHY and for more than 30 years that purpose has driven our scientific rigour, operational excellence, and deep therapeutic expertise, including supporting more than 70% of IBD compounds in development. We operate as a private,",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-163824",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Clinical Operations Lead (EU)",
+      "company": "Alimentiv",
+      "region": "Europe",
+      "url": "https://jobicy.com/jobs/163824-clinical-operations-lead-eu",
+      "published": "2026-11-22T05:59:09+00:00",
+      "excerpt": "Alimentiv is a global CRO with a singular focus: advancing therapies for patients with gastrointestinal diseases. GI is our WHY and for more than 30 years that purpose has driven our scientific rigour, operational excellence, and deep therapeutic expertise, including supporting more than 70% of IBD compounds in development. We operate as a private,",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
+    },
+    {
+      "id": "jobicy-163843",
+      "agent": "research",
+      "source": "Jobicy",
+      "category": "empleo_remoto",
+      "title": "Peer Success Manager",
+      "company": "Kaseya",
+      "region": "UK",
+      "url": "https://jobicy.com/jobs/163843-peer-success-manager-2",
+      "published": "2026-11-22T11:58:09+00:00",
+      "excerpt": "About Kaseya Kaseya is the leading provider of AI-powered IT management and cybersecurity software, serving Managed Service Providers (MSPs) and internal IT organizations worldwide. Our comprehensive platform helps organizations efficiently manage, secure, and automate their IT environments, driving operational efficiency and long-term business suc",
+      "score": 4,
+      "status": "Oportunidad detectada; elegibilidad y vigencia por verificar",
+      "revenue_eur": null,
+      "expense_eur": null
     }
   ],
   "missions": [
@@ -166,14 +198,6 @@
       "task": "Verificar requisitos y ubicación de «Distributed Systems Testing Software Engineer, Python / Go». Si encaja, preparar candidatura para revisión humana.",
       "source_id": "jobicy-151013",
       "url": "https://jobicy.com/jobs/151013-distributed-systems-testing-software-engineer-python-go",
-      "state": "pendiente_de_revision"
-    },
-    {
-      "agent": "research",
-      "title": "Clinical Operations Lead",
-      "task": "Verificar requisitos y ubicación de «Clinical Operations Lead». Si encaja, preparar candidatura para revisión humana.",
-      "source_id": "jobicy-156227",
-      "url": "https://jobicy.com/jobs/156227-clinical-operations-lead-2",
       "state": "pendiente_de_revision"
     },
     {
@@ -198,6 +222,14 @@
       "task": "Verificar requisitos y ubicación de «Senior Manager, Client Analytics Partner». Si encaja, preparar candidatura para revisión humana.",
       "source_id": "jobicy-156438",
       "url": "https://jobicy.com/jobs/156438-senior-manager-client-analytics-partner",
+      "state": "pendiente_de_revision"
+    },
+    {
+      "agent": "research",
+      "title": "Onboarding Manager, France",
+      "task": "Verificar requisitos y ubicación de «Onboarding Manager, France». Si encaja, preparar candidatura para revisión humana.",
+      "source_id": "jobicy-163714",
+      "url": "https://jobicy.com/jobs/163714-onboarding-manager-france",
       "state": "pendiente_de_revision"
     }
   ],
