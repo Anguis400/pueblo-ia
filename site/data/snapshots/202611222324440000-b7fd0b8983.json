@@ -1,0 +1,75 @@
+{
+  "schema_version": 3,
+  "last_run_utc": "2026-11-22T23:24:44+00:00",
+  "run_type": "recoleccion_publica",
+  "run_result": "completo",
+  "sources": [
+    {
+      "name": "Workana búsqueda escandallos",
+      "url": "https://www.workana.com/jobs?query=escandallo",
+      "observed_at": "2026-11-22T23:24:44+00:00",
+      "state": "ok",
+      "count": 0,
+      "error": null
+    },
+    {
+      "name": "Workana búsqueda costes",
+      "url": "https://www.workana.com/jobs?query=costos",
+      "observed_at": "2026-11-22T23:24:44+00:00",
+      "state": "ok",
+      "count": 0,
+      "error": null
+    },
+    {
+      "name": "Workana encargo observado (seguimiento, no descubrimiento)",
+      "url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+      "observed_at": "2026-11-22T23:24:44+00:00",
+      "state": "ok",
+      "count": 1,
+      "error": null
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "workana-desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+      "agent": "sales",
+      "source": "Workana / petición pública",
+      "category": "posible_encargo_no_verificado",
+      "title": "Desenvolvimento de Planilha Financeira e de Custos para Confeitaria",
+      "company": "",
+      "region": "Sin verificar",
+      "url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+      "published": "2026-10-29",
+      "observed_at": "2026-11-22T23:24:45+00:00",
+      "excerpt": "O cliente busca um profissional para desenvolver uma planilha completa e personalizada para gestão de uma confeitaria. A planilha deve incluir funcionalidades para controle de despesas fixas, detalhamento da lista de ingredientes e receitas de cada produto, e projeções financeiras individuais para cada item produzido. ",
+      "score": 15,
+      "status": "Petición pública de herramienta de costes; presupuesto, acceso y contratación pendientes de verificar",
+      "project_status_observed": "evaluating bids",
+      "budget_eur": null,
+      "revenue_eur": null,
+      "expense_eur": null
+    }
+  ],
+  "missions": [
+    {
+      "agent": "sales",
+      "title": "Desenvolvimento de Planilha Financeira e de Custos para Confeitaria",
+      "task": "Leer la conversación original y comprobar si «Desenvolvimento de Planilha Financeira e de Custos para Confeitar» implica un encargo pagado y abierto.",
+      "source_id": "workana-desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+      "url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+      "state": "pendiente_de_revision"
+    }
+  ],
+  "ai_brief": {
+    "state": "desactivado",
+    "text": "La IA generativa no se ha ejecutado."
+  },
+  "facts": {
+    "confirmed_revenue_eur": null,
+    "confirmed_profit_eur": null,
+    "sales_completed": null,
+    "payments_verified": false,
+    "notice": "No hay cuentas bancarias conectadas; sin verificación de cobros."
+  },
+  "policy": "No compras, contactos, publicaciones ni inversión sin aprobación expresa."
+}
