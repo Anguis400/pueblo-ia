@@ -11,7 +11,7 @@ from html.parser import HTMLParser
 
 UTC = dt.timezone.utc
 SOURCE_TIMEOUT = 18
-SCOUTS = {"remote": "Observatorio de trabajo remoto", "freelance": "Radar de encargos públicos"}
+SCOUTS = {"research": "Demanda de costes para obradores", "sales": "Encargos públicos por verificar"}
 SIGNALS = {
     "automatización": 5, "automation": 5, "automate": 4,
     "python": 4, "excel": 4, "spreadsheet": 4, "google sheets": 4,
@@ -162,17 +162,16 @@ def get_ai_brief(items, fetch=fetch_json):
     # Credentials alone never authorize spending.
     return {"state": "no_configurado", "text": "IA de pago desactivada: requiere autorización y control de costes; no se realizan llamadas."}
 
-def collect(fetch=fetch_json, include_ai=True):
+def collect(fetch=None, include_ai=True):
+    from .demand import fetch_html, search_workana, watch_request, WATCHED_REQUEST, SEARCHES
+    fetch = fetch or fetch_html
     now = dt.datetime.now(UTC).isoformat(timespec='seconds')
     results, audits = [], []
-    sources = [('Jobicy Europa', lambda: get_jobicy('europe', fetch)),
-               ('Jobicy worldwide', lambda: get_jobicy('anywhere', fetch)),
-               ('HN freelance', lambda: get_hn('freelance', fetch)),
-               ('HN contract', lambda: get_hn('contract', fetch))]
-    source_urls = ['https://jobicy.com/api/jobs?count=100&geo=europe',
-                   'https://jobicy.com/api/jobs?count=100&geo=anywhere',
-                   'https://hn.algolia.com/api/v1/search_by_date?query=freelance&tags=comment&hitsPerPage=100',
-                   'https://hn.algolia.com/api/v1/search_by_date?query=contract&tags=comment&hitsPerPage=100']
+    sources = [('Workana búsqueda ' + label, lambda q=query: search_workana(q, fetch))
+               for label, query in SEARCHES]
+    sources.append(('Workana encargo observado (seguimiento, no descubrimiento)', lambda: watch_request(fetch)))
+    source_urls = ['https://www.workana.com/jobs?' + urllib.parse.urlencode({'query': query})
+                   for _, query in SEARCHES] + [WATCHED_REQUEST]
     for (name, fn), source_url in zip(sources, source_urls):
         try:
             found = fn()

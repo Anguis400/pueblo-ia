@@ -50,10 +50,11 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(rows[0]['category'], 'empleo_remoto')
 
     def test_collect_no_model_no_money(self):
+        from test_demand import empty_fetch
         with patch.dict('os.environ', {}, clear=True):
-            s=collect(fetch=self.example_fetch)
+            s=collect(fetch=empty_fetch)
         self.assertEqual(s['run_result'], 'completo')
-        self.assertEqual(len(s['opportunities']),1)  # same Jobicy item deduplicated
+        self.assertEqual(len(s['opportunities']),0)
         self.assertIsNone(s['facts']['confirmed_revenue_eur'])
         self.assertFalse(s['facts']['payments_verified'])
         self.assertEqual(s['ai_brief']['state'], 'no_configurado')
@@ -62,7 +63,7 @@ class EngineTests(unittest.TestCase):
         def bad(url): raise OSError('offline')
         s=collect(fetch=bad,include_ai=False)
         self.assertEqual(s['run_result'],'fallido')
-        self.assertEqual(len(s['sources']),4)
+        self.assertEqual(len(s['sources']),3)
         self.assertTrue(all(x['state']=='error' for x in s['sources']))
 
     def test_template_escaped(self):
