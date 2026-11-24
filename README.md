@@ -71,6 +71,25 @@ Demos: escandallo de servicios, presupuesto de proyecto, punto de equilibrio y e
 
 Se conservan los registros heredados de `site/data`. Los nuevos textos públicos omiten correos, teléfonos y patrones comunes de credenciales. Este filtrado es una defensa limitada, no un permiso para incorporar datos privados: no añadir contactos, facturas, identificadores bancarios ni secretos a este repositorio. El contenido remoto se trata como datos no fiables y se escapa al generar HTML. No se ejecutan instrucciones de fuentes externas.
 
+## Operación para la primera venta
+
+`/ventas/` es una cola comercial con una consulta concreta por petición reciente. Conserva enlace original, fecha, caducidad del filtro, diferencias entre el encargo y el producto, texto en el idioma detectado y huella SHA-256 del borrador. Las siguientes rondas la generan con `app/revenue.py` y archivan su evidencia junto al informe empresarial. Un encargo conocido no se presenta como cliente nuevo.
+
+El producto publicado sigue siendo Escandallo Pro (precio de referencia 19 EUR). Cuando el solicitante pide Excel o proyecciones, se reconoce que el HTML existente no cumple por sí solo esa petición. Primero se confirma alcance; no se promete una entrega, precio o experiencia ficticios. No se inicia un producto nuevo antes de obtener una respuesta útil.
+
+Para preparar la cola a partir de la última investigación guardada, sin nuevas consultas ni envíos:
+
+```bash
+python -m app.revenue
+python -m app.presentation
+```
+
+La fecha de preparación se distingue de la observación de origen. No sobrescribe `latest.json`, `runs.json` ni informes antiguos. Los proyectos cerrados, sin fecha, de más de 30 días o ajenos a costes del sector se excluyen. El filtro reconoce también «custos» en portugués, sin confundirlo con «custom».
+
+El siguiente paso humano es aprobar un único texto y destinatario desde una cuenta profesional con acceso al canal. La aprobación de una publicación de Reddit no autoriza Workana. Sin cuenta o si el canal exige créditos de pago, el envío queda bloqueado. No se añaden remitentes ni mecanismos de contacto automático al repositorio.
+
+El reloj de revisión de siete días sigue sin empezar hasta acreditar un envío autorizado. Respuestas, pedidos de pago y beneficio neto permanecen desconocidos. Las comisiones, devoluciones, costes y reservas se concilian fuera de GitHub; no se publica información privada. La cola por sí sola no verifica cobros ni atribuye ingresos a un borrador.
+
 ## Capital y permisos
 
 `AGENTS.md` y `config/company.json` fijan **100 EUR de techo agregado**, que no es un saldo disponible. La automatización de esta versión no realiza gastos. Ingresos, costes y beneficio neto verificados permanecen **desconocidos**, al igual que las ventas; cero gasto técnico en una ronda no significa cero costes totales del negocio. Las declaraciones locales del radar no verifican cobros.

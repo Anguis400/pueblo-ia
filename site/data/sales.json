@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "prepared_at": "2026-11-24T09:34:17+00:00",
+  "source_snapshot_time": "2026-11-24T00:49:10+00:00",
+  "research_state": "completo",
+  "goal": "Primer cobro conciliado de un cliente real, excluyendo pedidos gratuitos y compras propias.",
+  "existing_offer": {
+    "name": "Escandallo Pro",
+    "reference_price_eur": 19,
+    "url": "https://payhip.com/b/IiVct",
+    "status": "Publicación documentada previamente; no es comprobación del cobro en esta ronda."
+  },
+  "requests": [
+    {
+      "id": "workana-desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+      "source_url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+      "title": "Desenvolvimento de Planilha Financeira e de Custos para Confeitaria",
+      "published": "2026-10-29",
+      "source_observed_at": "2026-11-24T00:49:11+00:00",
+      "tracking_started_at": "2026-11-24T09:32:50+00:00",
+      "known_to_pipeline": true,
+      "expires_on": "2026-11-28",
+      "state": "pendiente_autorizacion_y_acceso",
+      "budget_eur": null,
+      "next_action": "Revalidar la ficha y solicitar autorización para esta consulta exacta. Si el canal exige pagar, detenerse.",
+      "draft_sha256": "bd9feba215a59064c5e333a2861dddad8a710b704676b25fa78dd5af3217a1d6",
+      "draft": {
+        "language": "pt",
+        "text": "Olá! Vi o pedido de uma ferramenta de custos para a sua confeitaria. Temos uma demonstração de cálculo por receita. A versão atual é HTML local, não uma planilha Excel. Antes de propor uma adaptação, prefere Excel ou Google Sheets? Quantas receitas quer incluir e quais projeções financeiras são necessárias? Trabalhamos com assistência de IA e verificação dos cálculos. Podemos avaliar o escopo com dados fictícios, sem pedir receitas ou dados de clientes. Esta consulta não fixa preço nem prazo; qualquer orçamento dependerá de confirmação posterior.",
+        "capability_gaps": [
+          "El encargo pide una hoja de cálculo; el producto actual es HTML local. No son equivalentes.",
+          "Las proyecciones financieras requieren acordar supuestos y alcance; no se acreditan como función entregada."
+        ],
+        "price_eur": null,
+        "delivery_commitment": null,
+        "approval_scope": "Un solo mensaje en la ficha original desde una cuenta profesional autorizada; sin créditos de pago ni suscripciones.",
+        "sent_at": null,
+        "state": "borrador_no_enviado"
+      }
+    }
+  ],
+  "rejected": [],
+  "no_longer_in_round": [],
+  "metrics": {
+    "public_requests_to_validate": 1,
+    "drafts_prepared": 1,
+    "messages_sent_by_this_run": 0,
+    "total_messages_sent": null,
+    "customer_replies": null,
+    "verified_paid_orders": null,
+    "verified_net_profit_eur": null
+  },
+  "experiment": {
+    "started_at": null,
+    "review_after_days": 7,
+    "reason": "El plazo empieza después de un envío autorizado y acreditado; preparar un borrador no lo inicia."
+  },
+  "guardrails": [
+    "Sin envíos, registros de cuenta, compra de créditos ni gasto.",
+    "Revalidar estado, fecha y presupuesto antes de comprometer trabajo.",
+    "Mantener conversación y contratación dentro del canal original.",
+    "No fabricar testimonios, experiencia profesional, respuestas ni cobros."
+  ]
+}

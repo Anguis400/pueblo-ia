@@ -6,6 +6,7 @@ import pathlib
 import re
 from .products import build_products
 from .presentation import render_company
+from .revenue import prepare_sales
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DEPARTMENTS = {
@@ -40,9 +41,10 @@ def build_company(snapshot, site=None):
     run_id = re.sub(r'[^0-9]', '', now) + '-' + hashlib.sha256(json.dumps(snapshot, sort_keys=True).encode()).hexdigest()[:10]
     base = f'data/company/{run_id}'
     counts = dict(collections.Counter(word for lead in leads for word in ('escandallo', 'costos', 'custos', 'excel', 'planilha') if word in (lead['title'] + lead['excerpt']).lower()))
-    proposals = [{'source_id': lead['id'], 'source_url': lead['url'], 'state': 'borrador_no_enviado',
-                  'text': f"Referencia pública: {lead['title']}. Borrador para adaptar una herramienta de costes: ingredientes y precios, cantidades por receta, mano de obra, envases y gastos del lote. Verificar formato solicitado, número de recetas, presupuesto y alcance. La demo usa datos ficticios. Precio y entrega pendientes de acuerdo; no se ha contactado.",
-                  'next': 'Solicitar autorización específica del destinatario, canal y texto antes del contacto'} for lead in leads[:5]]
+    sales = prepare_sales(snapshot, site)
+    proposals = [{'source_id': row['id'], 'source_url': row['source_url'], 'state': row['draft']['state'],
+                  'text': row['draft']['text'], 'capability_gaps': row['draft']['capability_gaps'],
+                  'next': row['next_action']} for row in sales['requests']]
     calendar = [{'slot': 1, 'title': 'Cuánto cuesta cada unidad: prueba Escandallo Pro',
                  'demo': 'tienda/escandallo-pro/', 'state': 'borrador_no_publicado',
                  'copy': 'Ingredientes, mermas, mano de obra y envases: prueba la demo gratuita para pastelerías y obradores. La versión descargable cuesta 19 EUR, pago único. https://payhip.com/b/IiVct'}]
@@ -89,6 +91,8 @@ def build_company(snapshot, site=None):
             dump(site / evidence, artifact)
             agents.append({**{k: artifact[k] for k in ('agent', 'department', 'mission', 'time_utc', 'origin', 'state')}, 'name': name, 'evidence': evidence, 'result': data})
     report = {'schema_version': 3, 'run_id': run_id, 'time_utc': now, 'execution': '21 roles deterministas secuenciales, sin LLM ni trabajo paralelo simulado', 'agents': agents, 'finances': finances, 'catalog': catalog}
+    report['sales_pipeline'] = sales
+    dump(site / base / 'sales.json', sales)
     dump(site / base / 'report.json', report)
     dump(site / 'data/company.json', report)
     render_company(report, site)

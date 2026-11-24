@@ -18,7 +18,7 @@ class CompanyTests(unittest.TestCase):
 
     def test_roles_evidence_and_safe_pages(self):
         snapshot = self.snapshot()
-        snapshot['opportunities'] = [{'id': 'hn-123', 'category': 'posible_encargo_no_verificado', 'title': '</summary><script>alert(1)</script>', 'excerpt': 'python', 'url': 'https://news.ycombinator.com/item?id=123', 'score': 9}]
+        snapshot['opportunities'] = [{'id': 'workana-fixture-costes-no-real', 'category': 'posible_encargo_no_verificado', 'title': '</summary><script>alert(1)</script> Excel costes pastelería', 'excerpt': 'Herramienta de costes para pastelería', 'url': 'https://www.workana.com/job/fixture-costes-no-real', 'published': snapshot['last_run_utc'][:10], 'project_status_observed': 'open', 'score': 9}]
         with tempfile.TemporaryDirectory() as directory:
             site = pathlib.Path(directory)
             report = build_company(snapshot, site)
@@ -31,7 +31,8 @@ class CompanyTests(unittest.TestCase):
                 self.assertEqual(artifact['time_utc'], snapshot['last_run_utc'])
             page = (site / 'marketing/index.html').read_text()
             self.assertNotIn('<script>alert', page)
-            self.assertIn('&lt;script&gt;', page)
+            self.assertNotIn('href="javascript:', page)
+            self.assertIn('no una hoja Excel', page)
             self.assertIsNone(report['finances']['verified_net_profit_eur'])
             self.assertIsNone(report['finances']['proposed_reinvestment_eur'])
             self.assertEqual(report['finances']['automated_spend_this_run_eur'], 0)

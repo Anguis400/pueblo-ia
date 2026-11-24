@@ -11,7 +11,9 @@ from html.parser import HTMLParser
 UTC = dt.timezone.utc
 MAX_AGE_DAYS = 30
 WATCHED_REQUEST = 'https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria'
-SEARCHES = [('escandallos', 'escandallo'), ('costes', 'costos')]
+SEARCHES = [('escandallos', 'escandallo'), ('costes', 'costos'),
+            ('custos para confeitaria', 'custos confeitaria'),
+            ('planilhas para confeitaria', 'planilha confeitaria')]
 
 
 def fetch_html(url):
@@ -47,7 +49,7 @@ def folded(text):
 def relevant_request(text):
     body = folded(text)
     sector = re.search(r'pasteler|reposter|panader|obrador|confeitar|padaria|bakery|baking|restaurant|catering', body)
-    costing = re.search(r'cost[eoas]|escandall|precifica|pricing', body)
+    costing = re.search(r'cost[eoas]|\bcustos?\b|escandall|precifica|pricing', body)
     tool = re.search(r'excel|planilh|planilla|spreadsheet|calculador|software|sistema|herramienta|automatiza', body)
     return bool(sector and costing and tool)
 
