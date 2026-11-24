@@ -1,0 +1,19 @@
+{
+  "agent": "seo",
+  "department": "Marketing y publicidad",
+  "mission": "Preparar contenidos indexables",
+  "time_utc": "2026-11-24T00:49:10+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "preparado; posicionamiento no medido",
+  "result": {
+    "titles": [
+      "Cuánto cuesta cada unidad: prueba Escandallo Pro"
+    ],
+    "keywords": [
+      "escandallo pastelería",
+      "coste por receta",
+      "calculadora costes obrador"
+    ],
+    "state": "preparado; posicionamiento no medido"
+  }
+}
