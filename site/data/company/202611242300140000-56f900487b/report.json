@@ -1,0 +1,585 @@
+{
+  "schema_version": 3,
+  "run_id": "202611242300140000-56f900487b",
+  "time_utc": "2026-11-24T23:00:14+00:00",
+  "execution": "21 roles deterministas secuenciales, sin LLM ni trabajo paralelo simulado",
+  "agents": [
+    {
+      "agent": "ceo",
+      "department": "Dirección",
+      "mission": "Priorizar validación comercial",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado",
+      "name": "CEO",
+      "evidence": "data/company/202611242300140000-56f900487b/ceo.json",
+      "result": {
+        "priority": "Primera venta real de Escandallo Pro o adaptación acotada a una petición de costes; validar antes de ampliar catálogo",
+        "buyer_candidates": 1,
+        "blocked": "Contacto requiere autorización específica"
+      }
+    },
+    {
+      "agent": "estrategia",
+      "department": "Dirección",
+      "mission": "Diseñar experimentos rentables",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado",
+      "name": "Estrategia",
+      "evidence": "data/company/202611242300140000-56f900487b/estrategia.json",
+      "result": {
+        "experiment": "Validar si un encargo concreto de costes admite adaptar el trabajo de Escandallo Pro; confirmar formato y presupuesto antes de construir más",
+        "success": "Primera compra pagada de un cliente real; excluir pedido gratuito y compras propias",
+        "stop": "Sin respuesta verificable en siete días desde un envío autorizado: revisar la oferta. Sin envío no empieza el experimento de ventas"
+      }
+    },
+    {
+      "agent": "operaciones",
+      "department": "Dirección",
+      "mission": "Auditar ejecución y dependencias",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado",
+      "name": "Operaciones",
+      "evidence": "data/company/202611242300140000-56f900487b/operaciones.json",
+      "result": {
+        "sources": [
+          {
+            "name": "Workana búsqueda escandallos",
+            "url": "https://www.workana.com/jobs?query=escandallo",
+            "observed_at": "2026-11-24T23:00:14+00:00",
+            "state": "ok",
+            "count": 0,
+            "error": null
+          },
+          {
+            "name": "Workana búsqueda costes",
+            "url": "https://www.workana.com/jobs?query=costos",
+            "observed_at": "2026-11-24T23:00:14+00:00",
+            "state": "ok",
+            "count": 0,
+            "error": null
+          },
+          {
+            "name": "Workana encargo observado (seguimiento, no descubrimiento)",
+            "url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+            "observed_at": "2026-11-24T23:00:14+00:00",
+            "state": "ok",
+            "count": 1,
+            "error": null
+          }
+        ],
+        "round_state": "completo",
+        "schedule": "4 rondas diarias; no garantiza puntualidad"
+      }
+    },
+    {
+      "agent": "investigacion",
+      "department": "Inteligencia de mercado",
+      "mission": "Consultar fuentes públicas",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Investigación",
+      "evidence": "data/company/202611242300140000-56f900487b/investigacion.json",
+      "result": {
+        "sources": [
+          {
+            "name": "Workana búsqueda escandallos",
+            "url": "https://www.workana.com/jobs?query=escandallo",
+            "observed_at": "2026-11-24T23:00:14+00:00",
+            "state": "ok",
+            "count": 0,
+            "error": null
+          },
+          {
+            "name": "Workana búsqueda costes",
+            "url": "https://www.workana.com/jobs?query=costos",
+            "observed_at": "2026-11-24T23:00:14+00:00",
+            "state": "ok",
+            "count": 0,
+            "error": null
+          },
+          {
+            "name": "Workana encargo observado (seguimiento, no descubrimiento)",
+            "url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+            "observed_at": "2026-11-24T23:00:14+00:00",
+            "state": "ok",
+            "count": 1,
+            "error": null
+          }
+        ],
+        "observed_at": "2026-11-24T23:00:14+00:00",
+        "evidence": [
+          "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria"
+        ]
+      }
+    },
+    {
+      "agent": "demanda",
+      "department": "Inteligencia de mercado",
+      "mission": "Separar compradores de empleo",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado",
+      "name": "Demanda",
+      "evidence": "data/company/202611242300140000-56f900487b/demanda.json",
+      "result": {
+        "buyer_signals": 1,
+        "remote_jobs_not_clients": 0,
+        "keyword_counts": {
+          "custos": 1,
+          "planilha": 1
+        },
+        "method": "Filtro conservador de intención de compra; no prueba presupuesto ni vigencia"
+      }
+    },
+    {
+      "agent": "competencia",
+      "department": "Inteligencia de mercado",
+      "mission": "Preparar comparación verificable",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado",
+      "name": "Competencia",
+      "evidence": "data/company/202611242300140000-56f900487b/competencia.json",
+      "result": {
+        "state": "preparado",
+        "observed_on": "2026-11-23",
+        "source": "https://bakecost.app/",
+        "finding": "El proveedor anuncia costeo, pedidos, respaldo local y CSV gratis, sin cuenta y sin conexión. No se ha probado su aplicación ni verificado sus usuarios o ventas.",
+        "implication": "La calculadora genérica de pago necesita validación. Adaptación a un encargo concreto es una hipótesis, no una ventaja demostrada."
+      }
+    },
+    {
+      "agent": "producto",
+      "department": "Desarrollo de productos",
+      "mission": "Definir herramientas útiles",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado",
+      "name": "Producto",
+      "evidence": "data/company/202611242300140000-56f900487b/producto.json",
+      "result": {
+        "specifications": [
+          {
+            "name": "Escandallo de servicios",
+            "mission": "Calcular coste y precio objetivo",
+            "acceptance": "Funciona offline con entradas válidas y errores visibles"
+          },
+          {
+            "name": "Presupuesto de proyecto",
+            "mission": "Estimar una propuesta sin enviarla",
+            "acceptance": "Funciona offline con entradas válidas y errores visibles"
+          },
+          {
+            "name": "Punto de equilibrio",
+            "mission": "Analizar viabilidad antes de gastar",
+            "acceptance": "Funciona offline con entradas válidas y errores visibles"
+          },
+          {
+            "name": "Embudo comercial",
+            "mission": "Calcular conversión de datos propios",
+            "acceptance": "Funciona offline con entradas válidas y errores visibles"
+          }
+        ]
+      }
+    },
+    {
+      "agent": "desarrollo",
+      "department": "Desarrollo de productos",
+      "mission": "Construir demos descargables",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Desarrollo",
+      "evidence": "data/company/202611242300140000-56f900487b/desarrollo.json",
+      "result": {
+        "catalog": [
+          {
+            "id": "escandallo",
+            "name": "Escandallo de servicios",
+            "mission": "Calcular coste y precio objetivo",
+            "state": "demo_funcional",
+            "url": "tienda/escandallo.html",
+            "download": "tienda/escandallo.zip",
+            "sha256": "022e42317258202e7f8ca0345d8546b3f77db11e91a521adcd22313904b75526",
+            "sales_verified": null
+          },
+          {
+            "id": "presupuesto",
+            "name": "Presupuesto de proyecto",
+            "mission": "Estimar una propuesta sin enviarla",
+            "state": "demo_funcional",
+            "url": "tienda/presupuesto.html",
+            "download": "tienda/presupuesto.zip",
+            "sha256": "dbfadc379dacd7fc6c91fa2138d926679bde5eebe32ae16d848780b2f2097a5d",
+            "sales_verified": null
+          },
+          {
+            "id": "rentabilidad",
+            "name": "Punto de equilibrio",
+            "mission": "Analizar viabilidad antes de gastar",
+            "state": "demo_funcional",
+            "url": "tienda/rentabilidad.html",
+            "download": "tienda/rentabilidad.zip",
+            "sha256": "a354c33f35428a6b76b9264d7c4ffa962caae3192380aa50f5b135de542cdd70",
+            "sales_verified": null
+          },
+          {
+            "id": "conversion",
+            "name": "Embudo comercial",
+            "mission": "Calcular conversión de datos propios",
+            "state": "demo_funcional",
+            "url": "tienda/conversion.html",
+            "download": "tienda/conversion.zip",
+            "sha256": "2a367fea80c88e5be2f59a8087c0aafce6d25699cd7f818929d742ae4002ee36",
+            "sales_verified": null
+          }
+        ],
+        "implementation": "Plantillas HTML y JavaScript locales; cero API de pago"
+      }
+    },
+    {
+      "agent": "qa",
+      "department": "Desarrollo de productos",
+      "mission": "Verificar integridad de artefactos",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "QA",
+      "evidence": "data/company/202611242300140000-56f900487b/qa.json",
+      "result": {
+        "checks": [
+          {
+            "product": "escandallo",
+            "sha256_matches": true,
+            "zip_exists": true
+          },
+          {
+            "product": "presupuesto",
+            "sha256_matches": true,
+            "zip_exists": true
+          },
+          {
+            "product": "rentabilidad",
+            "sha256_matches": true,
+            "zip_exists": true
+          },
+          {
+            "product": "conversion",
+            "sha256_matches": true,
+            "zip_exists": true
+          }
+        ],
+        "limits": "Integridad de compilación; pruebas de cálculo en CI, no certificación fiscal"
+      }
+    },
+    {
+      "agent": "seo",
+      "department": "Marketing y publicidad",
+      "mission": "Preparar contenidos indexables",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado; posicionamiento no medido",
+      "name": "SEO",
+      "evidence": "data/company/202611242300140000-56f900487b/seo.json",
+      "result": {
+        "titles": [
+          "Cuánto cuesta cada unidad: prueba Escandallo Pro"
+        ],
+        "keywords": [
+          "escandallo pastelería",
+          "coste por receta",
+          "calculadora costes obrador"
+        ],
+        "state": "preparado; posicionamiento no medido"
+      }
+    },
+    {
+      "agent": "contenido",
+      "department": "Marketing y publicidad",
+      "mission": "Preparar calendario editorial",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado",
+      "name": "Contenido",
+      "evidence": "data/company/202611242300140000-56f900487b/contenido.json",
+      "result": {
+        "calendar": [
+          {
+            "slot": 1,
+            "title": "Cuánto cuesta cada unidad: prueba Escandallo Pro",
+            "demo": "tienda/escandallo-pro/",
+            "state": "borrador_no_publicado",
+            "copy": "Ingredientes, mermas, mano de obra y envases: prueba la demo gratuita para pastelerías y obradores. La versión descargable cuesta 19 EUR, pago único. https://payhip.com/b/IiVct"
+          }
+        ],
+        "cadence": "Una pieza semanal tras revisión; no publicación automática"
+      }
+    },
+    {
+      "agent": "publicidad",
+      "department": "Marketing y publicidad",
+      "mission": "Preparar campaña condicionada",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "bloqueado",
+      "name": "Publicidad",
+      "evidence": "data/company/202611242300140000-56f900487b/publicidad.json",
+      "result": {
+        "state": "bloqueado",
+        "campaign_draft": "Demostración de Escandallo Pro para pastelerías",
+        "audience_hypothesis": "Pastelerías y pequeños obradores que calculan costes de recetas",
+        "copy": "Revisa costes y supuestos con una demo offline.",
+        "spend_eur": 0,
+        "gates": [
+          "Payhip indicó el 23/11/2026 que la cuenta puede recibir pagos con PayPal, sin el aviso anterior. Cobro real aún no probado; entrega gratuita verificada el 15/11",
+          "Confirmar precio, impuestos y condiciones",
+          "Aprobar destinatario y propuesta individual",
+          "Registrar consentimiento y resultado fuera del repositorio",
+          "Verificar cobro, comisiones y devoluciones antes de atribuir ingresos"
+        ],
+        "budget": "Sin asignación; requiere autorización específica dentro del techo agregado"
+      }
+    },
+    {
+      "agent": "prospeccion",
+      "department": "Ventas",
+      "mission": "Priorizar señales de compra",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado",
+      "name": "Prospección",
+      "evidence": "data/company/202611242300140000-56f900487b/prospeccion.json",
+      "result": {
+        "candidates": [
+          {
+            "id": "workana-desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+            "url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+            "score": 15
+          }
+        ],
+        "excluded_job_count": 0,
+        "next": "Verificar necesidad, presupuesto, vigencia y adecuación antes de contactar"
+      }
+    },
+    {
+      "agent": "propuestas",
+      "department": "Ventas",
+      "mission": "Preparar borradores individuales",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado",
+      "name": "Propuestas",
+      "evidence": "data/company/202611242300140000-56f900487b/propuestas.json",
+      "result": {
+        "drafts": [
+          {
+            "source_id": "workana-desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+            "source_url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+            "state": "borrador_no_enviado",
+            "text": "Referencia pública: Desenvolvimento de Planilha Financeira e de Custos para Confeitaria. Borrador para adaptar una herramienta de costes: ingredientes y precios, cantidades por receta, mano de obra, envases y gastos del lote. Verificar formato solicitado, número de recetas, presupuesto y alcance. La demo usa datos ficticios. Precio y entrega pendientes de acuerdo; no se ha contactado.",
+            "next": "Solicitar autorización específica del destinatario, canal y texto antes del contacto"
+          }
+        ],
+        "state": "preparado",
+        "reason": "Sin señal de compra no se genera propuesta ficticia"
+      }
+    },
+    {
+      "agent": "conversion",
+      "department": "Ventas",
+      "mission": "Definir medición comercial",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "bloqueado",
+      "name": "Conversión",
+      "evidence": "data/company/202611242300140000-56f900487b/conversion.json",
+      "result": {
+        "visits": null,
+        "consented_conversations": null,
+        "proposals_sent": null,
+        "verified_sales": null,
+        "checklist": [
+          "Payhip indicó el 23/11/2026 que la cuenta puede recibir pagos con PayPal, sin el aviso anterior. Cobro real aún no probado; entrega gratuita verificada el 15/11",
+          "Confirmar precio, impuestos y condiciones",
+          "Aprobar destinatario y propuesta individual",
+          "Registrar consentimiento y resultado fuera del repositorio",
+          "Verificar cobro, comisiones y devoluciones antes de atribuir ingresos"
+        ]
+      }
+    },
+    {
+      "agent": "soporte",
+      "department": "Atención al cliente",
+      "mission": "Preparar ayuda de producto",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "preparado",
+      "name": "Soporte",
+      "evidence": "data/company/202611242300140000-56f900487b/soporte.json",
+      "result": {
+        "faq": [
+          "Descomprime el ZIP de Escandallo Pro y abre Escandallo_Pro.html.",
+          "Las recetas se guardan en el navegador; exporta copias JSON antes de cambiar de dispositivo o borrar datos.",
+          "Los cálculos son orientativos: revisa fiscalidad y supuestos."
+        ],
+        "tickets_received": null
+      }
+    },
+    {
+      "agent": "voz",
+      "department": "Atención al cliente",
+      "mission": "Preparar entrevistas consentidas",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "pendiente",
+      "name": "Voz del cliente",
+      "evidence": "data/company/202611242300140000-56f900487b/voz.json",
+      "result": {
+        "interview_draft": [
+          "¿Cómo calculas tus costes hoy?",
+          "¿Qué error te cuesta más tiempo?",
+          "¿Qué prueba necesitarías para comprar?"
+        ],
+        "state": "pendiente",
+        "reason": "No hay entrevistas ni respuestas reales; requiere consentimiento y permiso para contactar"
+      }
+    },
+    {
+      "agent": "retencion",
+      "department": "Atención al cliente",
+      "mission": "Diseñar seguimiento consentido",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "pendiente",
+      "name": "Retención",
+      "evidence": "data/company/202611242300140000-56f900487b/retencion.json",
+      "result": {
+        "followup_draft": "Tras compra verificada y consentimiento, preguntar si la herramienta resolvió la necesidad y ofrecer ayuda.",
+        "state": "pendiente",
+        "reason": "Sin clientes ni cohortes verificadas"
+      }
+    },
+    {
+      "agent": "tesoreria",
+      "department": "Finanzas",
+      "mission": "Controlar techo agregado",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "bloqueado",
+      "name": "Tesorería",
+      "evidence": "data/company/202611242300140000-56f900487b/tesoreria.json",
+      "result": {
+        "budget_ceiling_eur": 100,
+        "available_balance_eur": null,
+        "verified_revenue_eur": null,
+        "verified_costs_eur": null,
+        "verified_net_profit_eur": null,
+        "proposed_reinvestment_eur": null,
+        "reinvest_pct": 30,
+        "reserve_pct": 70,
+        "automated_spend_this_run_eur": 0,
+        "reason": "Sin libro contable privado conciliado ni verificación de cobros, comisiones, costes, devoluciones y reservas fiscales. El techo no es saldo disponible."
+      }
+    },
+    {
+      "agent": "reinversion",
+      "department": "Finanzas",
+      "mission": "Proponer reparto de beneficio verificado",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "bloqueado",
+      "name": "Reinversión",
+      "evidence": "data/company/202611242300140000-56f900487b/reinversion.json",
+      "result": {
+        "state": "bloqueado",
+        "proposal": "30% de beneficio neto verificado y positivo, 70% reservado; nunca transferencia automática",
+        "amount_eur": null,
+        "gates": [
+          "Conciliar cobros y todos los costes",
+          "Descontar devoluciones y reserva fiscal",
+          "Obtener autorización específica; respetar techo agregado de 100 EUR"
+        ]
+      }
+    },
+    {
+      "agent": "auditoria",
+      "department": "Finanzas",
+      "mission": "Revisar trazabilidad y bloqueos",
+      "time_utc": "2026-11-24T23:00:14+00:00",
+      "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+      "state": "completado",
+      "name": "Auditoría",
+      "evidence": "data/company/202611242300140000-56f900487b/auditoria.json",
+      "result": {
+        "no_outreach": true,
+        "no_payments": true,
+        "paid_ai_disabled": true,
+        "source_state": "completo",
+        "financial_verification": "desconocida",
+        "limitations": [
+          "No demuestra ventas",
+          "Payhip: aptitud de PayPal para recibir pagos observada el 23/11/2026. Entrega gratuita verificada, cobro real no verificado. No equivale a una comprobación en directo por esta ronda.",
+          "Fuentes externas no fiables; sin instrucciones ejecutables"
+        ]
+      }
+    }
+  ],
+  "finances": {
+    "budget_ceiling_eur": 100,
+    "available_balance_eur": null,
+    "verified_revenue_eur": null,
+    "verified_costs_eur": null,
+    "verified_net_profit_eur": null,
+    "proposed_reinvestment_eur": null,
+    "reinvest_pct": 30,
+    "reserve_pct": 70,
+    "automated_spend_this_run_eur": 0,
+    "reason": "Sin libro contable privado conciliado ni verificación de cobros, comisiones, costes, devoluciones y reservas fiscales. El techo no es saldo disponible."
+  },
+  "catalog": [
+    {
+      "id": "escandallo",
+      "name": "Escandallo de servicios",
+      "mission": "Calcular coste y precio objetivo",
+      "state": "demo_funcional",
+      "url": "tienda/escandallo.html",
+      "download": "tienda/escandallo.zip",
+      "sha256": "022e42317258202e7f8ca0345d8546b3f77db11e91a521adcd22313904b75526",
+      "sales_verified": null
+    },
+    {
+      "id": "presupuesto",
+      "name": "Presupuesto de proyecto",
+      "mission": "Estimar una propuesta sin enviarla",
+      "state": "demo_funcional",
+      "url": "tienda/presupuesto.html",
+      "download": "tienda/presupuesto.zip",
+      "sha256": "dbfadc379dacd7fc6c91fa2138d926679bde5eebe32ae16d848780b2f2097a5d",
+      "sales_verified": null
+    },
+    {
+      "id": "rentabilidad",
+      "name": "Punto de equilibrio",
+      "mission": "Analizar viabilidad antes de gastar",
+      "state": "demo_funcional",
+      "url": "tienda/rentabilidad.html",
+      "download": "tienda/rentabilidad.zip",
+      "sha256": "a354c33f35428a6b76b9264d7c4ffa962caae3192380aa50f5b135de542cdd70",
+      "sales_verified": null
+    },
+    {
+      "id": "conversion",
+      "name": "Embudo comercial",
+      "mission": "Calcular conversión de datos propios",
+      "state": "demo_funcional",
+      "url": "tienda/conversion.html",
+      "download": "tienda/conversion.zip",
+      "sha256": "2a367fea80c88e5be2f59a8087c0aafce6d25699cd7f818929d742ae4002ee36",
+      "sales_verified": null
+    }
+  ]
+}
