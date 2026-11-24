@@ -5,7 +5,7 @@ import json
 import unittest
 from unittest.mock import patch
 
-from app.demand import (WATCHED_REQUEST, parse_project, project_url,
+from app.demand import (WATCHED_REQUEST, SEARCHES, parse_project, project_url,
                         relevant_request, search_candidates, search_workana)
 from app.engine import collect
 
@@ -57,6 +57,8 @@ class DemandTests(unittest.TestCase):
         self.assertFalse(relevant_request('Buscamos un ingeniero Python remoto para automatizar Excel'))
         self.assertFalse(relevant_request('Buscamos pastelero para cocinar y controlar costes'))
         self.assertTrue(relevant_request('Planilha de custos e precificação para confeitaria'))
+        self.assertTrue(relevant_request('Planilha de custos para confeitaria'))
+        self.assertFalse(relevant_request('Custom Excel spreadsheet for bakery staff schedules'))
         self.assertTrue(relevant_request('Software de escandallos para obrador'))
 
     def test_allowlist_and_canonical_dedup(self):
@@ -88,7 +90,7 @@ class DemandTests(unittest.TestCase):
         snapshot = collect(fetch=fetch, include_ai=False)
         self.assertEqual(snapshot['run_result'], 'completo')
         self.assertEqual(snapshot['opportunities'], [])
-        self.assertEqual(len(snapshot['sources']), 3)
+        self.assertEqual(len(snapshot['sources']), len(SEARCHES) + 1)
         self.assertTrue(all('workana.com' in url for url in seen))
         self.assertIsNone(snapshot['facts']['confirmed_revenue_eur'])
 

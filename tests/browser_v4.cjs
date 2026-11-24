@@ -64,7 +64,7 @@ const TYPES = {
     );
     for (const width of [1536, 1366, 1024, 768, 390, 320]) {
       await page.setViewportSize({ width, height: 1050 });
-      for (const route of ["", "empresa/", "marketing/", "tienda/"]) {
+      for (const route of ["", "empresa/", "marketing/", "tienda/", "ventas/"]) {
         const response = await page.goto(base + route);
         assert.equal(response.status(), 200);
         assert.equal(
@@ -90,6 +90,9 @@ const TYPES = {
         }
       }
     }
+    await page.goto(base + "ventas/");
+    assert.ok((await page.locator("body").innerText()).includes("no envía mensajes"));
+    assert.equal(await page.locator('meta[name="robots"]').getAttribute("content"), "noindex");
     await page.setViewportSize({ width: 1536, height: 1050 });
     await page.goto(base + "empresa/");
     assert.equal(await page.locator(".building").count(), 7);
@@ -284,7 +287,7 @@ const TYPES = {
     assert.deepEqual(errors, []);
     assert.deepEqual(failed, []);
     console.log(
-      "PASS: 4 pages × 6 viewport sizes below /pueblo-ia/, 7 buildings, 21 roles, real KPI/evidence links, keyboard/history, reduced motion, no-JS fallback, radar and 4 calculators.",
+      "PASS: 5 pages × 6 viewport sizes below /pueblo-ia/, 7 buildings, 21 roles, real KPI/evidence links, keyboard/history, reduced motion, no-JS fallback, radar and 4 calculators.",
     );
   } finally {
     if (browser) await browser.close();

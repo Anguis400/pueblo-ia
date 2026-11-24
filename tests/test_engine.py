@@ -63,7 +63,8 @@ class EngineTests(unittest.TestCase):
         def bad(url): raise OSError('offline')
         s=collect(fetch=bad,include_ai=False)
         self.assertEqual(s['run_result'],'fallido')
-        self.assertEqual(len(s['sources']),3)
+        from app.demand import SEARCHES
+        self.assertEqual(len(s['sources']),len(SEARCHES) + 1)
         self.assertTrue(all(x['state']=='error' for x in s['sources']))
 
     def test_template_escaped(self):
