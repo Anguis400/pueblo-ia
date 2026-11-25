@@ -1,0 +1,13 @@
+{
+  "agent": "estrategia",
+  "department": "Dirección",
+  "mission": "Diseñar experimentos rentables",
+  "time_utc": "2026-11-25T09:50:12+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "preparado",
+  "result": {
+    "experiment": "Validar si un encargo concreto de costes admite adaptar el trabajo de Escandallo Pro; confirmar formato y presupuesto antes de construir más",
+    "success": "Primera compra pagada de un cliente real; excluir pedido gratuito y compras propias",
+    "stop": "Sin respuesta verificable en siete días desde un envío autorizado: revisar la oferta. Sin envío no empieza el experimento de ventas"
+  }
+}
