@@ -1,0 +1,28 @@
+{
+  "agent": "propuestas",
+  "department": "Ventas",
+  "mission": "Preparar borradores individuales",
+  "time_utc": "2026-11-25T22:28:48+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "preparado",
+  "result": {
+    "drafts": [
+      {
+        "source_id": "workana-desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+        "source_url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+        "state": "borrador_no_enviado",
+        "text": "Referencia pública: Desenvolvimento de Planilha Financeira e de Custos para Confeitaria. Borrador para adaptar una herramienta de costes: ingredientes y precios, cantidades por receta, mano de obra, envases y gastos del lote. Verificar formato solicitado, número de recetas, presupuesto y alcance. La demo usa datos ficticios. Precio y entrega pendientes de acuerdo; no se ha contactado.",
+        "next": "Solicitar autorización específica del destinatario, canal y texto antes del contacto"
+      },
+      {
+        "source_id": "workana-product-designer-ux-ui-para-auditoria-y-rediseno-de-plataforma-b2b-saas",
+        "source_url": "https://www.workana.com/job/product-designer-ux-ui-para-auditoria-y-rediseno-de-plataforma-b2b-saas",
+        "state": "borrador_no_enviado",
+        "text": "Referencia pública: Product Designer Ux/Ui para Auditoría y Rediseño de Plataforma B2b/Saas. Borrador para adaptar una herramienta de costes: ingredientes y precios, cantidades por receta, mano de obra, envases y gastos del lote. Verificar formato solicitado, número de recetas, presupuesto y alcance. La demo usa datos ficticios. Precio y entrega pendientes de acuerdo; no se ha contactado.",
+        "next": "Solicitar autorización específica del destinatario, canal y texto antes del contacto"
+      }
+    ],
+    "state": "preparado",
+    "reason": "Sin señal de compra no se genera propuesta ficticia"
+  }
+}
