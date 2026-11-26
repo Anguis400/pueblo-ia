@@ -1,0 +1,17 @@
+{
+  "agent": "voz",
+  "department": "Atención al cliente",
+  "mission": "Preparar entrevistas consentidas",
+  "time_utc": "2026-11-26T09:30:19+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "pendiente",
+  "result": {
+    "interview_draft": [
+      "¿Cómo calculas tus costes hoy?",
+      "¿Qué error te cuesta más tiempo?",
+      "¿Qué prueba necesitarías para comprar?"
+    ],
+    "state": "pendiente",
+    "reason": "No hay entrevistas ni respuestas reales; requiere consentimiento y permiso para contactar"
+  }
+}
