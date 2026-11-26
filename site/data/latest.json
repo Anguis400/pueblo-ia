@@ -1,13 +1,13 @@
 {
   "schema_version": 3,
-  "last_run_utc": "2026-11-26T09:30:19+00:00",
+  "last_run_utc": "2026-11-26T22:19:30+00:00",
   "run_type": "recoleccion_publica",
   "run_result": "completo",
   "sources": [
     {
       "name": "Workana búsqueda escandallos",
       "url": "https://www.workana.com/jobs?query=escandallo",
-      "observed_at": "2026-11-26T09:30:19+00:00",
+      "observed_at": "2026-11-26T22:19:30+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -15,7 +15,7 @@
     {
       "name": "Workana búsqueda costes",
       "url": "https://www.workana.com/jobs?query=costos",
-      "observed_at": "2026-11-26T09:30:19+00:00",
+      "observed_at": "2026-11-26T22:19:30+00:00",
       "state": "ok",
       "count": 0,
       "error": null
@@ -23,7 +23,7 @@
     {
       "name": "Workana encargo observado (seguimiento, no descubrimiento)",
       "url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
-      "observed_at": "2026-11-26T09:30:19+00:00",
+      "observed_at": "2026-11-26T22:19:30+00:00",
       "state": "ok",
       "count": 1,
       "error": null
@@ -40,7 +40,7 @@
       "region": "Sin verificar",
       "url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
       "published": "2026-10-29",
-      "observed_at": "2026-11-26T09:30:24+00:00",
+      "observed_at": "2026-11-26T22:19:31+00:00",
       "excerpt": "O cliente busca um profissional para desenvolver uma planilha completa e personalizada para gestão de uma confeitaria. A planilha deve incluir funcionalidades para controle de despesas fixas, detalhamento da lista de ingredientes e receitas de cada produto, e projeções financeiras individuais para cada item produzido. ",
       "score": 15,
       "status": "Petición pública de herramienta de costes; presupuesto, acceso y contratación pendientes de verificar",
