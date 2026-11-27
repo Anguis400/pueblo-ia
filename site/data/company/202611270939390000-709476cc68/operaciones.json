@@ -1,0 +1,38 @@
+{
+  "agent": "operaciones",
+  "department": "Dirección",
+  "mission": "Auditar ejecución y dependencias",
+  "time_utc": "2026-11-27T09:39:39+00:00",
+  "origin": "app/company.py:build_company; snapshot de investigación pública y plantillas locales",
+  "state": "preparado",
+  "result": {
+    "sources": [
+      {
+        "name": "Workana búsqueda escandallos",
+        "url": "https://www.workana.com/jobs?query=escandallo",
+        "observed_at": "2026-11-27T09:39:39+00:00",
+        "state": "ok",
+        "count": 0,
+        "error": null
+      },
+      {
+        "name": "Workana búsqueda costes",
+        "url": "https://www.workana.com/jobs?query=costos",
+        "observed_at": "2026-11-27T09:39:39+00:00",
+        "state": "ok",
+        "count": 0,
+        "error": null
+      },
+      {
+        "name": "Workana encargo observado (seguimiento, no descubrimiento)",
+        "url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+        "observed_at": "2026-11-27T09:39:39+00:00",
+        "state": "ok",
+        "count": 1,
+        "error": null
+      }
+    ],
+    "round_state": "completo",
+    "schedule": "4 rondas diarias; no garantiza puntualidad"
+  }
+}

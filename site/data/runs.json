@@ -1316,5 +1316,38 @@
     "lead_count": 1,
     "ai_state": "desactivado",
     "company_report": "data/company/202611262219300000-8204e83256/report.json"
+  },
+  {
+    "time_utc": "2026-11-27T09:39:39+00:00",
+    "result": "completo",
+    "sources": [
+      {
+        "name": "Workana búsqueda escandallos",
+        "url": "https://www.workana.com/jobs?query=escandallo",
+        "observed_at": "2026-11-27T09:39:39+00:00",
+        "state": "ok",
+        "count": 0,
+        "error": null
+      },
+      {
+        "name": "Workana búsqueda costes",
+        "url": "https://www.workana.com/jobs?query=costos",
+        "observed_at": "2026-11-27T09:39:39+00:00",
+        "state": "ok",
+        "count": 0,
+        "error": null
+      },
+      {
+        "name": "Workana encargo observado (seguimiento, no descubrimiento)",
+        "url": "https://www.workana.com/job/desenvolvimento-de-planilha-financeira-e-de-custos-para-confeitaria",
+        "observed_at": "2026-11-27T09:39:39+00:00",
+        "state": "ok",
+        "count": 1,
+        "error": null
+      }
+    ],
+    "lead_count": 1,
+    "ai_state": "desactivado",
+    "company_report": "data/company/202611270939390000-709476cc68/report.json"
   }
 ]
